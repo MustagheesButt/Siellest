@@ -18,7 +18,7 @@
   async function callImportFn() {
     this.innerHTML = "Importing..."
     this.disabled = true
-    const resp = await fetch('/wordpress-latest/wp-json/siellest-admin/import-starter-content', {
+    const resp = await fetch('<?= get_site_url() ?>/wp-json/siellest-admin/import-starter-content', {
       method: 'POST',
       headers: {
         'X-WP-Nonce': '<?= wp_create_nonce('wp_rest') ?>'

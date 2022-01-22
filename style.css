@@ -7,3 +7,9 @@ Tags: jewellery, bracelets, fragrances, ecommerce
 Author: Nezuco Inc.
 Author URI: https://nezuco.com
 */
+
+.header__logo {
+  max-width: 14rem;
+  height: 3.85rem;
+  color: gold;
+}
