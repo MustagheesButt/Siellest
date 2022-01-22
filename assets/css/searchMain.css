@@ -1,0 +1,547 @@
+/**
+ * TABLE OF CONTENTS
+ *
+ * SETTINGS
+ * Global..................Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins..................Useful mixins.
+ *
+ * COMPONENTS
+ *
+ *
+ * MODULES
+ *
+ */
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+/**
+ * Returns the value of the `$key` value of a provided `$map`.
+ */
+/**
+ * Uses `getProperty()` to return a value from the `$colors` map.
+ */
+/**
+ * Uses `getProperty()` to return a value from the `$breakpoints` map.
+ */
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+  #ELEMENT-DEFAULTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #HEADER-DEFAULTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #HORIZONTAL-SPACING
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITIONS
+\*------------------------------------*/
+/*------------------------------------*\
+  #TOOLS
+\*------------------------------------*/
+/**
+ * Responsive Mixin
+ * This mixin is designed for a _cleaner_ first approach
+ * This means that css isn't overridden but rather replaced for
+ * different viewport widths; making it easier to inspect/debug css
+ *
+ * Usage:
+ * @include media-query(exclude-medium)    { ... }
+ * @include media-query(medium-up-to-site) 	   { ... }
+ * ... etc
+ */
+/**
+ * [Adds styles to allow an element's height scale proportionatelly]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ */
+/**
+ * [Calculates the percentage aspect ratio (what % height is compared to the width)]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ * @return {[Number(%)]}
+ */
+/**
+ * *****REMEMBER TO USE MARGIN OR PADDING AND NOT TOP/BOTTOM******
+ * [Calculates the center of an element in relation to a provided width and height.
+ * Useful to place an absolute element at the center of another when
+ * the positioned element cannot be the target's child ]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ * @return {[Number(%)]}
+ */
+/**
+ * [In the  awful case you can't use Flexbox to vertically align something]
+ * @param  {[type]} $transform:       false         [Use transforms to align instead of the absolute trick]
+ * @param  {[type]} $pos:             absolute      [position type]
+ * @param  {[type]} $posAdj:          0             [position adjustment. If $transform is true, this value only affects the 'top' property.]
+ * @param  {[type]} $alignHorizontal: false         [Includes horizontal alignment]
+ */
+/**
+ * Generate Enumerated Class
+ * Iterates from 0 to the specified length and generates classes that set the specified property
+ * @param  {[String]} $classname:       required      [Required: Specify the class name]
+ * @param  {[String]} $property:        $classname    [Optional: Specify the enumerated property (if it's different from the name of the class)]
+ * @param  {[Number]} $length:          10            [Optional: Specify the end of the loop]
+ * @param  {[String]} $units:           null          [Optional: specify units to append to the enumerated property]
+ */
+/**
+* [Strip the pesky units from values]
+* @param  {[Number]} $value
+*/
+/**
+* [Fluid Type]
+*/
+/**
+ * Expose a single property to handle the different text-underline preferences for RTL vs LTR.
+ */
+/**
+ * POSTCSS-RTL/POSTCSS-RTLCSS Has issues parsing inline comments when using production mode, which removes CSS comments.
+ * Using the important comment syntax doesn't seem to work either, as that just results in appending the comment with no functionality.
+ */
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+.search-results {
+  margin-bottom: 5.5rem;
+}
+
+.search-results__container {
+  min-height: 30rem;
+}
+
+.search-results__search-form {
+  margin-top: 4.8125rem;
+  max-width: 30.375rem;
+}
+
+.search-results__footer {
+  position: relative;
+  margin-top: 3.25rem;
+}
+
+.search-results__footer-count {
+  margin-bottom: 1.5rem;
+}
+
+.search-results__footer-cta {
+  max-width: 8.75rem;
+}
+
+.search-results__section {
+  position: relative;
+}
+.search-results__section:not(.toggle--active) {
+  display: none;
+}
+
+.search-results--null-page {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.search-results--null__form {
+  margin-top: 3.875rem;
+}
+
+.search-results--null__title {
+  margin-bottom: 0.5rem;
+}
+
+.search-results--null__description {
+  margin-top: 0.625rem;
+}
+
+.search-results--null__help {
+  margin-top: 2rem;
+}
+
+@media (min-width: 48rem) {
+  .search-results {
+    padding-top: 2rem;
+  }
+}
+.search-results__main .descriptive-card:not(:last-child) {
+  margin-bottom: 0;
+}
+
+.search-results__nav {
+  margin-top: 4rem;
+}
+
+[dir="ltr"] .search-results__layout-selector {
+  margin-left: 1.125rem;
+}
+
+[dir="rtl"] .search-results__layout-selector {
+  margin-right: 1.125rem;
+}
+.search-results__layout-selector.set--active .icon--unselected {
+  display: none;
+}
+.search-results__layout-selector:not(.set--active) .icon--selected {
+  display: none;
+}
+
+[dir="ltr"] .search-results__layout-selector-label {
+  margin-right: 0.75rem;
+}
+
+[dir="rtl"] .search-results__layout-selector-label {
+  margin-left: 0.75rem;
+}
+
+@media (min-width: 48rem) {
+  .search-results__toolbar {
+    padding-bottom: 2rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .search-results__toolbar {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .search-results__toolbar-button-container {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    border-top: solid 0.0625rem #E6E6E6;
+    border-bottom: solid 0.0625rem #E6E6E6;
+    margin-bottom: 2.125rem;
+    padding: 1.125rem 0;
+  }
+
+  .search-results__toolbar-button {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  [dir="ltr"] .search-results__toolbar-sortby-button {
+    border-left: solid 0.0625rem #E6E6E6;
+  }
+
+  [dir="rtl"] .search-results__toolbar-sortby-button {
+    border-right: solid 0.0625rem #E6E6E6;
+  }
+}
+.refinement__size {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.refinement__header {
+  padding: 1rem 0;
+}
+.refinement__header.refinement--active {
+  padding-bottom: 0;
+}
+.refinement__header.refinement--active .refinement__header-icon {
+  -webkit-transform: scale(-1);
+          transform: scale(-1);
+}
+
+.refinement__content {
+  padding-bottom: 1rem;
+}
+.refinement__content.refinement--active {
+  display: none;
+}
+
+[dir="ltr"] .refinement__list .refinement__list {
+  padding-left: 0.5rem;
+}
+
+[dir="rtl"] .refinement__list .refinement__list {
+  padding-right: 0.5rem;
+}
+.refinement__list:not(:first-child) {
+  margin-top: 1.125rem;
+}
+
+.refinement__list-item:not(:last-child) {
+  margin-bottom: 1.15em;
+}
+
+.refinement__boolean-item:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.refinement__chip-item,
+.refinement__swatch-color-item {
+  margin-bottom: 0.625rem;
+}
+
+[dir="ltr"] .refinement__chip-item,
+[dir="ltr"] .refinement__swatch-color-item {
+  margin-right: 0.625rem;
+}
+
+[dir="rtl"] .refinement__chip-item,
+[dir="rtl"] .refinement__swatch-color-item {
+  margin-left: 0.625rem;
+}
+
+.applied-refinements__item:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+[dir="ltr"] .applied-refinements__item:not(:last-child) {
+  margin-right: 0.625rem;
+}
+
+[dir="rtl"] .applied-refinements__item:not(:last-child) {
+  margin-left: 0.625rem;
+}
+
+@media (min-width: 90.0625rem) {
+  [dir="ltr"] .refinement-bar {
+    padding-right: 7rem;
+  }
+
+  [dir="rtl"] .refinement-bar {
+    padding-left: 7rem;
+  }
+}
+@media (min-width: 77.5625rem) and (max-width: 90rem) {
+  [dir="ltr"] .refinement-bar {
+    padding-right: 30%;
+  }
+
+  [dir="rtl"] .refinement-bar {
+    padding-left: 30%;
+  }
+}
+@media (min-width: 48rem) {
+  .refinement__title {
+    margin: 1rem 0;
+  }
+
+  .refinement-bar {
+    position: relative;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+
+  .applied-refinements__list {
+    margin-bottom: 1.25rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .refinements {
+    margin-top: 1.25rem;
+  }
+
+  .refinement-bar {
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 4.5rem 0;
+    background-color: #FFF;
+    border-top: solid 0.375rem #D50032;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
+    -webkit-transition-duration: 200ms;
+            transition-duration: 200ms;
+    -webkit-transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
+    -webkit-transition-property: opacity, visibility, -webkit-transform;
+    transition-property: opacity, visibility, -webkit-transform;
+    transition-property: opacity, visibility, transform;
+    transition-property: opacity, visibility, transform, -webkit-transform;
+  }
+
+  [dir="ltr"] .refinement-bar {
+    left: 0;
+  }
+
+  [dir="rtl"] .refinement-bar {
+    right: 0;
+  }
+  .refinement-bar.refinement-bar--active, .refinement-bar.sort-menu--active {
+    opacity: 1;
+    visibility: inherit;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    -webkit-transition-duration: 300ms;
+            transition-duration: 300ms;
+    -webkit-transition-timing-function: ease-out;
+            transition-timing-function: ease-out;
+  }
+  .refinement-bar.refinement-bar--active .refinement-bar__sort-list,
+.refinement-bar.refinement-bar--active .refinement-bar__sort-title {
+    display: none;
+  }
+  .refinement-bar.sort-menu--active .refinements,
+.refinement-bar.sort-menu--active .refinement-bar__filter-title,
+.refinement-bar.sort-menu--active .refinement-bar__footer {
+    display: none;
+  }
+
+  .refinement-bar__head,
+.refinement-bar__footer {
+    position: absolute;
+    width: 100%;
+    background-color: #FFF;
+  }
+
+  [dir="ltr"] .refinement-bar__head,
+[dir="ltr"] .refinement-bar__footer {
+    left: 0;
+  }
+
+  [dir="rtl"] .refinement-bar__head,
+[dir="rtl"] .refinement-bar__footer {
+    right: 0;
+  }
+
+  .refinement-bar__head {
+    top: 2rem;
+  }
+
+  .refinement-bar__head-button {
+    position: absolute;
+    top: -1rem;
+    padding: 1rem;
+  }
+
+  [dir="ltr"] .refinement-bar__head-button {
+    right: 0;
+  }
+
+  [dir="rtl"] .refinement-bar__head-button {
+    left: 0;
+  }
+
+  .refinement-bar__footer {
+    bottom: 0.75rem;
+  }
+
+  [dir="ltr"] .refinement-bar__clear-button {
+    margin-right: 1rem;
+  }
+
+  [dir="rtl"] .refinement-bar__clear-button {
+    margin-left: 1rem;
+  }
+
+  .refinement-bar__body {
+    overflow-y: auto;
+    max-height: 100%;
+    border-top: solid 0.0625rem #E6E6E6;
+  }
+
+  .applied-refinements__list {
+    margin-bottom: 2.25rem;
+  }
+}
+@media (min-width: 64.0625rem) {
+  .feed-view .product-grid__item {
+    -ms-flex-preferred-size: 33.3333333333%;
+        flex-basis: 33.3333333333%;
+    max-width: 33.3333333333%;
+  }
+}
+@supports (display: grid) {
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+  .product-grid.feed-view {
+    grid-template-columns: repeat(1, 100%);
+  }
+  .product-grid .product-grid__item {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto;
+    max-width: none;
+  }
+
+  .product-grid__item--interrupter {
+    grid-column: span 1;
+    grid-column: span var(--interrupter-col-size, 1);
+  }
+
+  .search-results__footer {
+    grid-column: 1/-1;
+  }
+
+  @media (max-width: 47.9375rem) {
+    .feed-view .product-grid__item--interrupter {
+      grid-column: span 1;
+    }
+  }
+  @media (min-width: 48rem) and (max-width: 64rem) {
+    .product-grid {
+      grid-template-columns: repeat(3, 33.3333333333%);
+    }
+    .product-grid.feed-view {
+      grid-template-columns: repeat(2, 50%);
+    }
+  }
+  @media (min-width: 64.0625rem) {
+    .product-grid {
+      grid-template-columns: repeat(4, 25%);
+    }
+    .product-grid.feed-view {
+      grid-template-columns: repeat(3, 33.3333333333%);
+    }
+
+    .product-grid__item--interrupter {
+      grid-row: span 2;
+      grid-row: span var(--interrupter-row-size, 2);
+    }
+  }
+}
+.search-results__content-item:not(:last-child) {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: solid 0.0625rem #E6E6E6;
+}
+
+.refinement-bar__sort-item {
+  display: inline-block;
+}
+
+@media (max-width: 47.9375rem) {
+  .refinement-bar__sort-item-container {
+    margin-bottom: 0.875rem;
+  }
+
+  .refinement-bar__sort-list {
+    margin: 0;
+    padding-top: 2.5rem;
+  }
+}
+@media (min-width: 48rem) {
+  .refinement-bar__sort-item-container {
+    margin-top: 0.5rem;
+  }
+
+  .refinement-bar__sort-list {
+    margin-top: 0.5rem;
+    padding: 1.25rem 0;
+    border-top: solid 0.0625rem #F0F0F0;
+  }
+}
+
+/*# sourceMappingURL=searchMain.css.map*/

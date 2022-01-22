@@ -1,0 +1,297 @@
+/**
+ * TABLE OF CONTENTS
+ *
+ * SETTINGS
+ * Global..................Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins..................Useful mixins.
+ *
+ * COMPONENTS
+ * 
+ * 
+ * MODULES
+ *
+ */
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+/**
+ * Returns the value of the `$key` value of a provided `$map`.
+ */
+/**
+ * Uses `getProperty()` to return a value from the `$colors` map.
+ */
+/**
+ * Uses `getProperty()` to return a value from the `$breakpoints` map.
+ */
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+  #ELEMENT-DEFAULTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #HEADER-DEFAULTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #HORIZONTAL-SPACING
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITIONS
+\*------------------------------------*/
+/*------------------------------------*\
+  #TOOLS
+\*------------------------------------*/
+/**
+ * Responsive Mixin
+ * This mixin is designed for a _cleaner_ first approach
+ * This means that css isn't overridden but rather replaced for
+ * different viewport widths; making it easier to inspect/debug css
+ *
+ * Usage:
+ * @include media-query(exclude-medium)    { ... }
+ * @include media-query(medium-up-to-site) 	   { ... }
+ * ... etc
+ */
+/**
+ * [Adds styles to allow an element's height scale proportionatelly]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ */
+/**
+ * [Calculates the percentage aspect ratio (what % height is compared to the width)]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ * @return {[Number(%)]}
+ */
+/**
+ * *****REMEMBER TO USE MARGIN OR PADDING AND NOT TOP/BOTTOM******
+ * [Calculates the center of an element in relation to a provided width and height.
+ * Useful to place an absolute element at the center of another when
+ * the positioned element cannot be the target's child ]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ * @return {[Number(%)]}
+ */
+/**
+ * [In the  awful case you can't use Flexbox to vertically align something]
+ * @param  {[type]} $transform:       false         [Use transforms to align instead of the absolute trick]
+ * @param  {[type]} $pos:             absolute      [position type]
+ * @param  {[type]} $posAdj:          0             [position adjustment. If $transform is true, this value only affects the 'top' property.]
+ * @param  {[type]} $alignHorizontal: false         [Includes horizontal alignment]
+ */
+/**
+ * Generate Enumerated Class
+ * Iterates from 0 to the specified length and generates classes that set the specified property
+ * @param  {[String]} $classname:       required      [Required: Specify the class name]
+ * @param  {[String]} $property:        $classname    [Optional: Specify the enumerated property (if it's different from the name of the class)]
+ * @param  {[Number]} $length:          10            [Optional: Specify the end of the loop]
+ * @param  {[String]} $units:           null          [Optional: specify units to append to the enumerated property]
+ */
+/**
+* [Strip the pesky units from values]
+* @param  {[Number]} $value
+*/
+/**
+* [Fluid Type]
+*/
+/**
+ * Expose a single property to handle the different text-underline preferences for RTL vs LTR.
+ */
+/**
+ * POSTCSS-RTL/POSTCSS-RTLCSS Has issues parsing inline comments when using production mode, which removes CSS comments.
+ * Using the important comment syntax doesn't seem to work either, as that just results in appending the comment with no functionality.
+ */
+/*------------------------------------*\
+  #EXTERNALS
+\*------------------------------------*/
+.secondary-navigation {
+  position: relative;
+  text-transform: uppercase;
+}
+
+[dir=ltr] .secondary-navigation__item {
+  font-size: 0.75rem;
+}
+[dir=rtl] .secondary-navigation__item {
+  font-size: 0.875rem;
+}
+
+@media (min-width: 48rem) {
+  .secondary-navigation {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+
+  .secondary-navigation__title {
+    margin-bottom: 2.4em;
+  }
+
+  [dir="ltr"] .secondary-navigation__list {
+    margin-left: 1.25em;
+  }
+
+  [dir="rtl"] .secondary-navigation__list {
+    margin-right: 1.25em;
+  }
+
+  .secondary-navigation__item:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+
+  .secondary-navigation__item--extra {
+    margin-top: 2rem;
+  }
+
+  .secondary-navigation__anchor.set--active {
+    color: #1D1C1C;
+    font-weight: 600;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .secondary-navigation {
+    margin-bottom: 2rem;
+  }
+
+  .secondary-navigation__title {
+    margin-bottom: 0.5em;
+  }
+
+  .secondary-navigation__trigger {
+    position: relative;
+    width: 100%;
+    padding: 1rem;
+    border-bottom: solid 0.0625rem #E6E6E6;
+    border-radius: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  [dir="ltr"] .secondary-navigation__trigger {
+    text-align: left;
+  }
+
+  [dir="rtl"] .secondary-navigation__trigger {
+    text-align: right;
+  }
+
+  .secondary-navigation__trigger-icon {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  [dir="ltr"] .secondary-navigation__trigger-icon {
+    right: 1rem;
+  }
+
+  [dir="rtl"] .secondary-navigation__trigger-icon {
+    left: 1rem;
+  }
+  .toggle--active .secondary-navigation__trigger-icon {
+    -webkit-transform: scale(-1);
+            transform: scale(-1);
+  }
+
+  .secondary-navigation__list {
+    z-index: 1;
+    position: absolute;
+    top: calc(100% - 0.0625rem);
+    width: 100%;
+    background-color: #FFF;
+    border-bottom: solid 0.0625rem #E6E6E6;
+  }
+
+  [dir="ltr"] .secondary-navigation__list {
+    left: 0;
+  }
+
+  [dir="rtl"] .secondary-navigation__list {
+    right: 0;
+  }
+  .secondary-navigation__list:not(.toggle--active) {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  .secondary-navigation__item--extra {
+    margin-top: 1rem;
+  }
+
+  .secondary-navigation__anchor {
+    display: block;
+    padding: 1rem;
+  }
+  .secondary-navigation__anchor.set--active {
+    background-color: #F9F9F9;
+    font-weight: 600;
+    color: #1D1C1C;
+  }
+}
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+.cms-page__contents:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+.cms-page__footer {
+  margin-top: 4.875rem;
+}
+
+.cms-page__footer-block-contents {
+  max-width: 32.125rem;
+}
+
+.cms-page__footer-block-heading,
+.cms-page__footer-block-description {
+  margin-bottom: 1em;
+}
+
+.cms-page__footer-block-item:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+@media (min-width: 64.0625rem) {
+  .cms-page__footer-block {
+    padding: 6rem;
+  }
+}
+@media (min-width: 48rem) {
+  .cms-page--group,
+.cms-page--single {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
+}
+@media (max-width: 64rem) {
+  .cms-page__footer-block {
+    padding: 3rem 1rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .cms-page--group,
+.cms-page--single {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cms-page__footer-col:not(:last-child) {
+    margin-bottom: 4.5rem;
+  }
+}
+.news-page img {
+  max-width: none;
+  max-height: none;
+}
+
+/*# sourceMappingURL=cmsMain.css.map*/
