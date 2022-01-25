@@ -1,5 +1,7 @@
-<?php $product = wc_get_product()->get_data(); ?>
-<?php //print_r(wp_get_current_user()); ?>
+<?php
+  $p = wc_get_product();
+  $product = wc_get_product()->get_data(); ?>
+<?php //print_r($product); ?>
 
 <script type="text/javascript">
   //<!--
@@ -26,31 +28,38 @@
                 <span class="breadcrumbs__separator">/</span>
               </li>
               <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                <a class="breadcrumbs__anchor link--secondary" href="/en-us/jewelry/" title="Jewelry">Jewelry</a>
+                <a class="breadcrumbs__anchor link--secondary" href="jewelry/" title="Jewelry">Jewelry</a>
                 <span class="breadcrumbs__separator">/</span>
               </li>
               <li class="breadcrumbs__item flex--inline flex-align-baseline">
                 <a class="breadcrumbs__anchor link--secondary" href="/en-us/jewelry/bracelets/" title="Bracelets">Bracelets</a>
               </li>
+              <?php $p->get_categories() ?>
             </ol>
           </div>
 
           <ul id="pdpCarousel-B6067217" class="product-gallery product-gallery--pdp slider--sm-pre-layout-1 slider--arrows-inner slider--arrows-center slider--dots-inner list--reset slider--flex slider--row" data-slick='{"type": "pdpCarousel"}' data-product-component="image-gallery" aria-label="Product Main Images">
             <li class="product-gallery__col col-12  ">
               <button class="product-gallery__item aspect-ratio--square set--w-100  bg--grey-image" type="button" data-product-component="zoom-trigger">
-                <img src="https://www.siellest.com/wp-content/themes/siellest/assets/dwede7d33e/images/large/637453633438784210-2076647.png?sw=750&amp;sh=750&amp;sm=fit&amp;sfrm=png" class="product-gallery__img component-overlay component-overlay--center object-fit--contain " data-product-component="image" data-image-index="0" alt="Panth&egrave;re de Cartier bracelet, image 1" itemprop="image" />
+                <img src="<?= wp_get_attachment_url($product['image_id']) ?>" class="product-gallery__img component-overlay component-overlay--center object-fit--contain <?= true ? 'full-stretch-image' : '' ?>" data-product-component="image" data-image-index="0" alt="<?= $product['name'] ?>, image 1" itemprop="image" />
               </button>
             </li>
+            <?php
+            foreach ($product['gallery_image_ids'] as $key => $img_id) {
+            ?>
             <li class="product-gallery__col col-12  col-md-6">
               <button class="product-gallery__item aspect-ratio--square set--w-100  bg--grey-image" type="button" data-product-component="zoom-trigger">
-                <img src="https://www.siellest.com/wp-content/themes/siellest/assets/dwef48d6b6/images/large/637453633462847664-2076622.png?sw=750&amp;sh=750&amp;sm=fit&amp;sfrm=png" class="product-gallery__img component-overlay component-overlay--center object-fit--contain " data-product-component="image" data-image-index="1" alt="Panth&egrave;re de Cartier bracelet, image 2" itemprop="image" />
+                <img src="<?= wp_get_attachment_url($img_id) ?>?sw=750&amp;sh=750&amp;sm=fit&amp;sfrm=png" class="product-gallery__img component-overlay component-overlay--center object-fit--contain <?= true ? 'full-stretch-image' : '' ?>" data-product-component="image" data-image-index="1" alt="<?= $product['name'] ?>, image <?= $key + 1 ?>" itemprop="image" />
               </button>
             </li>
-            <li class="product-gallery__col col-12  col-md-6">
+            <?php
+            }
+            ?>
+            <!-- <li class="product-gallery__col col-12  col-md-6">
               <button class="product-gallery__item aspect-ratio--square set--w-100  bg--grey-image" type="button" data-product-component="zoom-trigger">
                 <img src="https://www.siellest.com/wp-content/themes/siellest/assets/dwec31bf36/images/large/637453633487692651-2076648.png?sw=750&amp;sh=750&amp;sm=fit&amp;sfrm=png" class="product-gallery__img component-overlay component-overlay--center object-fit--contain " data-product-component="image" data-image-index="2" alt="Panth&egrave;re de Cartier bracelet, image 3" itemprop="image" />
               </button>
-            </li>
+            </li> -->
           </ul>
           <div class="hidden">
             <li class="product-gallery__col col-12 col-md-6" data-product-component="gallery-item" data-image-template="image-gallery">
@@ -64,7 +73,6 @@
       <div class="fixit-container col-12 col-md-5">
         <div class="pdp-main__details flex flex-direction-col flex-align-center gutter--normal fixit-element" data-fixit-trigger='{"enabled": "small-up", "respondToParent": true, "containedInParent": true, "dynamicOffset": ".header", "useOffsetOnTarget": true}'>
           <div class="pdp-main__section pdp-main__section--name set--w-100">
-
 
             <h1 class="pdp__name heading-type fluid-type--deka-hecto text-line--normal" data-product-component="name">  
               <?= $product['name'] ?>

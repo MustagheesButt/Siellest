@@ -40,6 +40,15 @@ function create_pages()
     if ($rv === 0) return false; 
   }
 
+  // set front page
+  $homepage = get_page_by_title( $pages['homepage-valentines-day']['title'] );
+
+  if ($homepage)
+  {
+    update_option( 'show_on_front', 'page' );
+    update_option( 'page_on_front', $homepage->ID );
+  }
+
   return true;
 }
 

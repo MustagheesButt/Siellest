@@ -97,6 +97,15 @@ function add_terms_to_collection($taxonomy, $obj_type, $args) {
 
 add_action('registered_taxonomy', 'add_terms_to_collection', 10, 3);
 
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+function new_loop_shop_per_page( $cols ) {
+  // $cols contains the current number of products per page based on the value stored on Options –> Reading
+  // Return the number of products you wanna show per page.
+  $cols = 24;
+  return $cols;
+}
+
 /* Extending REST API */
 include 'api.php';
 
