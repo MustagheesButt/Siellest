@@ -7,3 +7,4 @@ TODO
 set permalink structure for WP REST API
 account pages template should not be needed
 create woocommerce categories and attributes
+ - fix subcategories not getting attached correctly

@@ -284,7 +284,7 @@ $pages_content = array(
                 <div class="content-tile__aspect-ratio content-tile__aspect-ratio--natural ">
                   <div class="content-tile__media ">
                     <picture>
-                      <source data-srcset="wp-content/themes/siellest/assets/homepage/hp-valentines-day/CARTIER_SERVICES_1680X1377PX7-min.webp" class="picture--source-element" srcset="homepage/HP-January-2022/CARTIER_SERVICES_1680X1377PX7-min.webp">
+                      <source data-srcset="wp-content/themes/siellest/assets/homepage/hp-valentines-day/CARTIER_SERVICES_1680X1377PX7-min.webp" class="picture--source-element" srcset="wp-content/themes/siellest/assets/homepage/hp-valentines-day/CARTIER_SERVICES_1680X1377PX7-min.webp">
                       <img data-image-component="lazyload" src="wp-content/themes/siellest/assets/homepage/hp-valentines-day/CARTIER_SERVICES_1680X1377PX7-min.webp?sw=40&amp;q=100" class="component-image content-tile__img object-fit--cover blur-up lazyloaded" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; ">
                     </picture>
                   </div>
