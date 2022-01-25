@@ -9,7 +9,9 @@ include 'classes/Nav_Walker.php';
   <meta charset=UTF-8>
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><?= siellest_title() ?></title>
+  <title><?php
+  if (!empty($args['title'])) echo $args['title'];
+  else echo siellest_title(); ?></title>
   <meta name="description" content="Discover <?= get_bloginfo('name') ?>'s unique collections of fine jewelry, watches, bridal sets, accessories and fragrances." />
   <meta name="keywords" content="<?= get_bloginfo('name') ?>" />
   <link rel="icon" type="image/png" href="wp-content/themes/siellest/assets/images/favicons/favicon-196x196.png" sizes="196x196" />

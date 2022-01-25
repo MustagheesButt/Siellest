@@ -17,7 +17,7 @@ wp_insert_post(array(
 
 function create_pages()
 {
-  include 'starter-content-data.php'; // if included outside function, variables wont be in scope for function
+  include 'data-pages.php'; // if included outside function, variables wont be in scope for function
 
   foreach ($pages as $key => $page) {
     // check if already exists
@@ -75,7 +75,30 @@ function create_menus()
 // Product Categories
 function create_product_categories()
 {
- return true;
+  include 'data-product-categories.php';
+
+  foreach ($cats as $key => $value) {
+    $parent = 0;
+    if ($value[1] != 0) {
+      $parent = term_exists($value[1], 'product_cat')['term_id'];
+    }
+
+    wp_insert_term($key, 'product_cat', [
+      'description' => $value[0],
+      'parent' => $parent,
+      'slug' => $value[2]
+    ]);
+  }
+
+  return true;
+}
+
+function create_attribute_collection()
+{
+  // terms are added in add_terms_to_collection callback in functions.php
+  wc_create_attribute(['name' => 'Collection']);
+
+  return true;
 }
 
 // Products

@@ -3,6 +3,7 @@
 function siellest_title()
 {
   $custom_title = get_post_meta(get_the_ID(), 'Title', true);
+
   return !empty($custom_title) ? $custom_title : get_the_title();
 }
 
@@ -83,6 +84,18 @@ function siellest_widget_areas()
 }
 
 add_action('widgets_init', 'siellest_widget_areas');
+
+function add_terms_to_collection($taxonomy, $obj_type, $args) {
+  include 'inc/starter-content/data-collections.php';
+
+  if ($taxonomy == 'pa_collection') {
+    foreach ($collections as $key => $term) {
+      wp_insert_term($term, 'pa_collection');
+    }
+  }
+}
+
+add_action('registered_taxonomy', 'add_terms_to_collection', 10, 3);
 
 /* Extending REST API */
 include 'api.php';

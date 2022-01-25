@@ -136,12 +136,13 @@ function logout()
 /* Admin functions */
 function import_starter_content()
 {
-  include 'inc/import-starter-content.php';
+  include 'inc/starter-content/importer.php';
 
   if (
     create_pages() &&
     create_menus() &&
     create_product_categories() &&
+    create_attribute_collection() &&
     create_products()
   ) {
     // TODO set home to front page

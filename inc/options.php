@@ -5,6 +5,8 @@
     <h2>Starter Content</h2>
     <p>Starter content gives you what you were promised (pages, menus etc). Usually you would want to import starter
       content only once, right after installing and activating the theme.</p>
+    <h3>Requirements</h3>
+    <h4>WooCommerce: <small><?= is_plugin_active('woocommerce/woocommerce.php') ? 'Installed' : 'Missing' ?></small></h4>
     
     <button id="import-starter-content" class="button button-primary">Import Starter Content</button>
   </section>

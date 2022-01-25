@@ -25,7 +25,7 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="/en-us/high-jewelry/emblematic-collections/" id="flyout-HighJewelry_EmblematicCollections" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-1]" aria-label="View High Jewelry: Emblematic Collections" role="tab">
+              <a href="high-jewelry/emblematic-collections/" id="flyout-HighJewelry_EmblematicCollections" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-1]" aria-label="View High Jewelry: Emblematic Collections" role="tab">
                 Emblematic Collections
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -84,7 +84,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/high-jewelry/latest-collections/%28sur%29naturel/" id="flyout-HighJewelry_LatestCollection_SURNATUREL" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "High Jewelry", "secondLevel": "Latest Collections", "thirdLevel": "(SUR)NATUREL"}}' aria-label="View High Jewelry: (SUR)NATUREL">
+                    <a href="high-jewelry/latest-collections/%28sur%29naturel/" id="flyout-HighJewelry_LatestCollection_SURNATUREL" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "High Jewelry", "secondLevel": "Latest Collections", "thirdLevel": "(SUR)NATUREL"}}' aria-label="View High Jewelry: (SUR)NATUREL">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/HJ_SURNATUREL.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="(SUR)NATUREL" alt="(SUR)NATUREL" style="; ; " />
@@ -242,7 +242,7 @@
         <div class="header-flyout__list--sections level-2">
           <ul class="header-flyout__tab-list list--reset puck-container" data-puck-component="container">
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="/en-us/jewelry/all-collections/" id="flyout-Jewelry_AllCollections" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-0]" aria-label="View Jewelry: All Collections" role="tab">
+              <a href="product-category/jewelry/all-collections/" id="flyout-Jewelry_AllCollections" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-0]" aria-label="View Jewelry: All Collections" role="tab">
                 All Collections
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -250,7 +250,7 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="/en-us/jewelry/bracelets/" id="flyout-jewelry_bracelets" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-1]" aria-label="View Jewelry: Bracelets" role="tab">
+              <a href="product-category/jewelry/bracelets/" id="flyout-jewelry_bracelets" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-1]" aria-label="View Jewelry: Bracelets" role="tab">
                 Bracelets
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -258,7 +258,7 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="/en-us/jewelry/rings/" id="flyout-jewelry_rings" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-2]" aria-label="View Jewelry: Rings" role="tab">
+              <a href="product-category/jewelry/rings/" id="flyout-jewelry_rings" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-2]" aria-label="View Jewelry: Rings" role="tab">
                 Rings
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -266,7 +266,7 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="/en-us/jewelry/necklaces/" id="flyout-jewelry_necklaces" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-3]" aria-label="View Jewelry: Necklaces" role="tab">
+              <a href="product-category/jewelry/necklaces/" id="flyout-jewelry_necklaces" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-3]" aria-label="View Jewelry: Necklaces" role="tab">
                 Necklaces
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -274,7 +274,7 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="/en-us/jewelry/earrings/" id="flyout-jewelry_earrings" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-4]" aria-label="View Jewelry: Earrings" role="tab">
+              <a href="product-category/jewelry/earrings/" id="flyout-jewelry_earrings" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-4]" aria-label="View Jewelry: Earrings" role="tab">
                 Earrings
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -282,7 +282,7 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="/en-us/jewelry/engagement-rings/" id="flyout-jewelry_engagementrings" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-5]" aria-label="View Jewelry: Engagement rings" role="tab">
+              <a href="product-category/jewelry/engagement-rings/" id="flyout-jewelry_engagementrings" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-5]" aria-label="View Jewelry: Engagement rings" role="tab">
                 Engagement rings
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -290,7 +290,7 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="/en-us/jewelry/wedding-bands/" id="flyout-jewelry_weddingbands" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-6]" aria-label="View Jewelry: Wedding bands" role="tab">
+              <a href="product-category/jewelry/wedding-bands/" id="flyout-jewelry_weddingbands" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-6]" aria-label="View Jewelry: Wedding bands" role="tab">
                 Wedding bands
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -329,7 +329,7 @@
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
                     <a href="/en-us/jewelry/all-collections/clash-de-cartier/" id="flyout-Jewelry_AllCollection_ClashdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Clash de Cartier"}}' aria-label="View Jewelry: Clash de Cartier">
                       <picture>
-                        <source data-srcset="wp-content/themes/siellest/assets/images/dw5a497cff/JEWELRY_MEGAMENU_COLLECTIONS_CLASH-DE-CARTIER.jpg" class="picture--source-element">
+                        <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_CLASH-DE-CARTIER.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Clash de Cartier" alt="Clash de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
@@ -338,9 +338,9 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/love/" id="flyout-Jewelry_AllCollection_LOVE" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "LOVE"}}' aria-label="View Jewelry: LOVE">
+                    <a href="product-category/jewelry/all-collections/love/" id="flyout-Jewelry_AllCollection_LOVE" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "LOVE"}}' aria-label="View Jewelry: LOVE">
                       <picture>
-                        <source data-srcset="wp-content/themes/siellest/assets/images/dwe28db729/JEWELRY_MEGAMENU_COLLECTIONS_LOVE.jpg" class="picture--source-element">
+                        <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_LOVE.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="LOVE" alt="LOVE" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
@@ -349,9 +349,9 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/trinity/" id="flyout-Jewelry_AllCollection_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
+                    <a href="product-category/jewelry/all-collections/trinity/" id="flyout-Jewelry_AllCollection_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
                       <picture>
-                        <source data-srcset="wp-content/themes/siellest/assets/images/dw8f3feca4/JEWELRY_MEGAMENU_COLLECTIONS_TRINITY.jpg" class="picture--source-element">
+                        <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_TRINITY.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Trinity" alt="Trinity" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
@@ -360,10 +360,10 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/juste-un-clou/" id="flyout-Jewelry_AllCollection__JusteunClou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Juste un Clou"}}' aria-label="View Jewelry: Juste un Clou">
+                    <a href="product-category/jewelry/all-collections/juste-un-clou/" id="flyout-Jewelry_AllCollection__JusteunClou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Juste un Clou"}}' aria-label="View Jewelry: Juste un Clou">
                       <picture>
 
-                        <source data-srcset="wp-content/themes/siellest/assets/images/dw6f3c4398/JEWELRY_MEGAMENU_COLLECTIONS_JUSTE-UN-CLOU.jpg" class="picture--source-element">
+                        <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_JUSTE-UN-CLOU.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Juste un Clou" alt="Juste un Clou" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
@@ -372,9 +372,9 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/panthere-de-cartier/" id="flyout-Jewelry_AllCollection_PantheredeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
+                    <a href="product-category/jewelry/all-collections/panthere-de-cartier/" id="flyout-Jewelry_AllCollection_PantheredeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
                       <picture>
-                        <source data-srcset="wp-content/themes/siellest/assets/images/dw76328169/JEWELRY_MEGAMENU_COLLECTIONS_PANTHERE-DE-CARTIER.jpg" class="picture--source-element">
+                        <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_PANTHERE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re de Cartier" alt="Panth&egrave;re de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
@@ -383,9 +383,9 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/diamond-collection/" id="flyout-Jewelry_Diamond_Collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Diamond collection"}}' aria-label="View Jewelry: Diamond collection">
+                    <a href="product-category/jewelry/all-collections/diamond-collection/" id="flyout-Jewelry_Diamond_Collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Diamond collection"}}' aria-label="View Jewelry: Diamond collection">
                       <picture>
-                        <source data-srcset="wp-content/themes/siellest/assets/images/dw958251cd/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_DIAMOND-COLLECTION.jpg" class="picture--source-element">
+                        <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_DIAMOND-COLLECTION.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Diamond collection" alt="Diamond collection" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
@@ -395,7 +395,7 @@
                   </div>
 
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/ecrou-de-cartier/" id="flyout-Jewelry_AllCollection_EcroudeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
+                    <a href="product-category/jewelry/all-collections/ecrou-de-cartier/" id="flyout-Jewelry_AllCollection_EcroudeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dwbc27f834/JEWELRY_MEGAMENU_COLLECTIONS_ECROU-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ecrou de Cartier" alt="Ecrou de Cartier" style="; ; " />
@@ -406,7 +406,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/cactus-de-cartier/" id="flyout-Jewelry_AllCollection_CactusdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Cactus de Cartier"}}' aria-label="View Jewelry: Cactus de Cartier">
+                    <a href="product-category/jewelry/all-collections/cactus-de-cartier/" id="flyout-Jewelry_AllCollection_CactusdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Cactus de Cartier"}}' aria-label="View Jewelry: Cactus de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dw8aa1d2e7/JEWELRY_MEGAMENU_COLLECTIONS_CACTUS-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cactus de Cartier" alt="Cactus de Cartier" style="; ; " />
@@ -417,7 +417,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/amulette-de-cartier/" id="flyout-Jewelry_AllCollection_AmulettedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Amulette de Cartier"}}' aria-label="View Jewelry: Amulette de Cartier">
+                    <a href="product-category/jewelry/all-collections/amulette-de-cartier/" id="flyout-Jewelry_AllCollection_AmulettedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Amulette de Cartier"}}' aria-label="View Jewelry: Amulette de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dwcc433b8b/MegaMenu/MEGAMENU_AMULETTE_02272021.png" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Amulette de Cartier" alt="Amulette de Cartier" style="; ; " />
@@ -428,7 +428,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/jewelry-for-men/" id="flyout-Jewelry_allcollection_ForMen" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Jewelry for men"}}' aria-label="View Jewelry: Jewelry for men">
+                    <a href="product-category/jewelry/all-collections/jewelry-for-men/" id="flyout-Jewelry_allcollection_ForMen" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Jewelry for men"}}' aria-label="View Jewelry: Jewelry for men">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dw39fe6050/JEWELRY_MEGAMENU_BRACELETS_JEWELRY-FOR-MEN.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Jewelry for men" alt="Jewelry for men" style="; ; " />
@@ -439,7 +439,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/caresse-dorchidees-de-cartier/" id="flyout-Jewelry_AllCollection_CaressedOrchideesdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
+                    <a href="product-category/jewelry/all-collections/caresse-dorchidees-de-cartier/" id="flyout-Jewelry_AllCollection_CaressedOrchideesdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dw504ccab4/JEWELRY_MEGAMENU_NECKLACES_CARESSES-DORCHIDEES.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Caresse d'Orchid&eacute;es de Cartier" alt="Caresse d'Orchid&eacute;es de Cartier" style="; ; " />
@@ -450,7 +450,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/c-de-cartier/" id="flyout-Jewerly_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
+                    <a href="product-category/jewelry/all-collections/c-de-cartier/" id="flyout-Jewerly_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dwb591d393/JEWELRY_MEGAMENU_NECKLACES_C-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="C de Cartier" alt="C de Cartier" style="; ; " />
@@ -461,7 +461,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/agrafe/" id="flyout-Jewelry_Agrafe" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Agrafe"}}' aria-label="View Jewelry: Agrafe">
+                    <a href="product-category/jewelry/all-collections/agrafe/" id="flyout-Jewelry_Agrafe" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Agrafe"}}' aria-label="View Jewelry: Agrafe">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dw9191646b/JEWELRY_MEGAMENU_COLLECTIONS_MAILLON-PANTHERE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Agrafe" alt="Agrafe" style="; ; " />
@@ -472,7 +472,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/cartier-fauna-%26-flora/" id="flyout-Jewelry_Cartier_Fauna" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Cartier Fauna &amp; Flora"}}' aria-label="View Jewelry: Cartier Fauna &amp; Flora">
+                    <a href="product-category/jewelry/all-collections/cartier-fauna-%26-flora/" id="flyout-Jewelry_Cartier_Fauna" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Cartier Fauna &amp; Flora"}}' aria-label="View Jewelry: Cartier Fauna &amp; Flora">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dw0aa405ba/JEWELRY_MEGAMENU_EARRINGS_CARTIER_FAUNA-FLORA.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Fauna &amp; Flora" alt="Cartier Fauna &amp; Flora" style="; ; " />
@@ -483,7 +483,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/links-and-chains/" id="flyout-Jewelry_Links_and_Chains" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Links and Chains"}}' aria-label="View Jewelry: Links and Chains">
+                    <a href="product-category/jewelry/all-collections/links-and-chains/" id="flyout-Jewelry_Links_and_Chains" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Links and Chains"}}' aria-label="View Jewelry: Links and Chains">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dwa65ed691/JEWELRY_MEGAMENU_NECKLACES_LINKS-AND-CHAINS.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Links and Chains" alt="Links and Chains" style="; ; " />
@@ -494,7 +494,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/hearts-and-symbols/" id="flyout-Jewelry_Hearts_and_Symbols" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Hearts and Symbols"}}' aria-label="View Jewelry: Hearts and Symbols">
+                    <a href="product-category/jewelry/all-collections/hearts-and-symbols/" id="flyout-Jewelry_Hearts_and_Symbols" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Hearts and Symbols"}}' aria-label="View Jewelry: Hearts and Symbols">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/dwf6643c24/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_HEARTS-AND-SYMBOLS-1.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Hearts and Symbols" alt="Hearts and Symbols" style="; ; " />
@@ -506,7 +506,7 @@
                   </div>
                 </div>
                 <div class="header-flyout__tab-viewall level-3">
-                  <a href="/en-us/jewelry/all-collections/" id="flyout-Jewelry_AllCollections--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View All Collections">
+                  <a href="product-category/jewelry/all-collections/" id="flyout-Jewelry_AllCollections--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View All Collections">
                     View All Collections
                   </a>
                 </div>
