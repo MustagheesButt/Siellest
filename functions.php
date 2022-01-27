@@ -50,10 +50,13 @@ function siellest_register_styles()
   wp_enqueue_style('siellest-style', get_template_directory_uri() . "/style.css", array(), $version, 'all');
 
   $post_name = get_post()->post_name; // slug
-  if ($post_name === 'account') {
+  if ( in_array($post_name, ['account', 'wishlist']) ) {
     wp_enqueue_style('siellest-account', get_template_directory_uri() . "/assets/css/accountMain.css", array('siellest-global'), $version, 'all');
   } else if ($post_name === 'contact-customer-care') {
     wp_enqueue_style('siellest-account', get_template_directory_uri() . "/assets/css/contactUsMain.css", array('siellest-global'), $version, 'all');
+  }
+  if ($post_name === 'wishlist') {
+    wp_enqueue_style('siellest-login', get_template_directory_uri() . "/assets/css/loginMain.css", array('siellest-global'), $version, 'all');
   }
 }
 
@@ -97,14 +100,31 @@ function add_terms_to_collection($taxonomy, $obj_type, $args) {
 
 add_action('registered_taxonomy', 'add_terms_to_collection', 10, 3);
 
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
-
 function new_loop_shop_per_page( $cols ) {
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
   $cols = 24;
   return $cols;
 }
+add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+
+// function siellest_default_catalog_orderby( $sort_by ) {
+//   echo $sort_by;
+//   return 'price';
+// }
+// add_filter('woocommerce_default_catalog_orderby', 'siellest_default_catalog_orderby');
+
+
+function siellest_custom_product_sorting( $args ) {
+  // Sort alphabetically
+	// if ( isset( $_GET['orderby'] ) && 'title' === $_GET['orderby'] ) {
+    // $args['orderby'] = 'meta_value_num';
+    // $args['meta_key'] = '_price';
+		// $args['order'] = 'asc';
+	// }
+	return $args;
+}
+add_filter( 'woocommerce_get_catalog_ordering_args', 'siellest_custom_product_sorting' );
 
 /* Extending REST API */
 include 'api.php';

@@ -1,72 +1,26 @@
 <?php
 get_header('archive-product', array( 'action' => 'Search-Show', 'title' => single_term_title('', false) ));
 
-// function render_product($product) {
-//   $p_link = $product->get_permalink();
-//   $name = $product->get_name();
-//   $currency = get_woocommerce_currency();
-//   $currency_symbol = get_woocommerce_currency_symbol();
-//   $price = $product->get_price();
-//   $formatted_price = number_format((float)$price, 2);
-//   $img = wp_get_attachment_url( $product->get_image_id() );
-
-//   return "<div class=\"product-grid__item col-6 col-md-3\" data-tracking-context=\"Productlisting\">
-//   <div class=\"product flex flex-grow-1 flex-direction-col\">
-//     <div class=\"product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center\" itemscope itemtype=\"http://schema.org/Product\" data-product-container=\"tile\" data-product-tile data-pid=\"N6715217\" data-tracking-id=\"N6715217\" data-tracking-position>
-
-//       <a class=\"product-tile__anchor\" href=\"$p_link\" data-product-url=\"productShow\" itemprop=\"url\">
-
-//         <div class=\"product-tile__media product-tile__media--default aspect-ratio--square \">
-//           <div class=\"product-tile__media-container component-overlay component-overlay--center\">
-//             <img class=\"product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up set--has-secondary-image full-stretch-image \" data-product-component=\"image\" data-src=\"$img?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png\" data-image-index=\"0\" itemprop=\"image\" alt=\"$name\" title=\"$name\" />
-
-//             <img class=\"product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image\" data-product-component=\"image\" data-src=\"$img?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png\" data-image-index=\"1\" itemprop=\"image\" alt=\"$name\" title=\"$name\" />
-//           </div>
-//         </div>
-//         <div class=\"product-tile__body\">
-//           <p class=\"product-tile__body-section product-tile__name text-line--large heading-type body-type--deci\" itemprop=\"name\">
-//             $name
-//           </p>
-//           <div class=\"product-tile__body-section product-tile__swatches font-family--serif\" data-product-component=\"swatches\">
-//           </div>
-//           <p class=\"product-tile__body-section product-tile__material font-family--serif\">
-//             Yellow gold, tsavorite garnets, onyx
-//           </p>
-//           <div class=\"product-tile__body-section text-line--large font-weight--semibold body-type--deci\">
-//             <div class=\"price flex--inline flex-flow-wrap flex-align-baseline\" data-product-component=\"price\" itemprop=\"offers\" itemscope itemtype=\"http://schema.org/Offer\">
-//               <meta itemprop=\"priceCurrency\" content=\"$currency\" />
-//               <span class=\"price__sales sales\">
-//                 <span class=\"value\" itemprop=\"price\" content=\"$price\">
-//                   $currency_symbol$formatted_price
-//                 </span>
-//             </div>
-//           </div>
-//           <div class=\"body-type--deci\">
-//           </div>
-//         </div>
-//       </a>
-//       <button type=\"button\" class=\"product-tile__wishlist body-type--deka\" title=\"Add to Wish List, Panth&egrave;re de Cartier bracelet\" data-wishlist-trigger=\"heart\" data-wishlist-label-add=\"Add to Wish List, Panth&egrave;re de Cartier bracelet\" data-wishlist-label-remove=\"Remove from Wish List, Panth&egrave;re de Cartier bracelet\">
-//         <svg aria-hidden=\"true\" focusable=\"false\" class=\"icon product-tile__wishlist-add\">
-//           <use xlink:href=\"#icon--heart\" />
-//         </svg>
-//         <svg aria-hidden=\"true\" focusable=\"false\" class=\"icon product-tile__wishlist-remove\">
-//           <use xlink:href=\"#icon--heart-filled\" />
-//         </svg>
-//       </button>
-//       <div class=\"product-tile__overlay flex flex-align-end bg--white\">
-//         <div class=\"product-tile__overlay-actions set--w-100\">
-//           <div class=\"product-tile__quickadd\">
-//             <button type=\"button\" class=\"button button--primary button--small set--w-100\" data-url=\"/on/demandware.store/Sites-CartierUS-Site/en_US/Product-ShowQuickView?pid=N6715217\" data-product-url=\"productShowQuickView\" title=\"Quick View for Panth&egrave;re de Cartier bracelet\" data-quickview-trigger=\"\">
-//               Quick View
-//             </button>
-//           </div>
-//         </div>
-//       </div>
-
-//     </div>
-//   </div>
-//   </div>";
-// }
+function render_product_loop_end($showing, $total)
+{
+  echo "<div class=\"search-results__footer col-12 flex-align-center text-align--center\" data-search-component=\"product-grid-footer\">
+    <div class=\"brand__panther-image image-width__large\">
+      <img class=\"panther-image\" alt=\"cartier\" src=\"wp-content/themes/siellest/assets/images/panthereCartierImageTransparent.webp\" />
+    </div>
+    <p class=\"search-results__footer-count font-family--serif\">
+      Showing $showing of $total items
+    </p>
+    <button type=\"button\" class=\"search-results__footer-cta button button--primary-outline button--fluid set--w-100 \"
+      data-search-component=\"more-products\"
+      data-sort-options=\"{&quot;options&quot;:[{&quot;displayName&quot;:&quot;Price Low To High&quot;,&quot;id&quot;:&quot;price-low-to-high&quot;,&quot;url&quot;:&quot;https://www.siellest.com/wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=price-low-to-high&amp;start=0&amp;sz=24&quot;},{&quot;displayName&quot;:&quot;Price High to Low&quot;,&quot;id&quot;:&quot;price-high-to-low&quot;,&quot;url&quot;:&quot;https://www.siellest.com/wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=price-high-to-low&amp;start=0&amp;sz=24&quot;},{&quot;displayName&quot;:&quot;Recommended&quot;,&quot;id&quot;:&quot;intl-emerch&quot;,&quot;url&quot;:&quot;https://www.siellest.com/wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=intl-emerch&amp;start=0&amp;sz=24&quot;}],&quot;ruleId&quot;:&quot;intl-emerch&quot;,&quot;selectedSortOption&quot;:{&quot;displayName&quot;:&quot;Recommended&quot;,&quot;id&quot;:&quot;intl-emerch&quot;,&quot;url&quot;:&quot;https://www.siellest.com/wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=intl-emerch&amp;start=0&amp;sz=24&quot;}}\"
+      data-page-size=\"24.0\" data-page-number=\"1.0\"
+      data-url=\"wp-json/siellest/Search-UpdateGrid?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;start=24&amp;sz=24\">
+      Load More
+    </button>
+    <input type=\"hidden\" class=\"permalink\" value=\"https://www.siellest.com/product-category/jewelry/all-collections/?prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;start=0&amp;sz=24\" />
+    <input type=\"hidden\" data-cgid value=\"Jewelry_AllCollections\" />
+  </div>";
+}
 ?>
 
 <div class="search-results__main " data-search-component="search-main">
@@ -173,40 +127,46 @@ get_header('archive-product', array( 'action' => 'Search-Show', 'title' => singl
             <div class="">
               <div class="row product-grid feed-view" itemtype="http://schema.org/SomeProducts" itemid="#product" data-search-component="product-grid">
                 <?php
-                  if ( wc_get_loop_prop( 'total' ) ) {
-                    while ( have_posts() ) {
-                      the_post();
-                      
-                      /**
-                       * Hook: woocommerce_shop_loop.
-                       */
-                      // do_action( 'woocommerce_shop_loop' );
-                      
-                      // wc_get_template_part( 'content', 'product' );
-                      global $product;
-                      echo render_product($product);
-                    }
-                  }
-                  // woocommerce_product_loop_end();
-                ?>
+                  $args = array(
+                    'paged' => 1,
+                    'limit' => 24,
+                    'category' => ['Jewelry'],
+                    'orderby' => 'meta_value_num',
+                    'meta_key' => '_price',
+                    'order' => 'asc'
+                  );
+                  $query = new WC_Product_Query( $args );
                 
-                <div class="search-results__footer col-12 flex-align-center text-align--center" data-search-component="product-grid-footer">
-                  <div class="brand__panther-image image-width__large">
-                    <img class="panther-image" alt="cartier" src="wp-content/themes/siellest/assets/images/panthereCartierImageTransparent.webp" />
-                  </div>
-                  <p class="search-results__footer-count font-family--serif">
-                    Showing 24 of <?= wc_get_loop_prop('total') ?> items
-                  </p>
-                  <button type="button" class="search-results__footer-cta button button--primary-outline button--fluid set--w-100 "
-                    data-search-component="more-products"
-                    data-sort-options="{&quot;options&quot;:[{&quot;displayName&quot;:&quot;Price Low To High&quot;,&quot;id&quot;:&quot;price-low-to-high&quot;,&quot;url&quot;:&quot;https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=price-low-to-high&amp;start=0&amp;sz=24&quot;},{&quot;displayName&quot;:&quot;Price High to Low&quot;,&quot;id&quot;:&quot;price-high-to-low&quot;,&quot;url&quot;:&quot;https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=price-high-to-low&amp;start=0&amp;sz=24&quot;},{&quot;displayName&quot;:&quot;Recommended&quot;,&quot;id&quot;:&quot;intl-emerch&quot;,&quot;url&quot;:&quot;https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=intl-emerch&amp;start=0&amp;sz=24&quot;}],&quot;ruleId&quot;:&quot;intl-emerch&quot;,&quot;selectedSortOption&quot;:{&quot;displayName&quot;:&quot;Recommended&quot;,&quot;id&quot;:&quot;intl-emerch&quot;,&quot;url&quot;:&quot;https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=intl-emerch&amp;start=0&amp;sz=24&quot;}}"
-                    data-page-size="24.0" data-page-number="1.0"
-                    data-url="wp-json/siellest/Search-UpdateGrid?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;start=24&amp;sz=24">
-                    Load More
-                  </button>
-                  <input type="hidden" class="permalink" value="https://www.siellest.com/en-us/jewelry/all-collections/?prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;start=0&amp;sz=24" />
-                  <input type="hidden" data-cgid value="Jewelry_AllCollections" />
-                </div>
+                  $products = $query->get_products();
+                  // $products = wc_products_array_orderby( $products, 'price', 'ASC' );
+
+                  if (true) // true == asc
+                  {
+                    // $x = $products[0];
+                    // unset($products[0]);
+                    // array_push($products, $x);
+                  }
+                  // if ( wc_get_loop_prop( 'total' ) ) {
+                  //   while ( have_posts() ) {
+                  //     the_post();
+                      
+                  //     /**
+                  //      * Hook: woocommerce_shop_loop.
+                  //      */
+                  //     // do_action( 'woocommerce_shop_loop' );
+                      
+                  //     // wc_get_template_part( 'content', 'product' );
+                  //     global $product;
+                  //     echo render_product($product);
+                  //   }
+                  // }
+                  // woocommerce_product_loop_end();
+
+                  foreach ( $products as $product ) {
+                    echo SiellestHelper::render_product($product);
+                  }
+                  render_product_loop_end(24, wc_get_loop_prop('total'));
+                ?>
               </div>
             </div>
           </div>

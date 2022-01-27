@@ -36,7 +36,7 @@ include 'classes/Nav_Walker.php';
       <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-577SDR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
     </noscript> -->
 
-  <div class="page page--homepage-eoy2021" data-action="<?= $args['action'] ?>" data-querystring="" data-page-motion>
+  <div class="page" data-action="<?= $args['action'] ?>" data-querystring="" data-page-motion>
     <a href="#main" class="header__skip-to-main button button--primary button--small body-type--deci" role="button" aria-label="Skip to main content" title="Skip to main content" data-window-scroll='{"target": "#main", "offset": ".header"}'>
       Skip to main content
     </a>

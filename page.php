@@ -1,11 +1,14 @@
 <?php
-get_header();
+$post_name = get_post()->post_name;
+$pages = array_diff( scandir(getcwd() . '/wp-content/themes/siellest/inc/pages/'), array('.', '..') );
+
+$actions = [ 'wishlist' => 'Wishlist-Show'];
+
+get_header('', [ 'action' => $actions[$post_name] ]);
 ?>
 
 <main id="main" class="main <?= get_post_meta(get_the_ID(), 'container_classes', true) ?>" role="main">
     <?php
-    $post_name = get_post()->post_name;
-    $pages = array_diff( scandir(getcwd() . '/wp-content/themes/siellest/inc/pages/'), array('.', '..') );
 
     if (in_array("{$post_name}.php", $pages))
     {

@@ -14,7 +14,7 @@
       <div id="refinement-available-online" class="refinement__content ">
         <ol class="refinement__available-online list--reset">
           <li class="refinement__boolean-item  ">
-            <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=isSellable&amp;prefv1=true&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-true" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+            <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=isSellable&amp;prefv1=true&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-true" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
               <span class="body-type--centi link--underline-hover" aria-hidden="true">
                 Available Online
               </span>
@@ -35,107 +35,32 @@
           </svg>
         </button>
         <div id="refinement-category" class="refinement__content ">
+          <?php $id = get_queried_object_id();
+            $terms = get_terms([
+              'taxonomy'    => 'product_cat',
+              'hide_empty'  => false,
+              'parent'      => $id
+            ]);
+          ?>
           <ol class="refinement__category list--reset">
-            <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=BRACELETS&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-BRACELETS" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+            <?php
+              $count = 0;
+              foreach($terms as $term) {
+                $count++;
+            ?>
+            <li class="refinement__boolean-item <?= $count >= 5 ? 'hidden' : '' ?>" <?= $count >= 5 ? 'data-refinement-hide' : '' ?>>
+              <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=<?= $term->name ?>&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-<?= $term->name ?>" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
                 <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  BRACELETS
+                  <?= $term->name ?>
                 </span>
                 <span class="sr-only selected-assistive-text">
-                  Refine by Category: BRACELETS
+                  Refine by Category: <?= $term->name ?>
                 </span>
               </a>
             </li>
-            <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=BROOCHES&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-BROOCHES" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  BROOCHES
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: BROOCHES
-                </span>
-              </a>
-            </li>
-            <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=EARRINGS&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-EARRINGS" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  EARRINGS
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: EARRINGS
-                </span>
-              </a>
-            </li>
-            <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=NECKLACES&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-NECKLACES" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  NECKLACES
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: NECKLACES
-                </span>
-              </a>
-            </li>
-            <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=PENDANTS&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-PENDANTS" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  PENDANTS
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: PENDANTS
-                </span>
-              </a>
-            </li>
-            <li class="refinement__boolean-item  hidden" data-refinement-hide>
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=RINGS&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-RINGS" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  RINGS
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: RINGS
-                </span>
-              </a>
-            </li>
-            <li class="refinement__boolean-item  hidden" data-refinement-hide>
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=CUFFLINKS&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-CUFFLINKS" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  CUFFLINKS
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: CUFFLINKS
-                </span>
-              </a>
-            </li>
-            <li class="refinement__boolean-item  hidden" data-refinement-hide>
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=ENGAGEMENT%20RINGS&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-ENGAGEMENT RINGS" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  ENGAGEMENT RINGS
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: ENGAGEMENT RINGS
-                </span>
-              </a>
-            </li>
-            <li class="refinement__boolean-item  hidden" data-refinement-hide>
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=PRODUCTCATEGORYJEWELRY&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Jewelry" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  Jewelry
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: Jewelry
-                </span>
-              </a>
-            </li>
-            <li class="refinement__boolean-item  hidden" data-refinement-hide>
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=PRODUCTCATEGORYWATCHES&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-Watches" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-                <span class="body-type--centi link--underline-hover" aria-hidden="true">
-                  Watches
-                </span>
-                <span class="sr-only selected-assistive-text">
-                  Refine by Category: Watches
-                </span>
-              </a>
-            </li>
+            <?php
+              }
+            ?>
             <li data-refinement-show-more-container>
               <button type="button" data-refinement-show-more="true" class="toggleRefineViewCount link link--secondary">More</button>
             </li>
@@ -154,7 +79,7 @@
         <div id="refinement-gender" class="refinement__content ">
           <ol class="refinement__gender list--reset">
             <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=gender&amp;prefv1=For%20Her&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-For Her" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+              <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=gender&amp;prefv1=For%20Her&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-For Her" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
                 <span class="body-type--centi link--underline-hover" aria-hidden="true">
                   For Her
                 </span>
@@ -164,7 +89,7 @@
               </a>
             </li>
             <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=gender&amp;prefv1=For%20Him&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-For Him" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+              <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=gender&amp;prefv1=For%20Him&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-For Him" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
                 <span class="body-type--centi link--underline-hover" aria-hidden="true">
                   For Him
                 </span>
@@ -174,7 +99,7 @@
               </a>
             </li>
             <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=gender&amp;prefv1=For%20Children&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-For Children" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+              <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=gender&amp;prefv1=For%20Children&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-For Children" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
                 <span class="body-type--centi link--underline-hover" aria-hidden="true">
                   For Children
                 </span>
@@ -199,7 +124,7 @@
           <ol class="refinement__collection list--reset">
 
             <li class="refinement__boolean-item  ">
-              <a href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=collection&amp;prefv1=AMULETTE%20DE%20CARTIER&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-AMULETTE DE CARTIER" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+              <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=collection&amp;prefv1=AMULETTE%20DE%20CARTIER&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-AMULETTE DE CARTIER" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
                 <span class="body-type--centi link--underline-hover" aria-hidden="true">
                   AMULETTE DE CARTIER
                 </span>

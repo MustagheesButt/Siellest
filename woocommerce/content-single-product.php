@@ -14,7 +14,7 @@
   // -->
 </script>
 <div class="pdp" itemscope itemtype="http://schema.org/Product" data-page-motion>
-  <div class="pdp-main max-width--large" data-product-container="pdp" data-pid="B6067217" data-product-querystring="pid=B6067217">
+  <div class="pdp-main max-width--large" data-product-container="pdp" data-pid="<?= $product['id'] ?>" data-product-querystring="pid=<?= $product['id'] ?>">
 
     <div class="row flex-no-gutters">
 
