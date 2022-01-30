@@ -4,11 +4,15 @@ include 'country-options.php';
 $pages = [
   'homepage-eoy2021' => [
     'title' => 'homepage-eoy2021',
-    'meta-title' => 'Siellest® Official Website - Jeweler and Watchmaker since 1847'
+    'meta' => [
+      'Title' => 'Siellest® Official Website - Jeweler and Watchmaker since 1847'
+    ]
   ],
   'homepage-valentines-day' => [
     'title' => 'homepage-valentines-day',
-    'meta-title' => 'Siellest® Official Website - Jeweler and Watchmaker since 1847'
+    'meta' => [
+      'Title' => 'Siellest® Official Website - Jeweler and Watchmaker since 1847'
+    ]
   ],
 
   'contact-customer-care' => [
@@ -19,6 +23,29 @@ $pages = [
   ],
   'your-purchase-concierge' => [
     'title' => 'Your Purchase Concierge'
+  ],
+  'gifts' => [
+    'title' => 'Gifts'
+  ],
+
+  'wishlist' => [
+    'title' => 'Wishlist',
+    'meta' => [ // custom fields
+      'Title' => 'My Account - My Wish List',
+      'action' => 'Wishlist-Show'
+    ]
+  ],
+  'cart' => [
+    'title' => 'Cart',
+    'meta' => [
+      'Title' => 'Shopping Bag'
+    ]
+  ],
+  'checkout' => [
+    'title' => 'Checkout',
+    'meta' => [
+      'action' => 'Checkout-Begin'
+    ]
   ]
 ];
 

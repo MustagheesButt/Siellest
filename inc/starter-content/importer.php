@@ -24,8 +24,8 @@ function create_pages()
     if ( count(get_posts(array( 'name' => $key, 'post_type' => 'page' ))) > 0 )
       continue;
 
-    $custom_fields = array();
-    if (!empty($page['meta-title'])) $custom_fields['Title'] = $page['meta-title'];
+    $custom_fields = [];
+    if (!empty($page['meta'])) $custom_fields = $page['meta'];
 
     $rv = wp_insert_post(array(
       'post_title' => $page['title'],
@@ -35,9 +35,21 @@ function create_pages()
       'post_name' => $key,
       'page_template' => '',
       'meta_input' => $custom_fields
-    ));
+    ), true);
 
-    if ($rv === 0) return false; 
+    if (is_wp_error($rv)) return false;
+  }
+
+  // set meta values
+  $keys_for_meta_pages = ['wishlist', 'cart'];
+  foreach ($keys_for_meta_pages as $name) {
+    $page = get_posts(array( 'name' => $name, 'post_type' => 'page' ))[0];
+    $id = $page->ID;
+
+    if ($page->post_name === $name) {
+      foreach ($pages[$name]['meta'] as $key => $value)
+        $rv = update_post_meta($id, $key, $value);
+    }
   }
 
   // set front page

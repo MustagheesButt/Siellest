@@ -43,6 +43,31 @@ function siellest_menus()
 
 add_action('init', 'siellest_menus');
 
+// Enable admin search using custom field: ext_url
+function siellest_request_query( $query_vars ) {
+	global $typenow;
+	global $wpdb;
+	global $pagenow;
+
+	if ( 'product' === $typenow && isset( $_GET['s'] ) && 'edit.php' === $pagenow ) {
+		$search_term            = esc_sql( sanitize_text_field( $_GET['s'] ) );
+		$meta_key               = 'ext_url';
+		$post_types             = array( 'product', 'product_variation' );
+		$search_results         = $wpdb->get_results(
+			$wpdb->prepare(
+				"SELECT DISTINCT posts.ID as product_id, posts.post_parent as parent_id FROM {$wpdb->posts} posts LEFT JOIN {$wpdb->postmeta} AS postmeta ON posts.ID = postmeta.post_id WHERE postmeta.meta_key = '{$meta_key}' AND postmeta.meta_value LIKE %s AND posts.post_type IN ('" . implode( "','", $post_types ) . "') ORDER BY posts.post_parent ASC, posts.post_title ASC",
+				'%' . $wpdb->esc_like( $search_term ) . '%'
+			)
+		);
+		$product_ids            = wp_parse_id_list( array_merge( wp_list_pluck( $search_results, 'product_id' ), wp_list_pluck( $search_results, 'parent_id' ) ) );
+		$query_vars['post__in'] = array_merge( $product_ids, $query_vars['post__in'] );
+	}
+
+	return $query_vars;
+}
+
+add_filter( 'request', 'siellest_request_query', 20 );
+
 function siellest_register_styles()
 {
   $version = wp_get_theme()->get('Version');
@@ -57,6 +82,9 @@ function siellest_register_styles()
   }
   if ($post_name === 'wishlist') {
     wp_enqueue_style('siellest-login', get_template_directory_uri() . "/assets/css/loginMain.css", array('siellest-global'), $version, 'all');
+  }
+  if ($post_name === 'checkout') {
+    wp_enqueue_style('siellest-checkout', get_template_directory_uri() . "/assets/css/checkoutMain.css", array('siellest-global'), $version, 'all');
   }
 }
 
@@ -125,6 +153,14 @@ function siellest_custom_product_sorting( $args ) {
 	return $args;
 }
 add_filter( 'woocommerce_get_catalog_ordering_args', 'siellest_custom_product_sorting' );
+
+function change_existing_currency_symbol( $currency_symbol, $currency ) {
+  switch( $currency ) {
+    case 'GBP': $currency_symbol = '£'; break;
+  }
+  return $currency_symbol;
+}
+add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
 
 /* Extending REST API */
 include 'api.php';

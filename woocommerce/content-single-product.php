@@ -3,16 +3,6 @@
   $product = wc_get_product()->get_data(); ?>
 <?php //print_r($product); ?>
 
-<script type="text/javascript">
-  //<!--
-  /* <![CDATA[ (viewProduct-active_data.js) */
-  // dw.ac._capture({
-  //   id: "B6067217",
-  //   type: "detail"
-  // });
-  /* ]]> */
-  // -->
-</script>
 <div class="pdp" itemscope itemtype="http://schema.org/Product" data-page-motion>
   <div class="pdp-main max-width--large" data-product-container="pdp" data-pid="<?= $product['id'] ?>" data-product-querystring="pid=<?= $product['id'] ?>">
 
@@ -55,11 +45,6 @@
             <?php
             }
             ?>
-            <!-- <li class="product-gallery__col col-12  col-md-6">
-              <button class="product-gallery__item aspect-ratio--square set--w-100  bg--grey-image" type="button" data-product-component="zoom-trigger">
-                <img src="https://www.siellest.com/wp-content/themes/siellest/assets/dwec31bf36/images/large/637453633487692651-2076648.png?sw=750&amp;sh=750&amp;sm=fit&amp;sfrm=png" class="product-gallery__img component-overlay component-overlay--center object-fit--contain " data-product-component="image" data-image-index="2" alt="Panth&egrave;re de Cartier bracelet, image 3" itemprop="image" />
-              </button>
-            </li> -->
           </ul>
           <div class="hidden">
             <li class="product-gallery__col col-12 col-md-6" data-product-component="gallery-item" data-image-template="image-gallery">

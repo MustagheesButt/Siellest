@@ -1,0 +1,600 @@
+/**
+ * TABLE OF CONTENTS
+ *
+ * SETTINGS
+ * Global..................Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins..................Useful mixins.
+ *
+ * COMPONENTS
+ * 
+ * 
+ * MODULES
+ *
+ */
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+/**
+ * Returns the value of the `$key` value of a provided `$map`.
+ */
+/**
+ * Uses `getProperty()` to return a value from the `$colors` map.
+ */
+/**
+ * Uses `getProperty()` to return a value from the `$breakpoints` map.
+ */
+/*------------------------------------*\
+  #TYPOGRAPHY
+\*------------------------------------*/
+/*------------------------------------*\
+  #COLORS
+\*------------------------------------*/
+/*------------------------------------*\
+  #ELEMENT-DEFAULTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #HEADER-DEFAULTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #HORIZONTAL-SPACING
+\*------------------------------------*/
+/*------------------------------------*\
+  #BREAKPOINTS
+\*------------------------------------*/
+/*------------------------------------*\
+  #TRANSITIONS
+\*------------------------------------*/
+/*------------------------------------*\
+  #TOOLS
+\*------------------------------------*/
+/**
+ * Responsive Mixin
+ * This mixin is designed for a _cleaner_ first approach
+ * This means that css isn't overridden but rather replaced for
+ * different viewport widths; making it easier to inspect/debug css
+ *
+ * Usage:
+ * @include media-query(exclude-medium)    { ... }
+ * @include media-query(medium-up-to-site) 	   { ... }
+ * ... etc
+ */
+/**
+ * [Adds styles to allow an element's height scale proportionatelly]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ */
+/**
+ * [Calculates the percentage aspect ratio (what % height is compared to the width)]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ * @return {[Number(%)]}
+ */
+/**
+ * *****REMEMBER TO USE MARGIN OR PADDING AND NOT TOP/BOTTOM******
+ * [Calculates the center of an element in relation to a provided width and height.
+ * Useful to place an absolute element at the center of another when
+ * the positioned element cannot be the target's child ]
+ * @param  {[Number]} $width
+ * @param  {[Number]} $height
+ * @return {[Number(%)]}
+ */
+/**
+ * [In the  awful case you can't use Flexbox to vertically align something]
+ * @param  {[type]} $transform:       false         [Use transforms to align instead of the absolute trick]
+ * @param  {[type]} $pos:             absolute      [position type]
+ * @param  {[type]} $posAdj:          0             [position adjustment. If $transform is true, this value only affects the 'top' property.]
+ * @param  {[type]} $alignHorizontal: false         [Includes horizontal alignment]
+ */
+/**
+ * Generate Enumerated Class
+ * Iterates from 0 to the specified length and generates classes that set the specified property
+ * @param  {[String]} $classname:       required      [Required: Specify the class name]
+ * @param  {[String]} $property:        $classname    [Optional: Specify the enumerated property (if it's different from the name of the class)]
+ * @param  {[Number]} $length:          10            [Optional: Specify the end of the loop]
+ * @param  {[String]} $units:           null          [Optional: specify units to append to the enumerated property]
+ */
+/**
+* [Strip the pesky units from values]
+* @param  {[Number]} $value
+*/
+/**
+* [Fluid Type]
+*/
+/**
+ * Expose a single property to handle the different text-underline preferences for RTL vs LTR.
+ */
+/**
+ * POSTCSS-RTL/POSTCSS-RTLCSS Has issues parsing inline comments when using production mode, which removes CSS comments.
+ * Using the important comment syntax doesn't seem to work either, as that just results in appending the comment with no functionality.
+ */
+/*------------------------------------*\
+  #EXTERNALS
+\*------------------------------------*/
+.store-locator__detect-location {
+  margin-top: 0.5rem;
+}
+
+.store-locator__result-content {
+  display: block;
+}
+.store-locator__result-content:hover {
+  cursor: pointer;
+}
+.store-locator__result-content:hover .store-details__name {
+  text-decoration: underline;
+}
+
+.store-locator__form {
+  margin: 2rem 0 3rem;
+}
+
+.store-locator__results,
+.store-locator__results--extended {
+  overflow: auto;
+}
+
+.store-locator__result-item {
+  position: relative;
+}
+
+.store-locator__no-results {
+  margin: auto;
+}
+
+.store-locator__actions {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.store-locator__result-item--extended:not(:last-child) {
+  margin-bottom: 3.5rem;
+}
+
+.store-details--extended .store-details__name {
+  margin-bottom: 1rem;
+}
+.store-details--extended .store-details__section:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+.store-details--extended .store-details__availability-indicator {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 1.25rem;
+}
+
+[dir="ltr"] .store-details--extended .store-details__availability-indicator {
+  margin-right: 0.5rem;
+}
+
+[dir="rtl"] .store-details--extended .store-details__availability-indicator {
+  margin-left: 0.5rem;
+}
+
+.store-locator--product-availability .store-locator__contact-form {
+  display: none;
+  margin-bottom: 1.5rem;
+  max-width: 23.5rem;
+}
+.store-locator--product-availability.set--show-form .store-locator__contact-form {
+  display: block;
+}
+.store-locator--product-availability.set--show-form .store-details--extended:not(.set--show-form) {
+  display: none;
+}
+.store-locator--product-availability.set--show-form .store-locator__query-section-wrapper {
+  display: none;
+}
+.store-locator--product-availability .store-details__hidden-actions {
+  display: none;
+  margin-bottom: 2rem;
+}
+.store-locator--product-availability .store-details__contact-description {
+  margin-top: 3.25rem;
+}
+.store-locator--product-availability .store-details--extended.set--show-form .store-details__check-availability {
+  display: none;
+}
+.store-locator--product-availability .store-details--extended.set--show-form .store-details__hidden-actions {
+  display: block;
+}
+.store-locator--product-availability .store-details__hours {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+}
+.store-locator--product-availability .store-details__hours-day {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 6.25rem;
+          flex: 0 0 6.25rem;
+}
+
+.store-locator--store-pickup .store-details__name,
+.store-locator--store-pickup .store-details__address {
+  margin-bottom: 1rem;
+}
+
+.store-locator--store-pickup .store-locator__result-details-cta {
+  margin-top: 0.35rem;
+}
+
+[dir="ltr"] .store-locator--store-pickup .store-locator__result-details-cta {
+  margin-left: 2.2rem;
+}
+
+[dir="rtl"] .store-locator--store-pickup .store-locator__result-details-cta {
+  margin-right: 2.2rem;
+}
+.store-locator--store-pickup .store-locator__result-item:not(:last-child) {
+  margin-bottom: 3rem;
+}
+
+[dir="ltr"] .store-details__delivery-value {
+  margin-left: 1.5rem;
+}
+
+[dir="rtl"] .store-details__delivery-value {
+  margin-right: 1.5rem;
+}
+
+.store-details--extended-modal .store-details__main {
+  margin-bottom: 4rem;
+}
+.store-details--extended-modal .store-details__name {
+  margin-bottom: 0.5rem;
+}
+.store-details--extended-modal .store-details__section:not(:last-child) {
+  margin-bottom: 2.25rem;
+}
+.store-details--extended-modal .store-details__section-title {
+  margin-bottom: 0.65rem;
+}
+.store-details--extended-modal .store-details__hours-row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.store-details--extended-modal .store-details__hours-row:not(:last-child) {
+  margin-bottom: 0.5em;
+  padding-bottom: 0.5em;
+  border-bottom: solid 0.0625rem #F0F0F0;
+}
+.store-details--extended-modal .store-details__hours-day {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 4.875rem;
+          flex: 0 0 4.875rem;
+}
+
+@media (min-width: 48rem) {
+  [dir="ltr"] .store-locator--product-availability .store-locator__contents {
+    padding-left: 2.5rem;
+  }
+
+  [dir="rtl"] .store-locator--product-availability .store-locator__contents {
+    padding-right: 2.5rem;
+  }
+  .store-locator--product-availability .store-details__action-cta {
+    min-width: 15rem;
+  }
+
+  .store-locator__results {
+    max-height: 30rem;
+  }
+
+  .store-locator__results--extended {
+    max-height: 65vh;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .store-locator--product-availability .store-locator__contents {
+    margin-top: 3.75rem;
+  }
+
+  .store-locator--store-pickup .store-locator__title {
+    margin-bottom: 1.5rem;
+  }
+  .store-locator--store-pickup .store-locator__form-group:not(:last-child) {
+    margin-bottom: 1.75rem;
+  }
+  .store-locator--store-pickup .store-locator__no-results {
+    text-align: center;
+  }
+
+  .store-locator__results {
+    max-height: 22rem;
+  }
+}
+.personalisation__gift-option-content:not(.toggle--active) {
+  display: none;
+}
+
+.personalisation__card {
+  -webkit-box-shadow: 0 0 0.25rem 0.0625rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 0.25rem 0.0625rem rgba(0, 0, 0, 0.1);
+}
+
+.personalisation__card-logo {
+  display: inline-block;
+  width: 8.25rem;
+  height: 2.4rem;
+  margin-bottom: 2.5rem;
+}
+
+.personalisation__card-textarea {
+  border-color: #E6E6E6;
+  text-align: inherit;
+}
+
+.personalisation__img--engraving {
+  max-height: 25rem;
+  max-width: 20rem;
+}
+
+@media (min-width: 48rem) {
+  .personalisation__card {
+    padding: 1.5rem 4.375rem 3.125rem;
+  }
+
+  [dir="ltr"] .personalisation__padded-container {
+    padding-right: 1.5rem;
+  }
+
+  [dir="rtl"] .personalisation__padded-container {
+    padding-left: 1.5rem;
+  }
+
+  .personalisation__cta-save {
+    max-width: 23.75rem;
+  }
+
+  .personalisation__cta-cancel {
+    max-width: 10.875rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .personalisation__card {
+    padding: 1.5rem 1.75rem 3.25rem;
+  }
+
+  .personalisation__img-col {
+    margin-bottom: 1.5rem;
+  }
+}
+.order-summary {
+  padding-top: 2rem;
+}
+
+.order-summary__header {
+  padding-bottom: 0.85rem;
+}
+
+.order-summary__products {
+  margin-bottom: 1rem;
+}
+
+.order-summary__totals {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  border: solid 0.0625rem;
+}
+
+.order-summary__user-acknowledgement {
+  margin-bottom: 1.625rem;
+}
+
+@media (min-width: 48rem) {
+  .order-summary {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #F9F9F9;
+  }
+
+  .order-summary__header {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 auto;
+            flex: 1 0 auto;
+  }
+
+  .order-summary__products {
+    overflow: auto;
+    min-height: 11.75rem;
+    max-height: calc(100vh - 37rem);
+  }
+
+  .order-summary__actions {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .order-summary__actions {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    background-color: #FFF;
+  }
+
+  .order-summary__actions:not(.fixit--active) {
+    z-index: 1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: solid 0.0625rem #E6E6E6;
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+
+  [dir="ltr"] .order-summary__actions:not(.fixit--active) {
+    left: 0;
+  }
+
+  [dir="rtl"] .order-summary__actions:not(.fixit--active) {
+    right: 0;
+  }
+}
+/*------------------------------------*\
+  #COMPONENTS
+\*------------------------------------*/
+.cart {
+  padding-bottom: 2.25rem;
+}
+
+.cart__items-footer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.cart__back-to-shopping {
+  margin-top: 2.75rem;
+}
+
+.cart-error-messaging .feedback-banner {
+  margin-bottom: 1.25rem;
+}
+
+.cart__gift-wrap-arrow {
+  -webkit-transition: -webkit-transform 300ms cubic-bezier(0.4, 0.9, 0.3, 1);
+  transition: -webkit-transform 300ms cubic-bezier(0.4, 0.9, 0.3, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0.9, 0.3, 1);
+  transition: transform 300ms cubic-bezier(0.4, 0.9, 0.3, 1), -webkit-transform 300ms cubic-bezier(0.4, 0.9, 0.3, 1);
+}
+
+[dir="ltr"] .toggle--active .cart__gift-wrap-arrow {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+[dir="rtl"] .toggle--active .cart__gift-wrap-arrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+@media (min-width: 64.0625rem) {
+  [dir="ltr"] .cart__contents {
+    padding-right: 1.5rem;
+  }
+
+  [dir="rtl"] .cart__contents {
+    padding-left: 1.5rem;
+  }
+}
+@media (min-width: 48rem) {
+  .cart {
+    padding-top: 4.75rem;
+  }
+
+  .cart__header {
+    margin-bottom: 1.75rem;
+  }
+
+  [dir="ltr"] .cart__header-count {
+    margin-left: 1.25rem;
+  }
+
+  [dir="rtl"] .cart__header-count {
+    margin-right: 1.25rem;
+  }
+}
+@media (max-width: 47.9375rem) {
+  .cart {
+    padding-top: 1.5rem;
+  }
+
+  .cart__header {
+    margin-bottom: 1.25rem;
+  }
+
+  [dir="ltr"] .cart__header-count {
+    margin-left: 1rem;
+  }
+
+  [dir="rtl"] .cart__header-count {
+    margin-right: 1rem;
+  }
+}
+.cart-coupon {
+  margin-bottom: 2rem;
+}
+.cart-coupon:first-child {
+  margin-top: 2.5rem;
+}
+
+[dir="ltr"] .cart-coupon__remove-action {
+  margin-left: 0.5rem;
+}
+
+[dir="rtl"] .cart-coupon__remove-action {
+  margin-right: 0.5rem;
+}
+
+.cart-promotion {
+  margin-top: 1rem;
+}
+
+[dir="ltr"] .cart-promotion__discount {
+  margin-left: 0.25em;
+}
+
+[dir="rtl"] .cart-promotion__discount {
+  margin-right: 0.25em;
+}
+
+.cart__summary-section:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+.cart__checkout-actions {
+  z-index: 0;
+  position: relative;
+  margin-top: 1.5rem;
+}
+
+.cart__checkout-action:not(:first-child) {
+  margin-top: 1.5rem;
+}
+.cart__checkout-action.button--apple-pay:not(:first-child), .cart__checkout-action.button--apple-pay:hover:not(:first-child), .cart__checkout-action.button--apple-pay:active:not(:first-child) {
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 64rem) {
+  .cart__summary {
+    margin-top: 2rem;
+  }
+}
+.total-list__row:not(:last-child) {
+  margin-bottom: 1.25rem;
+}
+
+.total-list__row--short-spacing:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+.total-list__division {
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.saveforlater {
+  margin-top: 2rem;
+  padding: 1rem;
+  border: solid 0.0625rem #E6E6E6;
+  border-radius: 0.25rem;
+}
+
+.saveforlater__add-to-cart-cta {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 47.9375rem) {
+  .saveforlater__price-qty {
+    margin-top: 1.25rem;
+  }
+}
+
+/*# sourceMappingURL=cartMain.css.map*/

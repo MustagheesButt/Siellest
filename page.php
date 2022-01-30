@@ -2,9 +2,7 @@
 $post_name = get_post()->post_name;
 $pages = array_diff( scandir(getcwd() . '/wp-content/themes/siellest/inc/pages/'), array('.', '..') );
 
-$actions = [ 'wishlist' => 'Wishlist-Show'];
-
-get_header('', [ 'action' => $actions[$post_name] ]);
+get_header('', [ 'action' => get_post_meta(get_the_ID(), 'action', true) ]);
 ?>
 
 <main id="main" class="main <?= get_post_meta(get_the_ID(), 'container_classes', true) ?>" role="main">

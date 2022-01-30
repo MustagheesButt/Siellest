@@ -1,14 +1,12 @@
 <?php
-// $user = wp_get_current_user();
+$user = wp_get_current_user();
 
 $wishlist = [];
 if (is_user_logged_in()) {
   $wishlist = get_user_meta($user->ID, 'wishlist');
-} else {
-  if (isset($_COOKIE['wishlist']))
-    $wishlist = explode(',', $_COOKIE['wishlist']);
+} else if (isset($_COOKIE['wishlist'])) {
+  $wishlist = explode(',', $_COOKIE['wishlist']);
 }
-
 ?>
 <div class="login login--wishlist max-width--large gutter--small-up-normal">
   <div class="row flex-justify-between">
@@ -23,7 +21,6 @@ if (is_user_logged_in()) {
             <div class="wishlist__saved-count heading-type body-type--deci col-12 col-md-6">
               You have <?= sizeof($wishlist) ?> item saved
             </div>
-
           </div>
           <div class="row">
             <?php
@@ -144,7 +141,7 @@ if (is_user_logged_in()) {
                 </div>
                 <div class="cms-generic-copy">
                   Read the
-                  <a href="https://www.cartier.com/en-us/resources/privacy-policy-template/privacy-policy.html" title="Privacy Policy" target="_blank">
+                  <a href="resources/privacy-policy-template/privacy-policy" title="Privacy Policy" target="_blank">
                     Privacy Policy
                   </a>
                   for further information
@@ -157,7 +154,7 @@ if (is_user_logged_in()) {
           </div>
         </div>
         <div class="login__section-content tab-content__panel " role="tabpanel" data-auth-component="register-tab-wishlist-page">
-          <form action="/on/demandware.store/Sites-CartierUS-Site/en_US/Account-SubmitRegistration?rurl=1" class="registration" method="POST" name="dwfrm_profile" data-ajax-form='{"responseTarget": "[data-auth-component*=register-tab]"}'>
+          <form action="wp-json/siellest/Account-SubmitRegistration?rurl=1" class="registration" method="POST" name="dwfrm_profile" data-ajax-form='{"responseTarget": "[data-auth-component*=register-tab]"}'>
             <p class="form-intro__copy font-family--serif text-line--medium">
               This space allows you to manage your personal information, e-Boutique orders, news updates and newsletter subscriptions.
             </p>
@@ -741,12 +738,12 @@ if (is_user_logged_in()) {
             </div>
             <div class="cms-generic-copy form-group--short-spacing">
               <span>For further information about how we use your personal information, please see our</span>
-              <a href="https://www.cartier.com/en-us/resources/privacy-policy-template/privacy-policy.html" title="Privacy Policy" target="_blank">Privacy Policy</a>
+              <a href="resources/privacy-policy-template/privacy-policy" title="Privacy Policy" target="_blank">Privacy Policy</a>
             </div>
             <div class="form-group--short-spacing form-check">
               <input type="checkbox" class="form-check-input" id="add-to-email-list" name="dwfrm_profile_customer_addtoemaillist" value="true">
               <label class="form-check-label cms-generic-copy" for="add-to-email-list">
-                I would also like to receive marketing information about Cartier’s products or services.
+                I would also like to receive marketing information about Cartier's products or services.
               </label>
               <div class="font-family--serif form-control-disclaimer form-check-description">
                 <div class="content-asset">

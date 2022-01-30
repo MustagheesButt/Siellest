@@ -108,11 +108,13 @@ include 'classes/Nav_Walker.php';
                 <span class="sr-only">Find a Boutique</span>
               </a>
               <div class="header__minicart header__utility-item--reverse-spacing header__utility-item--badged flex set--has-items" data-minicart-component="container">
-                <a class="header__utility-anchor flex flex-align-center link body-type--milli" href="cart" title="View Cart" data-toggle='{"target": "[data-minicart-component=overlay]", "targetFocus": true, "allowEscClose": true, "focusTrap": true}' aria-label="Shopping bag, 1 item in your shopping bag." data-minicart-component="trigger" data-header-component="focus-manager" data-action-url="/Cart-MiniCartShow" data-tracking='{"trackEvent": "header", "trackObject": {"headerLink": "shopping bag"}}' role="button">
+                <a class="header__utility-anchor flex flex-align-center link body-type--milli" href="cart" title="View Cart" data-toggle='{"target": "[data-minicart-component=overlay]", "targetFocus": true, "allowEscClose": true, "focusTrap": true}' aria-label="Shopping bag, 1 item in your shopping bag." data-minicart-component="trigger" data-header-component="focus-manager" data-action-url="wp-json/siellest/Cart-MiniCartShow" data-tracking='{"trackEvent": "header", "trackObject": {"headerLink": "shopping bag"}}' role="button">
                   <svg aria-hidden="true" focusable="false" class="header__minicart-icon icon fluid-type--deka-base">
                     <use xlink:href="#nav--cart" />
                   </svg>
-                  <span class="header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">1</span>
+                  <span class="header__utility-badge header__utility-badge--has-items flex flex-align-center flex-justify-center" data-minicart-component="qty">
+                    <?= WC()->cart->cart_contents_count ?>
+                  </span>
                 </a>
                 <div class="header__minicart-overlay utility-overlay" data-minicart-component="overlay" tabindex="-1" role="dialog" aria-modal="true"></div>
               </div>

@@ -1,5 +1,28 @@
 <?php
-require_once 'classes/Siellest_Helper.php';
+require_once 'classes/Product.php';
+require_once 'classes/Cart.php';
+
+add_filter( 'woocommerce_is_rest_api_request', 'simulate_as_not_rest' );
+/**
+ * We have to tell WC that this should not be handled as a REST request.
+ * Otherwise we can't use the product loop template contents properly.
+ * Since WooCommerce 3.6
+ *
+ * @param bool $is_rest_api_request
+ * @return bool
+ */
+function simulate_as_not_rest( $is_rest_api_request ) {
+	if ( empty( $_SERVER['REQUEST_URI'] ) ) {
+			return $is_rest_api_request;
+	}
+
+	// Bail early if this is not our request.
+	if ( false === strpos( $_SERVER['REQUEST_URI'], 'siellest' ) ) {
+		return $is_rest_api_request;
+	}
+
+	return false;
+}
 
 // TODO if user not logged in, store in cookie
 function get_wishlist()
@@ -30,28 +53,30 @@ function get_wishlist()
 
 function wishlist_addproduct(WP_REST_Request $request)
 {
-//   ini_set('display_errors', 1); 
-// error_reporting(E_ALL);
+  //   ini_set('display_errors', 1); 
+  // error_reporting(E_ALL);
   $user = wp_get_current_user();
   $pid  = $request->get_param('pid');
 
   if (is_user_logged_in()) {
-    add_user_meta($user->id, 'wishlist', $pid);
+    add_user_meta($user->ID, 'wishlist', $pid);
+    $wishlist = get_user_meta($user->ID, 'wishlist');
   } else {
-    if ( isset($_COOKIE['wishlist']) )
+    if (isset($_COOKIE['wishlist']))
       $cookie = $_COOKIE['wishlist'] . ",$pid";
     else
       $cookie = $pid;
 
     setcookie('wishlist', $cookie, time() + (86400 * 30), '/');
+    $wishlist = explode(',', $_COOKIE['wishlist']);
   }
-  
+
   return [
     "action" => "Wishlist-AddProduct",
     "queryString" => "",
     "locale" => "en_US",
     "success" => true,
-    "itemCount" => 1,
+    "itemCount" => sizeof($wishlist),
     "pid" => $pid,
     "msg" => "The product has been added to your wish list."
   ];
@@ -64,12 +89,14 @@ function wishlist_removeproduct(WP_REST_Request $request)
   $pid = $request->get_param('pid');
   $user = wp_get_current_user();
 
-  if (is_user_logged_in())
-    delete_user_meta($user->id, 'wishlist', $pid);
+  if (is_user_logged_in()) {
+    delete_user_meta($user->ID, 'wishlist', $pid);
+    $wishlist = get_user_meta($user->ID, 'wishlist');
+  }
   else {
-    if ( isset($_COOKIE['wishlist']) ) {
+    if (isset($_COOKIE['wishlist'])) {
       $wishlist = explode(',', $_COOKIE['wishlist']);
-      unset($wishlist[ array_search($pid, $wishlist) ]);
+      unset($wishlist[array_search($pid, $wishlist)]);
       setcookie('wishlist', implode(',', $wishlist), time() + (86400 * 30), '/');
     }
   }
@@ -79,12 +106,35 @@ function wishlist_removeproduct(WP_REST_Request $request)
     "queryString" => "pid=$pid",
     "locale" => "en_US",
     "success" => true,
-    "itemCount" => 2, // TODO do we need it?
-    "listIsEmpty" => false,
+    "itemCount" => sizeof($wishlist),
+    "listIsEmpty" => sizeof($wishlist) == 0,
     "type" => "remove",
     "pid" => $pid,
     "emptyWishlistMsg" => "",
     "msg" => "The product has been removed from your wish list."
+  ];
+}
+
+function product_showquickview(WP_REST_Request $request)
+{
+  $product = wc_get_product($request->get_param('pid'));
+
+  return [
+    "action" => "Product-ShowQuickView",
+    "queryString" => "pid=$product->id&quantity=1",
+    "locale" => "en_US",
+    "product" => Product::get_product_data($product),
+    "addToCartUrl" => [],
+    "resources" => [
+      "info_selectforstock" => "Select Styles for Availability",
+      "assistiveSelectedText" => "selected"
+    ],
+    "quickViewFullDetailMsg" => "View Full Details",
+    "closeButtonText" => "Close Quickview Dialog",
+    "enterDialogMessage" => "Start of Quickview dialog window. Select Close to cancel and close the window.",
+    "template" => "product/quickView.isml",
+    "renderedTemplate" => Product::render_quickview($product),
+    "productUrl" => $product->get_permalink()
   ];
 }
 
@@ -126,8 +176,8 @@ function product_zoom(WP_REST_Request $request)
 
   $rendered_html = "";
   foreach ($hi_res as $img) {
-    $rendered_html .= "<div class=\"product-zoom__item aspect-ratio--square\">\n
-    <img src=\"{$img['url']}\" class=\"product-zoom__image component-overlay component-overlay--center object-fit--contain\" data-product-component=\"image-zoom\" data-image-index=\"0\" alt=\"{$product->name}\" itemprop=\"image\" />\n
+    $rendered_html .= "<div class=\"product-zoom__item aspect-ratio--square\">
+    <img src=\"{$img['url']}\" class=\"product-zoom__image component-overlay component-overlay--center object-fit--contain\" data-product-component=\"image-zoom\" data-image-index=\"0\" alt=\"{$product->name}\" itemprop=\"image\" />
   </div>";
   }
 
@@ -139,10 +189,13 @@ function product_zoom(WP_REST_Request $request)
       "hi-res" => $hi_res
     ),
     "startindex" => $start_index,
-    "renderedTemplate" => "\n\n<p class=\"product-zoom__label heading-type body-type font-weight--normal text-align--center set--w-100\">\n    Zoom\n</p>\n
-          <div id=\"pdpZoom-null\" class=\"product-zoom flex set--w-100 bg--grey-1\" data-slick='{\"type\": \"zoomCarousel\", \"initialSlide\": {$start_index}}' data-product-component=\"image-gallery\" role=\"listbox\">\n
-            $rendered_html
-          </div>\n"
+    "renderedTemplate" => "
+      <p class=\"product-zoom__label heading-type body-type font-weight--normal text-align--center set--w-100\">
+        Zoom
+      </p>
+      <div id=\"pdpZoom-null\" class=\"product-zoom flex set--w-100 bg--grey-1\" data-slick='{\"type\": \"zoomCarousel\", \"initialSlide\": {$start_index}}' data-product-component=\"image-gallery\" role=\"listbox\">
+        $rendered_html
+      </div>"
   );
 }
 
@@ -198,23 +251,43 @@ function search_updategrid()
 {
   header('Content-Type: text/html');
   $start = $_GET['start'];
+  $category = $_GET['cgid'];
+
   $args = array(
     'offset' => $start,
     'limit' => 24,
-    'category' => ['Jewelry'],
+    'paginate' => true,
+    'category' => [$category],
     'orderby' => 'meta_value_num',
     'meta_key' => '_price',
-    'order' => 'asc'
+    'order' => 'asc',
+    'tax_query' => array(
+      // array(
+      //   'taxonomy'      => 'product_cat',
+      //   'field' => 'term_id', //This is optional, as it defaults to 'term_id'
+      //   'terms'         => 26,
+      //   'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
+      // ),
+      // array(
+      //   'taxonomy'      => 'product_visibility',
+      //   'field'         => 'slug',
+      //   'terms'         => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
+      //   'operator'      => 'NOT IN'
+      // )
+    )
   );
-  $query = new WC_Product_Query( $args );
-
-  $products = $query->get_products();
+  // $total = get_term_by('slug', $category, 'product_cat')->count;
+  $query = new WC_Product_Query($args);
+  $data = $query->get_products();
+  $products = $data->products;
+  $total = $data->total;
 
   // $products = wc_products_array_orderby( $products, 'price', 'ASC' );
 
-  foreach ( $products as $product ) {
-    echo SiellestHelper::render_product($product);
+  foreach ($products as $product) {
+    echo Product::render_product($product);
   }
+  Product::render_product_loop_end($category, $start + 24, $total);
 
   exit();
 }
@@ -223,7 +296,43 @@ function search_showajax()
 {
   header('Content-Type: text/html');
 
+  include 'template-parts/archive-product/main.php';
+
   exit();
+}
+
+function gtm_eventviewdatalayer()
+{
+  return [
+    "event" => "removeFromCart",
+    "currencyCode" => "USD",
+    "products" => [
+      [
+        "name" => "Pasha de Cartier Edition Noire Sport Eau de Toilette",
+        "id" => "65150003",
+        "productRef" => "65100006",
+        "price" => "123.00",
+        "brand" => "cartier",
+        "category" => "Eau de toilette",
+        "productCollection" => "Pasha de Cartier",
+        "productVertical" => "Fragrances",
+        "variant" => "5.1 fl.oz./150 ml",
+        "sellable" => "sellable",
+        "productSize" => "5.1 fl.oz./150 ml",
+        "quantity" => 1,
+        "productMaterialCase" => "NA",
+        "productMaterialJewelry" => "",
+        "productMaterialStrap" => "NA",
+        "productMaterialLeather" => "NA",
+        "isEngraved" => "NA",
+        "isEmbossed" => "NA",
+        "isAdjusted" => "NA",
+        "isPersonalised" => "NA",
+        "isAvailable" => "outofstock",
+        "productDisplay" => "Product pages"
+      ]
+    ]
+  ];
 }
 
 /* Admin functions */
@@ -231,17 +340,22 @@ function import_starter_content()
 {
   include 'inc/starter-content/importer.php';
 
-  if (
-    create_pages() &&
-    create_menus() &&
-    create_product_categories() &&
-    create_attribute_collection() &&
-    create_products()
-  ) {
+  $statuses = [
+    'pages' => create_pages(),
+    'menus' => create_menus(),
+    'product_categories' => create_product_categories(),
+    'attribute_collection' => create_attribute_collection(),
+    'products' => create_products()
+  ];
+
+  if (in_array(false, array_values($statuses)) === false) {
     // TODO set home to front page
     return 'ok';
   } else
-    return 'fail';
+    return [
+      'status' => 'failed',
+      'statuses' => $statuses
+    ];
 }
 
 /* Register API routes */
@@ -259,10 +373,32 @@ add_action('rest_api_init', function () {
     'callback' => 'wishlist_removeproduct'
   ));
 
+  register_rest_route('siellest', 'cart-addproduct', array(
+    'methods' => 'POST',
+    'callback' => 'Cart::cart_addproduct'
+  ));
+  register_rest_route('siellest', 'cart-minicartshow', array(
+    'methods' => 'GET',
+    'callback' => 'Cart::cart_minicartshow'
+  ));
+  register_rest_route('siellest', 'gtm-eventviewdatalayer', [
+    'methods' => 'GET',
+    'callback' => 'gtm_eventviewdatalayer'
+  ]);
+  register_rest_route('siellest', 'cart-removeproductlineitem', array(
+    'methods' => 'GET, POST',
+    'callback' => 'Cart::cart_removeproductlineitem'
+  ));
+
+  register_rest_route('siellest', 'product-showquickview', array(
+    'methods' => 'GET',
+    'callback' => 'product_showquickview'
+  ));
   register_rest_route('siellest', 'product-zoom', array(
     'methods' => 'GET, POST',
     'callback' => 'product_zoom'
   ));
+
   register_rest_route('siellest', 'account-login', array(
     'methods' => 'POST',
     'callback' => 'account_login'

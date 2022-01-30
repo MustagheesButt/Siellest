@@ -14,7 +14,7 @@
       <div id="refinement-available-online" class="refinement__content ">
         <ol class="refinement__available-online list--reset">
           <li class="refinement__boolean-item  ">
-            <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=isSellable&amp;prefv1=true&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-true" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+            <a href="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>&prefn1=isSellable&prefv1=true&prefn2=sapIsVisibleWeb&prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-true" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
               <span class="body-type--centi link--underline-hover" aria-hidden="true">
                 Available Online
               </span>
@@ -49,7 +49,7 @@
                 $count++;
             ?>
             <li class="refinement__boolean-item <?= $count >= 5 ? 'hidden' : '' ?>" <?= $count >= 5 ? 'data-refinement-hide' : '' ?>>
-              <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=category&amp;prefv1=<?= $term->name ?>&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-<?= $term->name ?>" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+              <a href="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>&prefn1=category&prefv1=<?= $term->name ?>&prefn2=sapIsVisibleWeb&prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-<?= $term->name ?>" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
                 <span class="body-type--centi link--underline-hover" aria-hidden="true">
                   <?= $term->name ?>
                 </span>
@@ -79,7 +79,7 @@
         <div id="refinement-gender" class="refinement__content ">
           <ol class="refinement__gender list--reset">
             <li class="refinement__boolean-item  ">
-              <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=gender&amp;prefv1=For%20Her&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-For Her" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+              <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&prefn1=gender&amp;prefv1=For%20Her&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-For Her" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
                 <span class="body-type--centi link--underline-hover" aria-hidden="true">
                   For Her
                 </span>
@@ -735,7 +735,7 @@
     <div class="refinement-bar__sort-list form-check-group" name="sort-order" data-search-component="search-sort">
       <div class="display--small-up body-type--deci font-weight--semibold">Sort By</div>
       <div class="refinement-bar__sort-item-container">
-        <a class="refinement-bar__sort-item" href="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=price-low-to-high&amp;start=0&amp;sz=24" data-sort-option-id="price-low-to-high" data-search-component="search-sort-anchor" aria-label="Price Low To High" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+        <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>&prefn1=sapIsVisibleWeb&prefv1=true&srule=price-low-to-high&start=0&sz=24" data-sort-option-id="price-low-to-high" data-search-component="search-sort-anchor" aria-label="Price Low To High" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
           <input type="radio" id="price-low-to-high" class="form-check-input" name="sort-radio" />
           <label for="price-low-to-high" class="form-check-label--radio cursor--pointer">
             <span class="body-type--centi link--underline-hover">Price Low To High</span>
@@ -743,7 +743,7 @@
         </a>
       </div>
       <div class="refinement-bar__sort-item-container">
-        <a class="refinement-bar__sort-item" href="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=price-high-to-low&amp;start=0&amp;sz=24" data-sort-option-id="price-high-to-low" data-search-component="search-sort-anchor" aria-label="Price High to Low" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+        <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>&prefn1=sapIsVisibleWeb&prefv1=true&srule=price-high-to-low&start=0&sz=24" data-sort-option-id="price-high-to-low" data-search-component="search-sort-anchor" aria-label="Price High to Low" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
           <input type="radio" id="price-high-to-low" class="form-check-input" name="sort-radio" />
           <label for="price-high-to-low" class="form-check-label--radio cursor--pointer">
             <span class="body-type--centi link--underline-hover">Price High to Low</span>
@@ -751,7 +751,7 @@
         </a>
       </div>
       <div class="refinement-bar__sort-item-container">
-        <a class="refinement-bar__sort-item" href="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=sapIsVisibleWeb&amp;prefv1=true&amp;srule=intl-emerch&amp;start=0&amp;sz=24" data-sort-option-id="intl-emerch" data-search-component="search-sort-anchor" aria-label="Recommended" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+        <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>&prefn1=sapIsVisibleWeb&prefv1=true&srule=intl-emerch&start=0&sz=24" data-sort-option-id="intl-emerch" data-search-component="search-sort-anchor" aria-label="Recommended" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
           <input type="radio" id="intl-emerch" class="form-check-input" name="sort-radio" checked />
           <label for="intl-emerch" class="form-check-label--radio cursor--pointer">
             <span class="body-type--centi link--underline-hover">Recommended</span>
@@ -761,7 +761,7 @@
     </div>
   </div>
   <div class="refinement-bar__footer flex flex-justify-between display--small-only gutter--normal">
-    <button class="refinement-bar__clear-button button set--w-50" data-url="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=Jewelry_AllCollections" aria-label="Reset, all refinements" data-refinement-action="reset">
+    <button class="refinement-bar__clear-button button set--w-50" data-url="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>" aria-label="Reset, all refinements" data-refinement-action="reset">
       Clear All
     </button>
     <button type="button" class="button button--primary set--w-50" data-toggle-close="[data-search-component=refinement-bar-trigger]">Apply</button>

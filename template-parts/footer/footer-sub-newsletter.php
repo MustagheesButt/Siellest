@@ -2,7 +2,7 @@
   <div class="row flex-align-center flex-justify-center">
     <div class="col-12 col-md-6 col-lg-5 col-xl-4">
       <p class="subscription-banner__description heading-type text-align--center">Subscribe to our Newsletter</p>
-      <form role="form" action="wp-json/siellest/EmailSubscribe-Subscribe" method="POST" class="subscription-banner__form" data-ajax-form="{'onSuccess': 'reset', 'doneModalOptions': {'modalID': 'footerNewsletterSubscribe', 'modalClass': 'modal--base modal--newsletter', 'overlayOthers': true}, 'tracking': {'trackEvent': 'footerNewsletterCick'}}">
+      <form role="form" action="wp-json/siellest/EmailSubscribe-Subscribe" method="POST" class="subscription-banner__form" data-ajax-form='{"onSuccess": "reset", "doneModalOptions": {"modalID": "footerNewsletterSubscribe", "modalClass": "modal--base modal--newsletter", "overlayOthers": true}, "tracking": {"trackEvent": "footerNewsletterCick"}}'>
         <div class="row flex-no-gutters">
           <div class="col-8">
             <div class="" data-floating-label="">
