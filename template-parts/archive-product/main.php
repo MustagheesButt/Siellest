@@ -1,23 +1,46 @@
 <?php
 // ini_set('display_errors', 1);
-// ini_set('display_startup_errors', 1);
 // error_reporting(E_ALL);
 $category = (!empty(get_query_var('product_cat'))) ? get_query_var('product_cat') : $_GET['cgid'];
 
+$tax_query = [];
+if (isset($_GET['collection'])) {
+  array_push($tax_query, array(
+    'taxonomy'      => 'pa_collection',
+    'field'         => 'slug',
+    'terms'         => $_GET['collection'],
+    'operator'      => 'IN'
+  ));
+}
+
 $args = array(
+  'status' => ['publish'],
   'paged' => 1,
   'limit' => 24,
   'paginate' => true,
   'category' => [$category],
   'orderby' => 'meta_value_num',
   'meta_key' => '_price',
-  'order' => 'asc'
+  'order' => 'asc',
+  'tax_query' => $tax_query
 );
 $query = new WC_Product_Query($args);
 $data = $query->get_products();
 $products = $data->products;
+
 wc_set_loop_prop('total', $data->total);
+$category_data = get_term_by('slug', $category, 'product_cat');
 // $products = wc_products_array_orderby( $products, 'price', 'ASC' );
+
+$plp_banners = [
+  'jewelry-allcollections' => 'header_jwl_all_LOVE.webp',
+  'bracelets' => 'JEWELRY_BANNERS_1920x800_VIEW-ALL-BRACELETS.webp',
+  'rings' => 'header_jwl_rings_VIEWALL.webp',
+  'necklaces' => 'JEWELRY_BANNERS_1920x800_VIEW-ALL-NECKLACES.webp',
+  'earrings' => 'JEWELRY_TOP-BANNER_1920x800_VIEW-ALL-EARRINGS.webp',
+  'engagement-rings' => 'ENGAGEMENT_BANNERS_1920x800_ALL-ENGAEMENT-RINGS.webp',
+  'wedding-bands' => 'ENGAGEMENT_BANNERS_1920x800_ALL-WEDDING-BANDS.webp'
+];
 ?>
 <div class="search-results__main " data-search-component="search-main">
   <?php
@@ -26,26 +49,28 @@ wc_set_loop_prop('total', $data->total);
     <article class="bg--grey-1 flex-grow-1 descriptive-card descriptive-card--size-regular descriptive-card--ratio-wide descriptive-card--style-slim" style="" data-content-component="descriptive-card" data-motion='{"properties": "opacity from-v-direction", "children": ".descriptive-card__content > *"}'>
 
       <div class="row flex-no-gutters">
+        <?php
+        if ($plp_banners[$category]) {
+        ?>
         <div class="col-12 col-md-6 col-lg-6 ">
           <div class="descriptive-card__aspect-ratio descriptive-card__aspect-ratio--wide">
             <div class="descriptive-card__media component-overlay component-overlay--center">
               <picture>
-                <source data-srcset="wp-content/themes/sielelst/assets/images/plp-banners/header_jwl_all_LOVE.png" class="picture--source-element">
-                <img data-image-component="lazyload" src="https://www.siellest.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Library-Sites-CartierSharedLibrary-BGTJ/default/dw14cddc32/plp-banners/header_jwl_all_LOVE.png?sw=40&amp;q=100" class="component-image descriptive-card__img object-fit--cover lazyload blur-up" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; " />
+                <source data-srcset="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$category] ?>" class="picture--source-element">
+                <img data-image-component="lazyload" src="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$category] ?>?sw=40&q=100" class="component-image descriptive-card__img object-fit--cover lazyload blur-up" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; " />
               </picture>
             </div>
           </div>
         </div>
+        <?php } ?>
         <div class="col-12 col-md-6 col-lg-6 ">
           <div class="descriptive-card__content-wrap flex flex-grow-1 text-align--left component-v-align--center component-h-align--center">
             <div class="descriptive-card__content component-custom-width" style="--component-var-width:26.5rem; ">
               <h1 class="descriptive-card__title heading-type component-copy__title--regular">
-                ALL JEWELRY COLLECTIONS
+                <?= $category_data->name ?>
               </h1>
               <div class="descriptive-card__description font-family--serif text-line--medium">
-                <p>Plunge into the magical world of Cartier and discover the Maison's signature collections, unique pieces, and one-of-a-kind creations.</p>
-                <?php do_action('woocommerce_archive_description');
-                ?>
+                <?= $category_data->description ?>
               </div>
             </div>
           </div>
@@ -63,11 +88,11 @@ wc_set_loop_prop('total', $data->total);
                   <span class="breadcrumbs__separator">/</span>
                 </li>
                 <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                  <a class="breadcrumbs__anchor link--secondary" href="shop/product-category/jewelry/" title="Jewelry">Jewelry</a>
+                  <a class="breadcrumbs__anchor link--secondary" href="product-category/jewelry/" title="Jewelry">Jewelry</a>
                   <span class="breadcrumbs__separator">/</span>
                 </li>
                 <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                  <a class="breadcrumbs__anchor link--secondary" href="shop/product-category/jewelry/all-collections/" title="All Collections">All Collections</a>
+                  <a class="breadcrumbs__anchor link--secondary" href="product-category/jewelry/<?= $category ?>/" title="All Collections"><?= $category_data->name ?></a>
                 </li>
               </ol>
             </div>
@@ -155,7 +180,7 @@ wc_set_loop_prop('total', $data->total);
     </div>
   <?php
   } else {
-    do_action('woocommerce_no_products_found');
+    include get_template_directory() . '/woocommerce/loop/no-products-found.php';
   }
   ?>
 </div>

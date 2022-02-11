@@ -21,7 +21,7 @@
         <div class="footer-content-col col-12 col-md-6 col-lg-3">
           <div class="footer-content">
             <h2 class="footer-content__heading footer__heading body-type font-weight--semibold text-transform--uppercase">100% Secure Payment</h2>
-            <img class="footer-content__img" src="/on/demandware.static/-/Library-Sites-CartierSharedLibrary-BGTJ/default/dw1473cb44/payment-processors.png" alt="" title="" />
+            <img class="footer-content__img" src="wp-content/themes/siellest/assets/images/payment-processors.png" alt="" title="" />
             <div class="footer-content__description cms-generic-copy list--reset body-type--deci">
               All transactions are safe and secure.
             </div>
@@ -47,7 +47,7 @@
     <div class="max-width--xmedium">
       <div class="footer__copyright">
         <span class="footer__copyright-description body-type--centi text-transform--uppercase">
-          Copyright © 2022 Cartier
+          Copyright © 2022 <?= get_bloginfo('name') ?>
         </span>
       </div>
     </div>
@@ -241,6 +241,15 @@
 </script>
 <?php include 'template-parts/footer/js-config.php'; ?>
 <script src="//code.jquery.com/jquery-3.5.1.min.js" type="text/javascript"></script>
+<script>
+  $.ajaxSetup({
+    beforeSend: function (xhr)
+    {
+      xhr.setRequestHeader("X-WP-Nonce","<?= wp_create_nonce('wp_rest') ?>");
+      xhr.withCredentials = true
+    }
+});
+</script>
 <script defer type="text/javascript" src="wp-content/themes/siellest/assets/js/main.js"></script>
 <script defer type="text/javascript" src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.9.4/adyen.js"></script>
 <script defer type="text/javascript" src="https://pay.google.com/gp/p/js/pay.js"></script>

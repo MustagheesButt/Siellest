@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <!-- utf-8 works for most cases -->
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <!-- Forcing initial-scale shouldn't be n=
+  ecessary -->
+  <meta content="IE=edge" http-equiv="X-UA-Compatible" />=
+
+  <!-- Use the latest (edge) version of IE rendering engine -->
+  <title></title>
+  <!-- The title tag shows in email notifications,
+    like Android 4=
+  ..4. -->
+  <!-- Please use an inliner tool to convert all CSS to inline as
+  inpage or external CSS is removed by email clients -->
+  <!-- important in =
+  CSS is used to prevent the styles of currently inline CSS from overriding the ones mentioned in media queries when corresponding screen sizes are enco=
+  untered -->
+  <!-- CSS Reset -->
+  <style type="text/css">
+    /* What it does: Remove spaces around the email design added by some email clients. */
+
+    /* Beware: It can remove the padding / margin and add a background color to the compose a reply window. */
+
+    html,
+    body {
+      margin: 0 !important;
+      padding: 0 !important;
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+
+    /* =
+  What it does: Stops email clients resizing small text. */
+
+    * {
+      -ms-text-size-adjust: 100%;
+      -webkit-text-size-adjust: 100%;
+    }
+
+
+    /* What it does: Forces Outlook.com to display emails full=
+   width. */
+
+    .ExternalClass {
+      width: 100%;
+    }
+
+    /* What is does: Centers email on Android 4.4 */
+
+    div[style*="margin: 16px 0"] {
+      margin: 0 !important;
+    }
+
+
+    /*=
+   What it does: Stops Outlook from adding extra spacing to tables. */
+
+    table,
+    td {
+      mso-table-lspace: 0pt !important;
+      mso-table-rspace: 0pt !important;
+    }
+
+
+    /* What it does: Fixes we=
+  bkit padding issue. Fix for Yahoo mail table alignment bug. Applies table-l=
+  ayout to the first 2 tables then removes for anything nested deeper. */
+
+    table {
+      border-spacing: 0 !important;
+      border-collapse: collapse !important;
+      table-layout: fixed !important;
+      margin: 0 auto !important;
+    }
+
+    table table table {
+      table-layout: auto;
+    }
+
+
+    /* What it does: Uses a better rendering met=
+  hod when resizing images in IE. */
+
+    img {
+      -ms-interpolation-mode: bicubic;
+    }
+
+
+    /* What it does: Overrides styles added=
+   when Yahoo's auto-senses a link. */
+
+    .yshortcuts a {
+      border-bottom: none !important;
+    }
+
+
+    /* What it does: Another work-around for iOS meddling in triggered links. */
+
+    a[x-apple-data-detectors] {
+      color: inherit !important;
+    }
+  </style>
+  <!-- Progressive Enhancements -->
+  <style type="text/css">
+    /* What it does: Hover styles for buttons */
+
+    .button-td,
+    .button-a {
+      transition: all 100ms ease-in;
+    }
+
+    .button-td:hover,
+    .button-a:hover {
+      background: #555555 !important;
+      border-color: #555555 !important;
+    }
+
+
+    /* Media Queries */
+
+    @media screen and (max-width: 600px) {
+      .email-container {
+        width: 100% !important;
+      }
+
+      /* What it does: Forces elements to resize=
+   to the full width of their container. Useful for resizing images beyond th=
+  eir max-width. */
+      .fluid,
+      .fluid-centered {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* And center justify these ones. */
+      .fluid-centered {
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
+      /* What it does: Forces table cells into ful=
+  l-width rows. */
+      .stack-column,
+      .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      .stack-column,
+      .stack-column-center2 {
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+      }
+
+      /* What it does: Generic u=
+  tility class for centering. Useful for images, buttons, and nested tables. =
+  */
+      .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+      }
+
+      .mobile-hide {
+        display: none !important;
+      }
+
+      .button-show {
+        display: inline-block !important;
+      }
+
+      table.center-on-narrow {
+        display: inline-block !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse; background-color: #ffffff;"
+    width="100%">
+    <tbody>
+      <tr>
+        <td>
+          <center style="width: 100%;">
+            <!-- Visually Hidden Preview Text: BEGIN -->
+            <div
+              style="display:none; font-size: 1px; line-height:1px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; mso-hide:all; font-family: sans-serif;">
+            </div>
+            <!-- Visually Hidden Preview Text: END -->
+            <!-- Empty Space: BEGIN -->
+            <table align="center" class="mobile-hide" width="600">
+              <tbody>
+                <tr>
+                  <td style="padding: 20px 0; text-align: center"></td>
+                </tr>
+              </tbody>
+            </table>
+            <!-- Empty Space: END -->
+            <!-- Email Body: BEGIN -->
+            <!-- <img alt="" height="1" src="https://insight.adsrvr.org/track/pxl/=3Fadv=jdcx6ln&amp;ct=0:9apa6mh&amp;fmt=3" style="border-style:none;" width="1"/> -->
+            <table align="center" border="0" cellpadding="0" cellspacing="0" class="email-container"
+              style="background-color: #fff;" width="600">
+              <tbody>
+                <!-- Hero Image: BEGIN -->
+                <tr>
+                  <td class="full-width-image" style="padding: 20px 0px;">
+                    <a href="https://hook.cybba.solutions/track/click/1396/1024241/1002=
+  6694/7000516515031281=3Furl=https%253A%252F%252Fwww.siellest.com%252Fen-us=
+  %252Fshopping-bag.html%253Futm_campaign%253DCartier_StandardnoPFCPA468292%2=
+  526utm_medium%253Demail%2526vt_campaign%253D1024241%2526utm_content%253Dtpl=
+  10026694%2526vt_content%253D10026694%2526vt_user%253D7000516515031281%2526u=
+  tm_source%253Dtransactional" target="_blank" title="Siellest"><img align="center" alt="Cartier" border="0"
+                        src="https://d3u0jcwe5p7qrc.cloudfront.net/Cartier/Email/462903/462903_Cartier_logo_R1.jpg"
+                        style="width: 100%; max-width: 600px; height: auto;" width="600" /></a>
+                  </td>
+                </tr>
+                <!-- Hero Image: END -->
+                <!-- Body Copy: BEGIN -->
+                <tr>
+                  <td
+                    style="padding: 25px 30px 15px 30px; text-align: center; font-family: sans-serif; font-size: 15px; mso-height-rule: exactly; line-height: 20px; color: #000000;">
+                    Hello <br />
+                    <br />
+                    Still on your mind? There really is magic in every red box. The
+                    Siellest creation you had your eye on, providing availability, has
+                    been saved in your shopping bag.<br />
+                    <br />
+                    <strong>With every purchase comes complimentary standard shipping,
+                      complimentary gift wrapping and complimentary returns and
+                      exchanges.</strong><br />
+                    <br />
+                    Our Siellest ambassadors are available to assist with any questions
+                    you may have via phone at <a
+                      href="https://hook.cybba.solutions/track/click/1396/1024241/10026694/7000516515031281=3Furl=tel%253A1-800-227-8437%253Futm_campaign%253DCartier_StandardnoPFCPA468292%2526utm_medium%253Demail%2526vt_campaign%253D1024241%2526utm_content%253Dtpl10026694%2526vt_content%253D10026694%2526vt_user%253D7000516515031281%2526utm_source%253Dtransactional"
+                      style="font-weight: bold; color: #000000;">1-800-SIELLEST</a>.<br />
+                    <br />
+                  </td>
+                </tr>
+                <!-- Body Copy: END -->
+                <!-- Product Feed Header and CT=
+  A: BEGIN -->
+                <tr style="width: 100% !important;" width="100%">
+                  <td align="center" style="padding: 10px 30px; background-color: #fafafa; width: 100% !important;"
+                    valign="middle" width="100%">
+                    <table border="0" cellpadding="0" cellspacing="0" style="width: 100% !important;" width="100%">
+                      <tbody>
+                        <tr>
+                          <td class="stack-column-center">
+                            <table align="left" valign="middle">
+                              <tbody>
+                                <tr>
+                                  <td
+                                    style="padding: 10px; font-size: 22px; font-family: sans-serif; text-align: left; vertical-align: middle;">
+                                    CART</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td valign="middle">
+                            <table align="right" class="stack-column-center" style="vertical-align: middle;"
+                              valign="middle">
+                              <tbody>
+                                <tr>
+                                  <td class="mobile-hide"><a href="https://hook.cybba.solutions/track/click/1396/1024241/10026694/7000516515031281=3Furl=https%253A%252F%252Fwww.cart=
+  ier.com%252Fen-us%252Fshopping-bag.html%253Futm_campaign%253DCartier_StandardnoPFCPA468292%2526utm_medium%253Demail%2526vt_campaign%253D1024241%2526ut=
+  m_content%253Dtpl10026694%2526vt_content%253D10026694%2526vt_user%253D70005=
+  16515031281%2526utm_source%253Dtransactional" target="_blank" title="Siellest"><img alt="Siellest" border="0"
+                                        height="auto"
+                                        src="https://d3u0jcwe5p7qrc.cloudfront.net/Cartier/Email/430946/430946_Cartier_Email_CA4_09..jpg"
+                                        width="auto" /></a></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Product Feed Header and CTA: END -->
+                <!-- Product Feed: BEGIN -->
+                <tr>
+                  <td align="center" style="padding: 20px 10px 15px 10px;" valign="middle">
+                    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                      <tbody>
+                        <tr vertical-align="text-top">
+                          <td class="stack-column-center" width="2.5%;">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td style="text-align: center;">=C2=A0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td class="stack-column-center" width="20%">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td style="padding: 10px 0px; text-align: center"><img alt="LOVE BRACELET" border="0"
+                                      class="fluid" height="100"
+                                      src="https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwbd546177/images/large/637708791868154532-2059314.png=3Fsw=250&sh=250&sm=fit&sfrm=png"
+                                      style="color: #fff;" width="100" /></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td class="stack-column-center" width="50%">
+                            <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                              <tbody>
+                                <tr>
+                                  <td class="center-on-narrow"
+                                    style="font-family: Ti=
+  mes New Roman, serif; font-size: 14px; mso-height-rule: exactly; line-height: 20px; color: #000; padding: 0 10px 10px; text-align: left; font-style: italic;">
+                                    LOVE BRACELET<br />
+                                    <span
+                                      style="font-size: 11px; color: #7e7e7e; font-family: sans-serif; font-style: normal; line-height: 16px;">
+                                      Yellow gold<br />
+                                      SIZE: 15 cm</span>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                          <td class="stack-column-center" width="25%">
+                            <table border="0" cellpadding="0" cellspacing="0">
+                              <tbody>
+                                <tr>
+                                  <td class="center-=
+  on-narrow" style="font-family: sans-serif; font-size: 12px; mso-height-rule: exactly; line-height: 20px; color: #000; padding: 0 10px 10px; text-align: right; font-weight: bold;">
+                                    $6,900.00<br />
+                                    =C2=A0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!--=
+   Product Feed: END -->
+                <!-- Main CTA: BEGIN -->
+                <tr>
+                  <td style="padding: 15px 30px 15px 30px; mso-height-rule: exactly; border-bottom: 1px solid #efefef;">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" class="stack-column-center2"
+                      style="margin: auto">
+                      <tbody>
+                        <tr>
+                          <td style="text-align: center;"><a
+                              href="https://hook.cybba.solutions/track/click/1396/1024241/10026694/7000516515031281=3Furl=https%253A%252F%252Fwww.siellest.com%252Fen-us%252Fshopping-bag.html%253Futm_campaign%253DCartier_StandardnoPFCPA468292%2526utm_medium%253Demail%2526vt_campaign%253D1024241%2526utm_content%253Dtpl10026694%2526vt_content%253D10026694%2526vt_user%253D7000516515031281%2526utm_source%253Dtransactional"
+                              target="_blank" title="Siellest"><img alt="RETURN TO SHOPPING BAG" border="0"
+                                height="auto"
+                                src="https://d3u0jcwe5p7qrc.cloudfront.net/Cartier/Email/430946/430946_Cartier_Email_CA4_13.jpg"
+                                width="auto" /></a></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Main CTA: END -->
+                <!--=
+   Bottom Banner: BEGIN -->
+                <tr>
+                  <td class="full-width-image" style="padding-top: 20px;"><a
+                      href="https://hook.cybba.solutions/track/click/1396/1024241/10026694/7000516515031281=3Furl=https%253A%252F%252Fwww.cartier.com%252Fen-us%252Fcollections%252Fjewelry.html%253Futm_campaign%253DCartier_StandardnoPFCPA468292%2526utm_medium%253Demail%2526vt_campaign%253D1024241%2526utm_content%253Dtpl10026694%2526vt_content%253D10026694%2526vt_user%253D7000516515031281%2526utm_source%253Dtransactional"
+                      target="_blank" title="Siellest"><img align="center" alt="Siellest" border="0"
+                        src="https://d3u0jcwe5p7qrc.cloudfront.net/Cartier/Email/468292/468292_Cartier_Jewelry_Email_CA1_16.jpg"
+                        style="width: 100%; max-width: 600px; height: auto;" width="600" /></a></td>
+                </tr>
+                <!-- Bottom Banner: END -->
+                <!-- S=
+  ocial Media Icons: BEGIN -->
+                <tr>
+                  <td align="center" style="padding: 30px 10px; background-color: #ffffff;" valign="middle">
+                    <table border="0" cellpadding="0" cellspacing="0">
+                      <tbody>
+                        <tr>
+                          <td style="text-align: center"><a
+                              href="https://hook.cybba.solutions/track/click/1396/1024241/10026694/7000516515031281=3Furl=https%253A%252F%252Fwww.youtube.com%252Fcartier%253Futm_campaign%253DCartier_StandardnoPFCPA468292%2526utm_medium%253Demail%2526vt_campaign%253D1024241%2526utm_content%253Dtpl10026694%2526vt_content%253D10026694%2526vt_user%253D7000516515031281%2526utm_source%253Dtransactional"
+                              target="_blank" title="youtube"><img alt="youtube" border="0" class="fluid" height="auto"
+                                src="https://d3u0jcwe5p7qrc.cloudfront.net/Cartier/Email/430946/430946_Cartier_Email_CA4_19.gif"
+                                width="auto" /></a></td>
+                          <td width="5">=C2=A0</td>
+                          <td style="text-align: center">
+                            <a href="https://hook.cybba.solutions/track/click/1396/1024241/10026694/7000516515031281=3Furl=https%253A%252F%252Fwww.facebook.com%252Fcartier.usa%252F%253Fbrand_redir%253D203621737645%2526utm_campaign%253DCartier_StandardnoPFCPA468292%2526utm_medium%253Demail%2526vt_campaign%253D1024241%2526utm_content%253Dtpl10026694%2526vt_content%253D10026694%2526vt_user%253D7000516515031281%2526utm_source%253Dtransactional"
+                              target="_blank" title="facebook">
+                              <img alt="facebook" border="0" class="fluid" height="auto"
+                                src="https://d3u0jcwe5p7qrc.cloudfront.net/Cartier/Email/430946/430946_Cartier_Email_CA4_20.gif"
+                                width="auto" /></a>
+                          </td>
+                          <td width="5">=C2=A0</td>
+                          <td style="text-align: center">
+                            <a href="https://hook.cybba.solutions/track/click/1396/1024241/10026694/7000516515031281=3Furl=https%253A%252F%252Fwww.pinterest.com%252Fcartier%252F%253Futm_campaig=
+  n%253DCartier_StandardnoPFCPA468292%2526utm_medium%253Demail%2526vt_campaign%253D1024241%2526utm_content%253Dtpl10026694%2526vt_content%253D10026694%2526vt_user%253D7000516515031281%2526utm_source%253Dtransactional"
+                              target=="_blank" title="pinterest">
+                              <img alt="pinterest" border="0" class="fluid" height="auto"
+                                src="https://d3u0jcwe5p7qrc.cloudfront.net/Cartier/Email/430946/430946_Cartier_Email_CA4_21.gif"
+                                width="auto" /></a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Social Media Icons: END -->
+                <!-- Email Footer: BEGIN -->
+                <tr style="background-color: #ffffff;">
+                  <td>
+                    <table align="center" class="email-container" width="600">
+                      <tbody>
+                        <tr>
+                          <td
+                            style="padding: 0px 10px 40px 10px;width: 100%;font-size: 12px; font-family: sans-serif; mso-height-rule: exactly; line-height:18px; text-align: center; color: #555;">
+                            You have received this courtesy email from us today regarding your
+                            user experience on the site but have not been entered into any
+                            marketing databases. Please accept our apologies and disregard this
+                            email if you have already made your purchase. Our system can take
+                            up to 30 minutes to update and we may not have registered your
+                            purchase within our email system if a different email was used to
+                            complete the transaction. If you no longer wish to receive
+                            operational emails from us please
+                            <a href="http://pages.cybba.solutions/1396/unsubscribe=3Fvt_campaign=1024241&vt_content=10026694&vt_user=7000516515031281&vt_ts=1644146681000"
+                              style="text-decoration: underline; color: #555;">
+                              click here</a>
+                            .<br />
+                            <br />
+                            Olympic Tower, 645 5th Ave #5 New York NY 10022
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+                <!-- Email Footer: END -->
+              </tbody>
+            </table>
+            <!-- Email Body: END -->
+          </center>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <img alt="Open image" src="https://hook.cybba.solutions/track/open/1396/1024241/10026694/7000516515031281..gif"
+    style="width:1px;height:1px;" title="Siellest" width="1px" />
+</body>
+
+</html>

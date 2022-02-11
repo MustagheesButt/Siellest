@@ -111,6 +111,9 @@
           </ol>
         </div>
       </div>
+      <?php
+        if (!isset($_GET['collection'])) {
+      ?>
       <div class="refinement refinement-collection " data-refinement-type="collection" tabindex="-1">
         <button type="button" class="refinement__header set--w-100 flex flex-justify-between " data-toggle='{"target": ".refinement__content", "persist": true, "activeClass": "refinement--active", "auto": false}' data-search-component="refinement-trigger" aria-label="Collection">
           <strong class="refinement__type text-transform--uppercase font-weight--semibold text-align--left">
@@ -122,7 +125,6 @@
         </button>
         <div id="refinement-collection" class="refinement__content ">
           <ol class="refinement__collection list--reset">
-
             <li class="refinement__boolean-item  ">
               <a href="wp-json/siellest/Search-ShowAjax?cgid=Jewelry_AllCollections&amp;prefn1=collection&amp;prefv1=AMULETTE%20DE%20CARTIER&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true" class="form-check-label  " data-refinement-action="boolean" data-refinement-id="boolean-AMULETTE DE CARTIER" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
                 <span class="body-type--centi link--underline-hover" aria-hidden="true">
@@ -589,6 +591,7 @@
           </ol>
         </div>
       </div>
+      <?php } ?>
       <div class="refinement refinement-metal " data-refinement-type="metal" tabindex="-1">
         <button type="button" class="refinement__header set--w-100 flex flex-justify-between " data-toggle='{"target": ".refinement__content", "persist": true, "activeClass": "refinement--active", "auto": false}' data-search-component="refinement-trigger" aria-label="Metal">
           <strong class="refinement__type text-transform--uppercase font-weight--semibold text-align--left">

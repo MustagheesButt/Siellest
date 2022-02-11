@@ -1,5 +1,8 @@
 <?php
 
+require 'vendor/autoload.php';
+require 'constants.php';
+
 function siellest_title()
 {
   $custom_title = get_post_meta(get_the_ID(), 'Title', true);
@@ -44,29 +47,30 @@ function siellest_menus()
 add_action('init', 'siellest_menus');
 
 // Enable admin search using custom field: ext_url
-function siellest_request_query( $query_vars ) {
-	global $typenow;
-	global $wpdb;
-	global $pagenow;
+function siellest_request_query($query_vars)
+{
+  global $typenow;
+  global $wpdb;
+  global $pagenow;
 
-	if ( 'product' === $typenow && isset( $_GET['s'] ) && 'edit.php' === $pagenow ) {
-		$search_term            = esc_sql( sanitize_text_field( $_GET['s'] ) );
-		$meta_key               = 'ext_url';
-		$post_types             = array( 'product', 'product_variation' );
-		$search_results         = $wpdb->get_results(
-			$wpdb->prepare(
-				"SELECT DISTINCT posts.ID as product_id, posts.post_parent as parent_id FROM {$wpdb->posts} posts LEFT JOIN {$wpdb->postmeta} AS postmeta ON posts.ID = postmeta.post_id WHERE postmeta.meta_key = '{$meta_key}' AND postmeta.meta_value LIKE %s AND posts.post_type IN ('" . implode( "','", $post_types ) . "') ORDER BY posts.post_parent ASC, posts.post_title ASC",
-				'%' . $wpdb->esc_like( $search_term ) . '%'
-			)
-		);
-		$product_ids            = wp_parse_id_list( array_merge( wp_list_pluck( $search_results, 'product_id' ), wp_list_pluck( $search_results, 'parent_id' ) ) );
-		$query_vars['post__in'] = array_merge( $product_ids, $query_vars['post__in'] );
-	}
+  if ('product' === $typenow && isset($_GET['s']) && 'edit.php' === $pagenow) {
+    $search_term            = esc_sql(sanitize_text_field($_GET['s']));
+    $meta_key               = 'ext_url';
+    $post_types             = array('product', 'product_variation');
+    $search_results         = $wpdb->get_results(
+      $wpdb->prepare(
+        "SELECT DISTINCT posts.ID as product_id, posts.post_parent as parent_id FROM {$wpdb->posts} posts LEFT JOIN {$wpdb->postmeta} AS postmeta ON posts.ID = postmeta.post_id WHERE postmeta.meta_key = '{$meta_key}' AND postmeta.meta_value LIKE %s AND posts.post_type IN ('" . implode("','", $post_types) . "') ORDER BY posts.post_parent ASC, posts.post_title ASC",
+        '%' . $wpdb->esc_like($search_term) . '%'
+      )
+    );
+    $product_ids            = wp_parse_id_list(array_merge(wp_list_pluck($search_results, 'product_id'), wp_list_pluck($search_results, 'parent_id')));
+    $query_vars['post__in'] = array_merge($product_ids, $query_vars['post__in']);
+  }
 
-	return $query_vars;
+  return $query_vars;
 }
 
-add_filter( 'request', 'siellest_request_query', 20 );
+add_filter('request', 'siellest_request_query', 20);
 
 function siellest_register_styles()
 {
@@ -75,7 +79,7 @@ function siellest_register_styles()
   wp_enqueue_style('siellest-style', get_template_directory_uri() . "/style.css", array(), $version, 'all');
 
   $post_name = get_post()->post_name; // slug
-  if ( in_array($post_name, ['account', 'wishlist']) ) {
+  if (in_array($post_name, ['account', 'wishlist'])) {
     wp_enqueue_style('siellest-account', get_template_directory_uri() . "/assets/css/accountMain.css", array('siellest-global'), $version, 'all');
   } else if ($post_name === 'contact-customer-care') {
     wp_enqueue_style('siellest-account', get_template_directory_uri() . "/assets/css/contactUsMain.css", array('siellest-global'), $version, 'all');
@@ -85,6 +89,9 @@ function siellest_register_styles()
   }
   if ($post_name === 'checkout') {
     wp_enqueue_style('siellest-checkout', get_template_directory_uri() . "/assets/css/checkoutMain.css", array('siellest-global'), $version, 'all');
+  }
+  if ($post_name === 'cart') {
+    wp_enqueue_style('siellest-cart', get_template_directory_uri() . "/assets/css/cartMain.css", array('siellest-global'), $version, 'all');
   }
 }
 
@@ -116,7 +123,8 @@ function siellest_widget_areas()
 
 add_action('widgets_init', 'siellest_widget_areas');
 
-function add_terms_to_collection($taxonomy, $obj_type, $args) {
+function add_terms_to_collection($taxonomy, $obj_type, $args)
+{
   include 'inc/starter-content/data-collections.php';
 
   if ($taxonomy == 'pa_collection') {
@@ -128,13 +136,14 @@ function add_terms_to_collection($taxonomy, $obj_type, $args) {
 
 add_action('registered_taxonomy', 'add_terms_to_collection', 10, 3);
 
-function new_loop_shop_per_page( $cols ) {
+function new_loop_shop_per_page($cols)
+{
   // $cols contains the current number of products per page based on the value stored on Options –> Reading
   // Return the number of products you wanna show per page.
   $cols = 24;
   return $cols;
 }
-add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
+add_filter('loop_shop_per_page', 'new_loop_shop_per_page', 20);
 
 // function siellest_default_catalog_orderby( $sort_by ) {
 //   echo $sort_by;
@@ -143,24 +152,53 @@ add_filter( 'loop_shop_per_page', 'new_loop_shop_per_page', 20 );
 // add_filter('woocommerce_default_catalog_orderby', 'siellest_default_catalog_orderby');
 
 
-function siellest_custom_product_sorting( $args ) {
+function siellest_custom_product_sorting($args)
+{
   // Sort alphabetically
-	// if ( isset( $_GET['orderby'] ) && 'title' === $_GET['orderby'] ) {
-    // $args['orderby'] = 'meta_value_num';
-    // $args['meta_key'] = '_price';
-		// $args['order'] = 'asc';
-	// }
-	return $args;
+  // if ( isset( $_GET['orderby'] ) && 'title' === $_GET['orderby'] ) {
+  // $args['orderby'] = 'meta_value_num';
+  // $args['meta_key'] = '_price';
+  // $args['order'] = 'asc';
+  // }
+  return $args;
 }
-add_filter( 'woocommerce_get_catalog_ordering_args', 'siellest_custom_product_sorting' );
+add_filter('woocommerce_get_catalog_ordering_args', 'siellest_custom_product_sorting');
 
-function change_existing_currency_symbol( $currency_symbol, $currency ) {
-  switch( $currency ) {
-    case 'GBP': $currency_symbol = '£'; break;
+function change_existing_currency_symbol($currency_symbol, $currency)
+{
+  switch ($currency) {
+    case 'GBP':
+      $currency_symbol = '£';
+      break;
   }
   return $currency_symbol;
 }
 add_filter('woocommerce_currency_symbol', 'change_existing_currency_symbol', 10, 2);
+
+/* Add custom fields to User model/profile */
+add_action( 'show_user_profile', 'extra_user_profile_fields' );
+add_action( 'edit_user_profile', 'extra_user_profile_fields' );
+
+function extra_user_profile_fields( $user ) {
+  include "template-parts/admin/user-profile.php";
+}
+
+add_action('personal_options_update', 'save_extra_user_profile_fields');
+add_action('edit_user_profile_update', 'save_extra_user_profile_fields');
+
+function save_extra_user_profile_fields($user_id)
+{
+  if (empty($_POST['_wpnonce']) || !wp_verify_nonce($_POST['_wpnonce'], 'update-user_' . $user_id)) {
+    return;
+  }
+
+  if (!current_user_can('edit_user', $user_id)) {
+    return false;
+  }
+  update_user_meta($user_id, 'subscribed', $_POST['subscribed']);
+  // update_user_meta($user_id, 'city', $_POST['city']);
+  // update_user_meta($user_id, 'postalcode', $_POST['postalcode']);
+}
 
 /* Extending REST API */
 include 'api.php';

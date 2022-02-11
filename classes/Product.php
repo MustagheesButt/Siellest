@@ -1,19 +1,846 @@
 <?php
 
-  class Product {
-    public static function render_product($product) {
-      $id       = $product->id;
-      $p_link   = $product->get_permalink();
-      $name     = $product->get_name();
-      $currency = get_woocommerce_currency();
-      $currency_symbol = get_woocommerce_currency_symbol();
-      $price           = $product->get_price();
-      $formatted_price = number_format((float)$price, 2);
-      $img1            = wp_get_attachment_url( $product->get_image_id() );
+class Product
+{
+  static function product_variation()
+  {
+// dwvar_B6047517_size: 20
+// pid: B6047517
+// quantity: 1
 
-      $stretch_class = false ? 'full-stretch-image' : '';
-    
-      return "<div class=\"product-grid__item col-6 col-md-3\" data-tracking-context=\"Productlisting\">
+    // return {
+    //   "action": "Product-Variation",
+    //   "queryString": "dwvar_B6047517_size=20&pid=B6047517&quantity=1",
+    //   "locale": "en_US",
+    //   "product": {
+    //     "uuid": "b1c434f39f74492927fb60bae9",
+    //     "id": "CRB6047520",
+    //     "productName": "#LOVE# bracelet, small model",
+    //     "productType": "variant",
+    //     "brand": "cartier",
+    //     "productDisplayName": "<span class=\"font-family--cartier-logos\">LOVE</span> bracelet, small model",
+    //     "price": {
+    //       "sales": {
+    //         "value": 4450,
+    //         "currency": "USD",
+    //         "formatted": "$4,450.00",
+    //         "decimalPrice": "4450.00"
+    //       },
+    //       "list": null,
+    //       "html": "\n\n\n\n    <div class=\"price flex--inline flex-flow-wrap flex-align-baseline\" data-product-component=\"price\" itemprop=\"offers\" itemscope itemtype=\"http://schema.org/Offer\">\n        \n        \n\n\n\n\n\n<meta itemprop=\"priceCurrency\" content=\"USD\" />\n\n    <span class=\"price__sales sales\">\n    \n    \n    \n        <span class=\"value\" itemprop=\"price\" content=\"4450.00\">\n    \n    \n\n\t$4,450.00\n\n\n    </span>\n\n\n    </div>\n\n\n"
+    //     },
+    //     "sellable": {
+    //       "web": true,
+    //       "phone": true
+    //     },
+    //     "requestPrice": false,
+    //     "sellableLabel": "sellable",
+    //     "isPriceUnderThreshold": true,
+    //     "images": {
+    //       "large": [
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwfcad4c04/images/large/637708800298749607-2059319.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "0",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwfcad4c04/images/large/637708800298749607-2059319.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059319.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwa99cc689/images/large/637708800298749607-2059345.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "1",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwa99cc689/images/large/637708800298749607-2059345.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059345.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw37457588/images/large/637708800298749607-2059370.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "2",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw37457588/images/large/637708800298749607-2059370.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059370.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw61477780/images/large/637708800298749607-2059529.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "3",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw61477780/images/large/637708800298749607-2059529.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059529.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw0bf6590c/images/large/637708800298749607-2059528.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "4",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw0bf6590c/images/large/637708800298749607-2059528.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059528.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw60e7b52e/images/large/637708800298749607-2059527.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "5",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw60e7b52e/images/large/637708800298749607-2059527.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059527.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw3dc00fa1/images/large/637708800298749607-2059526.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "6",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw3dc00fa1/images/large/637708800298749607-2059526.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059526.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwa841cdae/images/large/637750371958735270-2285107.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "7",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwa841cdae/images/large/637750371958735270-2285107.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637750371958735270-2285107.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw79642246/images/large/637708800298749607-2059450.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "8",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw79642246/images/large/637708800298749607-2059450.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059450.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw0baec4c4/images/large/637708800298749607-2059554.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "9",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw0baec4c4/images/large/637708800298749607-2059554.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059554.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwd8bf198e/images/large/637708800298749607-2159807.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "index": "10",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwd8bf198e/images/large/637708800298749607-2159807.png?sw=750&sh=750&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": true,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2159807.png"
+    //         }
+    //       ],
+    //       "small": [
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwfcad4c04/images/large/637708800298749607-2059319.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "0",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwfcad4c04/images/large/637708800298749607-2059319.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059319.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwa99cc689/images/large/637708800298749607-2059345.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "1",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwa99cc689/images/large/637708800298749607-2059345.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059345.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw37457588/images/large/637708800298749607-2059370.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "2",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw37457588/images/large/637708800298749607-2059370.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059370.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw61477780/images/large/637708800298749607-2059529.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "3",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw61477780/images/large/637708800298749607-2059529.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059529.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw0bf6590c/images/large/637708800298749607-2059528.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "4",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw0bf6590c/images/large/637708800298749607-2059528.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059528.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw60e7b52e/images/large/637708800298749607-2059527.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "5",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw60e7b52e/images/large/637708800298749607-2059527.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059527.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw3dc00fa1/images/large/637708800298749607-2059526.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "6",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw3dc00fa1/images/large/637708800298749607-2059526.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059526.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwa841cdae/images/large/637750371958735270-2285107.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "7",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwa841cdae/images/large/637750371958735270-2285107.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637750371958735270-2285107.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw79642246/images/large/637708800298749607-2059450.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "8",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw79642246/images/large/637708800298749607-2059450.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059450.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw0baec4c4/images/large/637708800298749607-2059554.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "9",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dw0baec4c4/images/large/637708800298749607-2059554.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": false,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2059554.png"
+    //         },
+    //         {
+    //           "alt": "#LOVE# bracelet, small model",
+    //           "url": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwd8bf198e/images/large/637708800298749607-2159807.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "index": "10",
+    //           "title": "#LOVE# bracelet, small model",
+    //           "absURL": "https://www.cartier.com/dw/image/v2/BGTJ_PRD/on/demandware.static/-/Sites-cartier-master/default/dwd8bf198e/images/large/637708800298749607-2159807.png?sw=250&sh=250&sm=fit&sfrm=png",
+    //           "hasImage": true,
+    //           "hasBackground": true,
+    //           "isWornImage": true,
+    //           "hide": false,
+    //           "imagePath": "/images/large/637708800298749607-2159807.png"
+    //         }
+    //       ]
+    //     },
+    //     "selectedQuantity": 1,
+    //     "minOrderQuantity": 1,
+    //     "maxOrderQuantity": 10,
+    //     "variationAttributes": [
+    //       {
+    //         "attributeId": "size",
+    //         "displayName": "Size",
+    //         "id": "size",
+    //         "swatchable": false,
+    //         "values": [
+    //           {
+    //             "id": "15",
+    //             "description": null,
+    //             "displayValue": "15 cm",
+    //             "value": "15",
+    //             "selected": false,
+    //             "selectable": false,
+    //             "labelDefault": "Size: 15 cm",
+    //             "labelSelected": "Size: 15 cm, selected",
+    //             "labelUnselectable": "Size: 15 cm, unselectable",
+    //             "visibleWeb": true,
+    //             "visiblePhone": true,
+    //             "url": "https://www.cartier.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=15&pid=B6047517&quantity=1"
+    //           },
+    //           {
+    //             "id": "16",
+    //             "description": null,
+    //             "displayValue": "16 cm",
+    //             "value": "16",
+    //             "selected": false,
+    //             "selectable": true,
+    //             "labelDefault": "Size: 16 cm",
+    //             "labelSelected": "Size: 16 cm, selected",
+    //             "labelUnselectable": "Size: 16 cm, unselectable",
+    //             "visibleWeb": true,
+    //             "visiblePhone": true,
+    //             "url": "https://www.cartier.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=16&pid=B6047517&quantity=1"
+    //           },
+    //           {
+    //             "id": "17",
+    //             "description": null,
+    //             "displayValue": "17 cm",
+    //             "value": "17",
+    //             "selected": false,
+    //             "selectable": false,
+    //             "labelDefault": "Size: 17 cm",
+    //             "labelSelected": "Size: 17 cm, selected",
+    //             "labelUnselectable": "Size: 17 cm, unselectable",
+    //             "visibleWeb": true,
+    //             "visiblePhone": true,
+    //             "url": "https://www.cartier.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=17&pid=B6047517&quantity=1"
+    //           },
+    //           {
+    //             "id": "18",
+    //             "description": null,
+    //             "displayValue": "18 cm",
+    //             "value": "18",
+    //             "selected": false,
+    //             "selectable": true,
+    //             "labelDefault": "Size: 18 cm",
+    //             "labelSelected": "Size: 18 cm, selected",
+    //             "labelUnselectable": "Size: 18 cm, unselectable",
+    //             "visibleWeb": true,
+    //             "visiblePhone": true,
+    //             "url": "https://www.cartier.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=18&pid=B6047517&quantity=1"
+    //           },
+    //           {
+    //             "id": "19",
+    //             "description": null,
+    //             "displayValue": "19 cm",
+    //             "value": "19",
+    //             "selected": false,
+    //             "selectable": true,
+    //             "labelDefault": "Size: 19 cm",
+    //             "labelSelected": "Size: 19 cm, selected",
+    //             "labelUnselectable": "Size: 19 cm, unselectable",
+    //             "visibleWeb": true,
+    //             "visiblePhone": true,
+    //             "url": "https://www.cartier.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=19&pid=B6047517&quantity=1"
+    //           },
+    //           {
+    //             "id": "20",
+    //             "description": null,
+    //             "displayValue": "20 cm",
+    //             "value": "20",
+    //             "selected": true,
+    //             "selectable": true,
+    //             "labelDefault": "Size: 20 cm",
+    //             "labelSelected": "Size: 20 cm, selected",
+    //             "labelUnselectable": "Size: 20 cm, unselectable",
+    //             "visibleWeb": true,
+    //             "visiblePhone": true,
+    //             "url": "https://www.cartier.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=&pid=B6047517&quantity=1"
+    //           }
+    //         ],
+    //         "resetUrl": "https://www.cartier.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=&pid=B6047517&quantity=1",
+    //         "selectedValue": "20 cm"
+    //       }
+    //     ],
+    //     "longDescription": "#LOVE# bracelet, small model, 18K yellow gold. Sold with a screwdriver. Width: 3.65mm. The iconic #LOVE# bracelet has been a symbol of free-spirited #LOVE# since 1969. Its screw motif and famous locking technology are truly timeless design signatures, while its oval shape ensures a close but comfortable fit to the wearer’s wrist. The locking mechanism consists of a single functional screw on one side of the bracelet and a hinge on the other. Each #LOVE# bracelet is sold with a matching screwdriver specifically created for this piece. To discover your recommended #LOVE# bracelet size, please visit our Bracelet Sizing Chart. Add one centimeter to your size for a tight fit, or two centimeters for a looser fit.",
+    //     "shortDescription": "Yellow gold",
+    //     "truncatedDescription": "<span class=\"font-family--cartier-logos\">LOVE</span> bracelet, small model, 18K yellow gold. Sold with a screwdriver. Width: 3.65mm. T",
+    //     "longDescriptionDisplay": "<span class=\"font-family--cartier-logos\">LOVE</span> bracelet, small model, 18K yellow gold. Sold with a screwdriver. Width: 3.65mm. The iconic #LOVE# bracelet has been a symbol of free-spirited #LOVE# since 1969. Its screw motif and famous locking technology are truly timeless design signatures, while its oval shape ensures a close but comfortable fit to the wearer’s wrist. The locking mechanism consists of a single functional screw on one side of the bracelet and a hinge on the other. Each #LOVE# bracelet is sold with a matching screwdriver specifically created for this piece. To discover your recommended #LOVE# bracelet size, please visit our Bracelet Sizing Chart. Add one centimeter to your size for a tight fit, or two centimeters for a looser fit.",
+    //     "rating": 5,
+    //     "promotions": null,
+    //     "attributes": null,
+    //     "availability": {
+    //       "messages": [
+    //         "In Stock"
+    //       ],
+    //       "totalStock": 2,
+    //       "inStockDate": null
+    //     },
+    //     "available": true,
+    //     "options": [],
+    //     "quantities": [
+    //       {
+    //         "value": "1",
+    //         "selected": true,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=1"
+    //       },
+    //       {
+    //         "value": "2",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=2"
+    //       },
+    //       {
+    //         "value": "3",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=3"
+    //       },
+    //       {
+    //         "value": "4",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=4"
+    //       },
+    //       {
+    //         "value": "5",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=5"
+    //       },
+    //       {
+    //         "value": "6",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=6"
+    //       },
+    //       {
+    //         "value": "7",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=7"
+    //       },
+    //       {
+    //         "value": "8",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=8"
+    //       },
+    //       {
+    //         "value": "9",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=9"
+    //       },
+    //       {
+    //         "value": "10",
+    //         "selected": false,
+    //         "url": "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=20&pid=CRB6047520&quantity=10"
+    //       }
+    //     ],
+    //     "selectedProductUrl": "/en-us/jewelry/bracelets/love-bracelet-small-model-B6047517.html?dwvar_B6047517_size=20&quantity=1",
+    //     "readyToOrder": true,
+    //     "online": true,
+    //     "pageTitle": null,
+    //     "pageDescription": null,
+    //     "pageKeywords": null,
+    //     "pageMetaTags": [],
+    //     "template": null,
+    //     "fluentAvailability": {
+    //       "dskStock": 0,
+    //       "ndskStock": 2
+    //     },
+    //     "shareURLs": {
+    //       "facebook": {
+    //         "id": "facebook",
+    //         "label": "Facebook",
+    //         "url": "https://www.facebook.com/sharer/sharer.php?=undefined&u=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html"
+    //       },
+    //       "pinterest": {
+    //         "id": "pinterest",
+    //         "label": "Pinterest",
+    //         "url": "https://www.pinterest.com/pin/create/button?=undefined&description=%23LOVE%23%20bracelet%2C%20small%20model&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html"
+    //       },
+    //       "twitter": {
+    //         "id": "twitter",
+    //         "label": "Twitter",
+    //         "url": "https://twitter.com/intent/tweet?=undefined&text=%23LOVE%23%20bracelet%2C%20small%20model&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html"
+    //       },
+    //       "line": {
+    //         "id": "line",
+    //         "label": "Line",
+    //         "url": "https://social-plugins.line.me/lineit/share?=undefined&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html"
+    //       },
+    //       "email": {
+    //         "id": "email",
+    //         "label": "E-Mail",
+    //         "url": "mailto:?=undefined&body=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html&subject=%23LOVE%23%20bracelet%2C%20small%20model"
+    //       },
+    //       "presentationList": [
+    //         {
+    //           "id": "facebook",
+    //           "label": "Facebook",
+    //           "url": "https://www.facebook.com/sharer/sharer.php?=undefined&u=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html"
+    //         },
+    //         {
+    //           "id": "pinterest",
+    //           "label": "Pinterest",
+    //           "url": "https://www.pinterest.com/pin/create/button?=undefined&description=%23LOVE%23%20bracelet%2C%20small%20model&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html"
+    //         },
+    //         {
+    //           "id": "twitter",
+    //           "label": "Twitter",
+    //           "url": "https://twitter.com/intent/tweet?=undefined&text=%23LOVE%23%20bracelet%2C%20small%20model&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html"
+    //         },
+    //         {
+    //           "id": "email",
+    //           "label": "E-Mail",
+    //           "url": "mailto:?=undefined&body=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Flove-bracelet-small-model-CRB6047520.html&subject=%23LOVE%23%20bracelet%2C%20small%20model"
+    //         }
+    //       ]
+    //     },
+    //     "lineContactURLs": {
+    //       "desktop": "https://cartierth",
+    //       "mobile": "https://cartierthHi%20there"
+    //     },
+    //     "pimCategory": {},
+    //     "pimTopLevelCategory": {},
+    //     "category": {},
+    //     "toplevelcategory": {},
+    //     "aboutCollection": null,
+    //     "aboutCollectionExtended": null,
+    //     "gtmPushCategory": "Bracelet",
+    //     "explicitRecommendations": null,
+    //     "isEngrav": true,
+    //     "nrOfChar1Line": 10,
+    //     "hasEngravOptions": true,
+    //     "engravedProductType": "RENG",
+    //     "embossing": false,
+    //     "hasEmbossOptions": false,
+    //     "nrOfChar1LineEmbossing": 4,
+    //     "wristSizeMin": "14",
+    //     "wristSizeMax": "14",
+    //     "isEngraved": "No",
+    //     "isEmbossed": "NA",
+    //     "isAdjusted": "NA",
+    //     "isBraceletAdjusted": "NA",
+    //     "isPersonalised": "No",
+    //     "servicesContent": "product-gift-shipping-services",
+    //     "USPContent": "global-services-grid",
+    //     "productVariant": "20 cm",
+    //     "back": "",
+    //     "bracelet": "",
+    //     "buckle": "",
+    //     "cites": "false",
+    //     "colorLeatherGoods": "",
+    //     "colorOfDial": "",
+    //     "colorOfLenses": "",
+    //     "crown": "",
+    //     "dial": "",
+    //     "diameter": "",
+    //     "diamondShape": "",
+    //     "exclusive": "",
+    //     "finishing": "",
+    //     "gender": "[Ldw.value.EnumValue;@213d57f",
+    //     "glass": "",
+    //     "glassShape": "",
+    //     "grossWeight": "",
+    //     "GTIN": "7613268633991",
+    //     "hands": "",
+    //     "height": "",
+    //     "interchangableStraps": "",
+    //     "caseLength": "",
+    //     "length": "",
+    //     "limitedEdition": "false",
+    //     "launchDate": "",
+    //     "material2": "",
+    //     "modelLeatherGoods": "",
+    //     "movement": "",
+    //     "movementDetails": "",
+    //     "movementDimension": "",
+    //     "netProductWeight": "25.525",
+    //     "network": "Internal and External Boutiques",
+    //     "powerReserve": "",
+    //     "rangeStatus": "In range",
+    //     "scienceOfTheAnimal": "",
+    //     "segment": "BJ",
+    //     "setting": "",
+    //     "strapLength": "",
+    //     "subCollection": "",
+    //     "caseThickness": "",
+    //     "typeOfBracelet": "Rigide",
+    //     "typeOfCarry": "",
+    //     "watchComplication": "",
+    //     "watchShape": "",
+    //     "waterResistance": "",
+    //     "caseWidth": "",
+    //     "Width": "",
+    //     "writingMode": "",
+    //     "size": "20",
+    //     "keyFeatureSection1Desc": "",
+    //     "keyFeatureSection2Desc": "",
+    //     "keyFeatureSection3Desc": "",
+    //     "keyFeatureSection1Image": "",
+    //     "keyFeatureSection2Image": "",
+    //     "keyFeatureSection3Image": "",
+    //     "specificationSection1Image": "",
+    //     "specificationSection2Image": "",
+    //     "specificationSection3Image": "",
+    //     "specificationSection4Image": "",
+    //     "specificationSection5Image": "",
+    //     "specificationSection6Image": "",
+    //     "productcollection": "LOVE",
+    //     "reference": "B6047517",
+    //     "availableForStoreReservation": true,
+    //     "isCaseProduct": false,
+    //     "isFragranceRefillProduct": false,
+    //     "material1": "[Ldw.value.EnumValue;@3d003380",
+    //     "productMaterialJewelry": "",
+    //     "productLine2": "Jewelry",
+    //     "caseMaterial": "NA",
+    //     "leatherMaterial": "OJ",
+    //     "typeOfStrap": "NA",
+    //     "novelties": "NA",
+    //     "productLine": "Jewelry",
+    //     "imagesDisplayConfig": {
+    //       "configData": [
+    //         {
+    //           "imgName": "637708800298749607-2059319.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2059345.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2059370.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2059529.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2059528.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2059527.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2059526.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637750371958735270-2285107.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2059450.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2059554.png",
+    //           "hasBackground": true,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637708800298749607-2159807.png",
+    //           "hasBackground": true,
+    //           "isWornImage": true
+    //         },
+    //         {
+    //           "imgName": "637342205061540106-1437257.png",
+    //           "hasBackground": false,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637342205088571937-1437256.png",
+    //           "hasBackground": false,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637342205110134506-1642050.png",
+    //           "hasBackground": false,
+    //           "isWornImage": false
+    //         },
+    //         {
+    //           "imgName": "637436432080366143-1489631.png",
+    //           "hasBackground": false,
+    //           "isWornImage": false
+    //         }
+    //       ],
+    //       "hasBackgroundImage": true
+    //     },
+    //     "is3DProduct": false,
+    //     "includedStraps": [],
+    //     "hasStrapOptions": false,
+    //     "iframe3DURL": "3dconfigurator.s3-accelerate.amazonaws.com/CartierConfigurator/index.html?pId=B6047517",
+    //     "defaultStrapOption": "",
+    //     "sizeChartId": "",
+    //     "sizeChartURL": "https://www.en.cartier.com/services/care-adjust-repair/jewelry/sizing-guides.html",
+    //     "availableForInStorePickup": true,
+    //     "storePickupReady": true,
+    //     "storePickupEnabled": true,
+    //     "visible": {
+    //       "web": true,
+    //       "phone": true
+    //     },
+    //     "attributesHtml": "\n\n\n\n",
+    //     "promotionsHtml": "\n\n\n",
+    //     "optionsHtml": "\n\n\n\n\n",
+    //     "inWishlist": false
+    //   },
+    //   "resources": {
+    //     "info_selectforstock": "Select Styles for Availability",
+    //     "assistiveSelectedText": "selected"
+    //   }
+    // };
+  }
+
+  static function product_showquickview(WP_REST_Request $request)
+  {
+    $product = wc_get_product($request->get_param('pid'));
+
+    return [
+      "action" => "Product-ShowQuickView",
+      "queryString" => "pid=$product->id&quantity=1",
+      "locale" => "en_US",
+      "product" => Product::get_product_data($product),
+      "addToCartUrl" => [],
+      "resources" => [
+        "info_selectforstock" => "Select Styles for Availability",
+        "assistiveSelectedText" => "selected"
+      ],
+      "quickViewFullDetailMsg" => "View Full Details",
+      "closeButtonText" => "Close Quickview Dialog",
+      "enterDialogMessage" => "Start of Quickview dialog window. Select Close to cancel and close the window.",
+      "template" => "product/quickView.isml",
+      "renderedTemplate" => Product::render_quickview($product),
+      "productUrl" => $product->get_permalink()
+    ];
+  }
+
+  static function product_zoom(WP_REST_Request $request)
+  {
+    $pid         = $request->get_param('pid');
+    $start_index = $request->get_param('startindex');
+    $product     = wc_get_product($pid);
+
+    $hi_res = [
+      array(
+        "alt" => $product->name,
+        "url" => wp_get_attachment_url($product->image_id) . "?sw=2000&sh=2000&sm=fit&sfrm=png",
+        "index" => "0",
+        "title" => $product->name,
+        "absURL" => wp_get_attachment_url($product->image_id) . "?sw=2000&sh=2000&sm=fit&sfrm=png",
+        "hasImage" => true,
+        "hasBackground" => false,
+        "isWornImage" => false,
+        "hide" => false,
+        "imagePath" => basename(get_attached_file($product->image_id))
+      )
+    ];
+
+    for ($i = 0; $i < sizeof($product->gallery_image_ids); $i++) {
+      array_push($hi_res, array(
+        "alt" => $product->name,
+        "url" => wp_get_attachment_url($product->gallery_image_ids[$i]) . "?sw=2000&sh=2000&sm=fit&sfrm=png",
+        "index" => $i + 1,
+        "title" => $product->name,
+        "absURL" => wp_get_attachment_url($product->gallery_image_ids[$i]) . "?sw=2000&sh=2000&sm=fit&sfrm=png",
+        "hasImage" => true,
+        "hasBackground" => false,
+        "isWornImage" => false,
+        "hide" => false,
+        "imagePath" => basename(get_attached_file($product->gallery_image_ids[$i]))
+      ));
+    }
+
+    $rendered_html = "";
+    foreach ($hi_res as $img) {
+      $rendered_html .= "<div class=\"product-zoom__item aspect-ratio--square\">
+    <img src=\"{$img['url']}\" class=\"product-zoom__image component-overlay component-overlay--center object-fit--contain\" data-product-component=\"image-zoom\" data-image-index=\"0\" alt=\"{$product->name}\" itemprop=\"image\" />
+  </div>";
+    }
+
+    return array(
+      "action" => "Product-Zoom",
+      "queryString" => "dwvar_B6067217_size=20&pid=$pid&quantity=1&startindex=$start_index",
+      "locale" => "en_US",
+      "images" => array(
+        "hi-res" => $hi_res
+      ),
+      "startindex" => $start_index,
+      "renderedTemplate" => "
+      <p class=\"product-zoom__label heading-type body-type font-weight--normal text-align--center set--w-100\">
+        Zoom
+      </p>
+      <div id=\"pdpZoom-null\" class=\"product-zoom flex set--w-100 bg--grey-1\" data-slick='{\"type\": \"zoomCarousel\", \"initialSlide\": {$start_index}}' data-product-component=\"image-gallery\" role=\"listbox\">
+        $rendered_html
+      </div>"
+    );
+  }
+
+  public static function render_product($product)
+  {
+    $id       = $product->id;
+    $p_link   = $product->get_permalink();
+    $name     = $product->get_name();
+    $currency = get_woocommerce_currency();
+    $currency_symbol = get_woocommerce_currency_symbol();
+    $price           = $product->get_price();
+    $formatted_price = number_format((float)$price, 2);
+    $img1            = wp_get_attachment_url($product->get_image_id());
+
+    $stretch_class = false ? 'full-stretch-image' : '';
+
+    return "<div class=\"product-grid__item col-6 col-md-3\" data-tracking-context=\"Productlisting\">
       <div class=\"product flex flex-grow-1 flex-direction-col\">
         <div class=\"product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center\" itemscope itemtype=\"http://schema.org/Product\" data-product-container=\"tile\" data-product-tile data-pid=\"$id\" data-tracking-id=\"$id\" data-tracking-position>
     
@@ -68,16 +895,16 @@
         </div>
       </div>
       </div>";
-    }
+  }
 
-    public static function render_product_loop_end($category, $showing, $total)
-    {
-      $page = $showing/24;
-      // $nonce = wp_create_nonce('wp_rest');
-      $site_url = get_site_url();
-      if ($total <= $showing) $showing = $total;
+  public static function render_product_loop_end($category, $showing, $total)
+  {
+    $page = $showing / 24;
+    // $nonce = wp_create_nonce('wp_rest');
+    $site_url = get_site_url();
+    if ($total <= $showing) $showing = $total;
 
-      echo "
+    echo "
       <div class=\"search-results__footer col-12 flex-align-center text-align--center\" data-search-component=\"product-grid-footer\">
         <div class=\"brand__panther-image image-width__large\">
           <img class=\"panther-image\" alt=\"cartier\" src=\"wp-content/themes/siellest/assets/images/panthereCartierImageTransparent.webp\" />
@@ -85,8 +912,8 @@
         <p class=\"search-results__footer-count font-family--serif\">
           Showing $showing of $total items
         </p>";
-      if ($total > $showing)
-        echo "<button type=\"button\" class=\"search-results__footer-cta button button--primary-outline button--fluid set--w-100 \"
+    if ($total > $showing)
+      echo "<button type=\"button\" class=\"search-results__footer-cta button button--primary-outline button--fluid set--w-100 \"
           data-search-component=\"more-products\"
           data-sort-options='{
             \"options\":[
@@ -98,33 +925,34 @@
           data-url=\"wp-json/siellest/Search-UpdateGrid?cgid=$category&prefn1=sapIsVisibleWeb&prefv1=true&start=$showing&sz=24\">
           Load More
         </button>";
-       echo "<input type=\"hidden\" class=\"permalink\" value=\"$site_url/product-category/$category/all-collections/?prefn1=sapIsVisibleWeb&prefv1=true&start=0&sz=24\" />
+    echo "<input type=\"hidden\" class=\"permalink\" value=\"$site_url/product-category/$category/all-collections/?prefn1=sapIsVisibleWeb&prefv1=true&start=0&sz=24\" />
         <input type=\"hidden\" data-cgid value=\"$category\" />
       </div>";
-    }
+  }
 
-    public static function render_quickview($product) {
-      $permalink       = $product->get_permalink();
-      $currency        = get_woocommerce_currency();
-      $currency_symbol = get_woocommerce_currency_symbol();
-      $formatted_price = number_format((float)$product->price, 2);
-      $truncated_desc  = substr($product->description, 0, 90);
+  public static function render_quickview($product)
+  {
+    $permalink       = $product->get_permalink();
+    $currency        = get_woocommerce_currency();
+    $currency_symbol = get_woocommerce_currency_symbol();
+    $formatted_price = number_format((float)$product->price, 2);
+    $truncated_desc  = substr($product->description, 0, 88);
 
-      $output = "
+    $output = "
       <link rel=\"stylesheet\" href=\"wp-content/themes/siellest/assets/css/productMain.css\" />
       <div class=\"quickview quickview-standard\" data-product-container=\"quickview\" data-pid=\"{$product->id}\">
         <div class=\"row flex-no-gutters\">
           <!-- Product Images Carousel -->
           <div class=\"col-12 col-md-7 flex-justify-center\">
             <ul id=\"pdpCarousel-$product->id\" class=\"product-gallery product-gallery--quickview slider--pre-layout-1 slider--arrows-inner slider--arrows-center slider--dots-inner list--reset\" data-slick='{\"type\": \"qvCarousel\"}' data-product-component=\"image-gallery\" aria-label=\"Product Main Images\">";
-              foreach(Product::get_images($product) as $key => $img) {
-                $counter = $key + 1;
-                $class_md6 = $key > 0 ? 'col-md-6': '';
-                $output .= "<li class=\"product-gallery__item aspect-ratio--square bg--grey-1 col-12 $class_md6\">
+    foreach (Product::get_images($product) as $key => $img) {
+      $counter = $key + 1;
+      $class_md6 = $key > 0 ? 'col-md-6' : '';
+      $output .= "<li class=\"product-gallery__item aspect-ratio--square bg--grey-1 col-12 $class_md6\">
                         <img src=\"{$img['url']}\" class=\"product-gallery__img component-overlay component-overlay--center object-fit--contain\" data-product-component=\"image\" data-image-index=\"$key\" alt=\"$product->name $counter\" itemprop=\"image\" />
                       </li>";
-              }
-            $output .= "</ul>
+    }
+    $output .= "</ul>
             <div class=\"hidden\">
               <li class=\"product-gallery__item aspect-ratio--square bg--grey-1 col-12 col-md-6\" data-product-component=\"gallery-item\" data-image-template=\"image-gallery\">
                 <img class=\"product-gallery__img component-overlay component-overlay--center object-fit--contain\" data-product-component=\"image\" data-image-index=\"\" alt=\"\" itemprop=\"image\" />    
@@ -153,7 +981,7 @@
                 </div>
                 <div class=\"quickview__details-description-wrapper\">
                   <div class=\"pdp-main__description cms-generic-copy text-line--medium\" data-product-component=\"short-description\">
-                    <span class=\"pdp-main__description-truncated\">$truncated_desc</span>
+                    <span class=\"pdp-main__description-truncated\">$truncated_desc...</span>
                     <span class=\"pdp-main__description-full\">{$product->description}</span>
                     <button type=\"button\" class=\"pdp-main__description-more link link--underline\" data-toggle='{\"target\": \"[data-product-component=short-description]\", \"persist\": true}'>
                       <span class=\"pdp-main__description-truncated\">Read More</span>
@@ -279,386 +1107,394 @@
         </div>
       </div>";
 
-      return $output;
-    }
+    return $output;
+  }
 
-    public static function get_product_data($product)
-    {
-      return [
-        "uuid" => "ea75d4a05c64b80983c90dcce6",
-        "id" => "$product->id",
-        "productName" => "$product->name",
-        "productType" => "standard",
-        "brand" => "siellest",
-        "productDisplayName" => "$product->name",
-        "price" => [
-          "sales" => [
-            "value" => $product->price,
-            "currency" => get_woocommerce_currency(),
-            "formatted" => get_woocommerce_currency_symbol() . number_format((float)$product->price, 2),
-            "decimalPrice" => $product->price
-          ],
-          "list" => null
+  public static function get_product_data($product)
+  {
+    return [
+      "uuid" => "ea75d4a05c64b80983c90dcce6",
+      "id" => "$product->id",
+      "productName" => "$product->name",
+      "productType" => "standard",
+      "brand" => "siellest",
+      "productDisplayName" => "$product->name",
+      "price" => [
+        "sales" => [
+          "value" => $product->price,
+          "currency" => get_woocommerce_currency(),
+          "formatted" => get_woocommerce_currency_symbol() . number_format((float)$product->price, 2),
+          "decimalPrice" => $product->price
         ],
-        "sellable" => [
-          "web" => true,
-          "phone" => true
+        "list" => null
+      ],
+      "sellable" => [
+        "web" => true,
+        "phone" => true
+      ],
+      "requestPrice" => false,
+      "sellableLabel" => "sellable",
+      "isPriceUnderThreshold" => true,
+      "images" => [
+        "large" => Product::get_images($product),
+        "small" => Product::get_images($product, 'small')
+      ],
+      "selectedQuantity" => 1,
+      "minOrderQuantity" => 1,
+      "maxOrderQuantity" => 10,
+      "variationAttributes" => null,
+      "longDescription" => $product->description,
+      "shortDescription" => $product->short_description,
+      "truncatedDescription" => "Trinity bracelet, small model, white gold 750/1000, rose gold 750/1000, yellow gold 750/",
+      "longDescriptionDisplay" => "Trinity bracelet, small model, white gold 750/1000, rose gold 750/1000, yellow gold 750/1000. Supplied on a cord. Width: 2 mm. Inner diameter: 10.7 mm",
+      "rating" => 4.2,
+      "promotions" => null,
+      "attributes" => null,
+      // "variationAttributes": [ // for when productType = variant
+      //   {
+      //     "displayName": "Size",
+      //     "displayValue": "15 cm",
+      //     "attributeId": "size",
+      //     "id": "size"
+      //   }
+      // ]
+      "availability" => [
+        "messages" => [
+          "In Stock" // or "Unavailable online"
         ],
-        "requestPrice" => false,
-        "sellableLabel" => "sellable",
-        "isPriceUnderThreshold" => true,
-        "images" => [
-          "large" => Product::get_images($product),
-          "small" => Product::get_images($product, 'small')
+        "totalStock" => 271,
+        "inStockDate" => null
+      ],
+      "available" => true,
+      "options" => [],
+      "quantities" => [
+        [
+          "value" => "1",
+          "selected" => true,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=1"
         ],
-        "selectedQuantity" => 1,
-        "minOrderQuantity" => 1,
-        "maxOrderQuantity" => 10,
-        "variationAttributes" => null,
-        "longDescription" => "Trinity bracelet, small model, white gold 750/1000, rose gold 750/1000, yellow gold 750/1000. Supplied on a cord. Width: 2 mm. Inner diameter: 10.7 mm",
-        "shortDescription" => "White gold, yellow gold, rose gold",
-        "truncatedDescription" => "Trinity bracelet, small model, white gold 750/1000, rose gold 750/1000, yellow gold 750/",
-        "longDescriptionDisplay" => "Trinity bracelet, small model, white gold 750/1000, rose gold 750/1000, yellow gold 750/1000. Supplied on a cord. Width: 2 mm. Inner diameter: 10.7 mm",
-        "rating" => 4.2,
-        "promotions" => null,
-        "attributes" => null,
-        "availability" => [
-          "messages" => [
-            "In Stock"
-          ],
-          "totalStock" => 271,
-          "inStockDate" => null
+        [
+          "value" => "2",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=2"
         ],
-        "available" => true,
-        "options" => [],
-        "quantities" => [
-          [
-            "value" => "1",
-            "selected" => true,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=1"
-          ],
-          [
-            "value" => "2",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=2"
-          ],
-          [
-            "value" => "3",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=3"
-          ],
-          [
-            "value" => "4",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=4"
-          ],
-          [
-            "value" => "5",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=5"
-          ],
-          [
-            "value" => "6",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=6"
-          ],
-          [
-            "value" => "7",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=7"
-          ],
-          [
-            "value" => "8",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=8"
-          ],
-          [
-            "value" => "9",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=9"
-          ],
-          [
-            "value" => "10",
-            "selected" => false,
-            "url" => "/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?pid=CRB6016700&quantity=10"
-          ]
+        [
+          "value" => "3",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=3"
         ],
-        "selectedProductUrl" => "/en-us/jewelry/bracelets/trinity-bracelet-CRB6016700.html?%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html=undefined&quantity=1",
-        "readyToOrder" => true,
-        "online" => true,
-        "pageTitle" => "CRB6016700 - Trinity bracelet - White gold, yellow gold, rose gold - Cartier",
-        "pageDescription" => "Trinity bracelet: Trinity bracelet, 18K white gold, 18K rose gold, 18K yellow gold. Comes on a cord. Width: 2 mm. Inner diameter: 10.7mm",
-        "pageKeywords" => null,
-        "pageMetaTags" => [],
-        "template" => null,
-        "fluentAvailability" => [
-          "dskStock" => 174,
-          "ndskStock" => 97
+        [
+          "value" => "4",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=4"
         ],
-        "shareURLs" => [
-          "facebook" => [
+        [
+          "value" => "5",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=5"
+        ],
+        [
+          "value" => "6",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=6"
+        ],
+        [
+          "value" => "7",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=7"
+        ],
+        [
+          "value" => "8",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=8"
+        ],
+        [
+          "value" => "9",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=9"
+        ],
+        [
+          "value" => "10",
+          "selected" => false,
+          "url" => "wp-json/siellest/Product-Variation?pid=$product->id&quantity=10"
+        ]
+      ],
+      "selectedProductUrl" => "$product->permalink&quantity=1",
+      "readyToOrder" => true,
+      "online" => true,
+      "pageTitle" => "$product->id - $product->name - White gold, yellow gold, rose gold - Cartier",
+      "pageDescription" => "$product->name: $product->name, 18K white gold, 18K rose gold, 18K yellow gold. Comes on a cord. Width: 2 mm. Inner diameter: 10.7mm",
+      "pageKeywords" => null,
+      "pageMetaTags" => [],
+      "template" => null,
+      "fluentAvailability" => [
+        "dskStock" => 174,
+        "ndskStock" => 97
+      ],
+      "shareURLs" => [
+        "facebook" => [
+          "id" => "facebook",
+          "label" => "Facebook",
+          "url" => "https://www.facebook.com/sharer/sharer.php?=undefined&u=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
+        ],
+        "pinterest" => [
+          "id" => "pinterest",
+          "label" => "Pinterest",
+          "url" => "https://www.pinterest.com/pin/create/button?=undefined&description=Trinity%20bracelet&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
+        ],
+        "twitter" => [
+          "id" => "twitter",
+          "label" => "Twitter",
+          "url" => "https://twitter.com/intent/tweet?=undefined&text=Trinity%20bracelet&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
+        ],
+        "line" => [
+          "id" => "line",
+          "label" => "Line",
+          "url" => "https://social-plugins.line.me/lineit/share?=undefined&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
+        ],
+        "email" => [
+          "id" => "email",
+          "label" => "E-Mail",
+          "url" => "mailto:?=undefined&body=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html&subject=Trinity%20bracelet"
+        ],
+        "presentationList" => [
+          [
             "id" => "facebook",
             "label" => "Facebook",
             "url" => "https://www.facebook.com/sharer/sharer.php?=undefined&u=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
           ],
-          "pinterest" => [
+          [
             "id" => "pinterest",
             "label" => "Pinterest",
             "url" => "https://www.pinterest.com/pin/create/button?=undefined&description=Trinity%20bracelet&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
           ],
-          "twitter" => [
+          [
             "id" => "twitter",
             "label" => "Twitter",
             "url" => "https://twitter.com/intent/tweet?=undefined&text=Trinity%20bracelet&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
           ],
-          "line" => [
-            "id" => "line",
-            "label" => "Line",
-            "url" => "https://social-plugins.line.me/lineit/share?=undefined&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
-          ],
-          "email" => [
+          [
             "id" => "email",
             "label" => "E-Mail",
             "url" => "mailto:?=undefined&body=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html&subject=Trinity%20bracelet"
-          ],
-          "presentationList" => [
-            [
-              "id" => "facebook",
-              "label" => "Facebook",
-              "url" => "https://www.facebook.com/sharer/sharer.php?=undefined&u=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
-            ],
-            [
-              "id" => "pinterest",
-              "label" => "Pinterest",
-              "url" => "https://www.pinterest.com/pin/create/button?=undefined&description=Trinity%20bracelet&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
-            ],
-            [
-              "id" => "twitter",
-              "label" => "Twitter",
-              "url" => "https://twitter.com/intent/tweet?=undefined&text=Trinity%20bracelet&url=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html"
-            ],
-            [
-              "id" => "email",
-              "label" => "E-Mail",
-              "url" => "mailto:?=undefined&body=https%3A%2F%2Fwww.cartier.com%2Fen-us%2Fjewelry%2Fbracelets%2Ftrinity-bracelet-CRB6016700.html&subject=Trinity%20bracelet"
-            ]
           ]
-        ],
-        "lineContactURLs" => [
-          "desktop" => "https://cartierth",
-          "mobile" => "https://cartierthHi%20there"
-        ],
-        "pimCategory" => [],
-        "pimTopLevelCategory" => [],
-        "category" => [],
-        "toplevelcategory" => [],
-        "aboutCollection" => null,
-        "aboutCollectionExtended" => null,
-        "gtmPushCategory" => "Bracelet",
-        "explicitRecommendations" => null,
-        "nrOfChar1Line" => 10,
-        "engravedProductType" => "",
-        "nrOfChar1LineEmbossing" => 4,
-        "wristSizeMin" => "14",
-        "wristSizeMax" => "14",
-        "isEngraved" => "NA",
-        "isEmbossed" => "NA",
-        "isAdjusted" => "NA",
-        "isBraceletAdjusted" => "NA",
-        "isPersonalised" => "NA",
-        "servicesContent" => "product-gift-shipping-services",
-        "USPContent" => "global-services-grid",
-        "productVariant" => "NA",
-        "back" => "",
-        "bracelet" => "",
-        "buckle" => "",
-        "cites" => "false",
-        "colorLeatherGoods" => "",
-        "colorOfDial" => "",
-        "colorOfLenses" => "",
-        "crown" => "",
-        "dial" => "",
-        "diameter" => "",
-        "diamondShape" => "",
-        "exclusive" => "",
-        "finishing" => "",
-        "gender" => "[Ldw.value.EnumValue;@11bb23bc",
-        "glass" => "",
-        "glassShape" => "",
-        "grossWeight" => "",
-        "GTIN" => "7612456281907",
-        "hands" => "",
-        "height" => "",
-        "interchangableStraps" => "",
-        "caseLength" => "",
-        "length" => "",
-        "limitedEdition" => "false",
-        "launchDate" => "",
-        "material2" => "",
-        "modelLeatherGoods" => "",
-        "movement" => "",
-        "movementDetails" => "",
-        "movementDimension" => "",
-        "netProductWeight" => "2.93",
-        "network" => "Internal and External Boutiques",
-        "powerReserve" => "",
-        "rangeStatus" => "In range",
-        "scienceOfTheAnimal" => "",
-        "segment" => "BJ",
-        "setting" => "",
-        "strapLength" => "",
-        "subCollection" => "",
-        "caseThickness" => "",
-        "typeOfBracelet" => "Souple",
-        "typeOfCarry" => "",
-        "watchComplication" => "",
-        "watchShape" => "",
-        "waterResistance" => "",
-        "caseWidth" => "",
-        "Width" => "",
-        "writingMode" => "",
-        "size" => "",
-        "keyFeatureSection1Desc" => "",
-        "keyFeatureSection2Desc" => "",
-        "keyFeatureSection3Desc" => "",
-        "keyFeatureSection1Image" => "",
-        "keyFeatureSection2Image" => "",
-        "keyFeatureSection3Image" => "",
-        "specificationSection1Image" => "",
-        "specificationSection2Image" => "",
-        "specificationSection3Image" => "",
-        "specificationSection4Image" => "",
-        "specificationSection5Image" => "",
-        "specificationSection6Image" => "",
-        "productcollection" => "Trinity",
-        "reference" => "B6016700",
-        "availableForStoreReservation" => true,
-        "isCaseProduct" => false,
-        "isFragranceRefillProduct" => false,
-        "material1" => "[Ldw.value.EnumValue;@47afbaa0",
-        "productMaterialJewelry" => "",
-        "productLine2" => "Jewelry",
-        "caseMaterial" => "NA",
-        "leatherMaterial" => "OGOROJ",
-        "typeOfStrap" => "NA",
-        "novelties" => "NA",
-        "productLine" => "Jewelry",
-        "imagesDisplayConfig" => Product::get_images_display_config($product),
-        "is3DProduct" => false,
-        "includedStraps" => [],
-        "hasStrapOptions" => false,
-        "iframe3DURL" => "3dconfigurator.s3-accelerate.amazonaws.com/CartierConfigurator/index.html?pId=B6016700",
-        "defaultStrapOption" => "",
-        "sizeChartId" => "",
-        "sizeChartURL" => "https://www.en.cartier.com/services/care-adjust-repair/jewelry/sizing-guides.html",
-        "availableForInStorePickup" => true,
-        "storePickupReady" => true,
-        "storePickupEnabled" => true,
-        "visible" => [
-          "web" => true,
-          "phone" => true
         ]
-      ];
-    }
+      ],
+      "lineContactURLs" => [
+        "desktop" => "https://cartierth",
+        "mobile" => "https://cartierthHi%20there"
+      ],
+      "pimCategory" => [],
+      "pimTopLevelCategory" => [],
+      "category" => [],
+      "toplevelcategory" => [],
+      "aboutCollection" => null,
+      "aboutCollectionExtended" => null,
+      "gtmPushCategory" => "Bracelet",
+      "explicitRecommendations" => null,
+      "nrOfChar1Line" => 10,
+      "engravedProductType" => "",
+      "nrOfChar1LineEmbossing" => 4,
+      "wristSizeMin" => "14",
+      "wristSizeMax" => "14",
+      "isEngraved" => "NA",
+      "isEmbossed" => "NA",
+      "isAdjusted" => "NA",
+      "isBraceletAdjusted" => "NA",
+      "isPersonalised" => "NA",
+      "servicesContent" => "product-gift-shipping-services",
+      "USPContent" => "global-services-grid",
+      "productVariant" => "NA",
+      "back" => "",
+      "bracelet" => "",
+      "buckle" => "",
+      "cites" => "false",
+      "colorLeatherGoods" => "",
+      "colorOfDial" => "",
+      "colorOfLenses" => "",
+      "crown" => "",
+      "dial" => "",
+      "diameter" => "",
+      "diamondShape" => "",
+      "exclusive" => "",
+      "finishing" => "",
+      "gender" => "[Ldw.value.EnumValue;@11bb23bc",
+      "glass" => "",
+      "glassShape" => "",
+      "grossWeight" => "",
+      "GTIN" => "7612456281907",
+      "hands" => "",
+      "height" => "",
+      "interchangableStraps" => "",
+      "caseLength" => "",
+      "length" => "",
+      "limitedEdition" => "false",
+      "launchDate" => "",
+      "material2" => "",
+      "modelLeatherGoods" => "",
+      "movement" => "",
+      "movementDetails" => "",
+      "movementDimension" => "",
+      "netProductWeight" => "2.93",
+      "network" => "Internal and External Boutiques",
+      "powerReserve" => "",
+      "rangeStatus" => "In range",
+      "scienceOfTheAnimal" => "",
+      "segment" => "BJ",
+      "setting" => "",
+      "strapLength" => "",
+      "subCollection" => "",
+      "caseThickness" => "",
+      "typeOfBracelet" => "Souple",
+      "typeOfCarry" => "",
+      "watchComplication" => "",
+      "watchShape" => "",
+      "waterResistance" => "",
+      "caseWidth" => "",
+      "Width" => "",
+      "writingMode" => "",
+      "size" => "",
+      "keyFeatureSection1Desc" => "",
+      "keyFeatureSection2Desc" => "",
+      "keyFeatureSection3Desc" => "",
+      "keyFeatureSection1Image" => "",
+      "keyFeatureSection2Image" => "",
+      "keyFeatureSection3Image" => "",
+      "specificationSection1Image" => "",
+      "specificationSection2Image" => "",
+      "specificationSection3Image" => "",
+      "specificationSection4Image" => "",
+      "specificationSection5Image" => "",
+      "specificationSection6Image" => "",
+      "productcollection" => "Trinity",
+      "reference" => "B6016700",
+      "availableForStoreReservation" => true,
+      "isCaseProduct" => false,
+      "isFragranceRefillProduct" => false,
+      "material1" => "[Ldw.value.EnumValue;@47afbaa0",
+      "productMaterialJewelry" => "",
+      "productLine2" => "Jewelry",
+      "caseMaterial" => "NA",
+      "leatherMaterial" => "OGOROJ",
+      "typeOfStrap" => "NA",
+      "novelties" => "NA",
+      "productLine" => "Jewelry",
+      "imagesDisplayConfig" => Product::get_images_display_config($product),
+      "is3DProduct" => false,
+      "includedStraps" => [],
+      "hasStrapOptions" => false,
+      "iframe3DURL" => "3dconfigurator.s3-accelerate.amazonaws.com/CartierConfigurator/index.html?pId=B6016700",
+      "defaultStrapOption" => "",
+      "sizeChartId" => "",
+      "sizeChartURL" => "https://www.en.cartier.com/services/care-adjust-repair/jewelry/sizing-guides.html",
+      "availableForInStorePickup" => true,
+      "storePickupReady" => true,
+      "storePickupEnabled" => true,
+      "visible" => [
+        "web" => true,
+        "phone" => true
+      ]
+    ];
+  }
 
-    public static function get_images($product, $size = 'large')
-    {
-      $size = $size == 'large' ? 750 : 250;
-      $imgs_data = [];
+  public static function get_images($product, $size = 'large')
+  {
+    $size = $size == 'large' ? 750 : 250;
+    $imgs_data = [];
 
-      $url = wp_get_attachment_url($product->image_id);
+    $url = wp_get_attachment_url($product->image_id);
+    array_push($imgs_data, [
+      "alt" => $product->name,
+      "url" =>  "$url?sw=$size&sh=$size&sm=fit&sfrm=png",
+      "index" => "0",
+      "title" => $product->name,
+      "absURL" => "$url?sw=$size&sh=$size&sm=fit&sfrm=png",
+      "hasImage" => true,
+      "hasBackground" => true,
+      "isWornImage" => false,
+      "hide" => false,
+      "imagePath" => "/images/large/" . basename(get_attached_file($product->image_id))
+    ]);
+
+    foreach ($product->gallery_image_ids as $key => $img_id) {
+      $url = wp_get_attachment_url($img_id);
       array_push($imgs_data, [
         "alt" => $product->name,
-        "url" =>  "$url?sw=$size&sh=$size&sm=fit&sfrm=png",
-        "index" => "0",
+        "url" => "$url?sw=$size&sh=$size&sm=fit&sfrm=png",
+        "index" => ($key + 1),
         "title" => $product->name,
         "absURL" => "$url?sw=$size&sh=$size&sm=fit&sfrm=png",
         "hasImage" => true,
         "hasBackground" => true,
         "isWornImage" => false,
         "hide" => false,
-        "imagePath" => "/images/large/" . basename(get_attached_file($product->image_id))
+        "imagePath" => "/images/large/" . basename(get_attached_file($img_id))
       ]);
-  
-      foreach ($product->gallery_image_ids as $key => $img_id) {
-        $url = wp_get_attachment_url($img_id);
-        array_push($imgs_data, [
-          "alt" => $product->name,
-          "url" => "$url?sw=$size&sh=$size&sm=fit&sfrm=png",
-          "index" => ($key + 1),
-          "title" => $product->name,
-          "absURL" => "$url?sw=$size&sh=$size&sm=fit&sfrm=png",
-          "hasImage" => true,
-          "hasBackground" => true,
-          "isWornImage" => false,
-          "hide" => false,
-          "imagePath" => "/images/large/" . basename(get_attached_file($img_id))
-        ]);
-      }
-      return $imgs_data;
     }
-
-    public static function get_images_display_config($product)
-    {
-      return [
-        "configData" => [
-          [
-            "imgName" => "637708788550193812-2059312.png",
-            "hasBackground" => true,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637708788550193812-2059408.png",
-            "hasBackground" => true,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637708788550193812-2059483.png",
-            "hasBackground" => true,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637708788550193812-2059482.png",
-            "hasBackground" => true,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637708788550193812-2059435.png",
-            "hasBackground" => true,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637708788550193812-2059514.png",
-            "hasBackground" => true,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637708788550193812-2159750.png",
-            "hasBackground" => true,
-            "isWornImage" => true
-          ],
-          [
-            "imgName" => "637342194268640334-1057412.png",
-            "hasBackground" => false,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637342194289109467-1956045.png",
-            "hasBackground" => false,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637436417947662037-1362412.png",
-            "hasBackground" => false,
-            "isWornImage" => false
-          ],
-          [
-            "imgName" => "637436418030162330-2091396.png",
-            "hasBackground" => false,
-            "isWornImage" => true
-          ]
-        ],
-        "hasBackgroundImage" => true
-      ];
-    }
+    return $imgs_data;
   }
+
+  public static function get_images_display_config($product)
+  {
+    return [
+      "configData" => [
+        [
+          "imgName" => "637708788550193812-2059312.png",
+          "hasBackground" => true,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637708788550193812-2059408.png",
+          "hasBackground" => true,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637708788550193812-2059483.png",
+          "hasBackground" => true,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637708788550193812-2059482.png",
+          "hasBackground" => true,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637708788550193812-2059435.png",
+          "hasBackground" => true,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637708788550193812-2059514.png",
+          "hasBackground" => true,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637708788550193812-2159750.png",
+          "hasBackground" => true,
+          "isWornImage" => true
+        ],
+        [
+          "imgName" => "637342194268640334-1057412.png",
+          "hasBackground" => false,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637342194289109467-1956045.png",
+          "hasBackground" => false,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637436417947662037-1362412.png",
+          "hasBackground" => false,
+          "isWornImage" => false
+        ],
+        [
+          "imgName" => "637436418030162330-2091396.png",
+          "hasBackground" => false,
+          "isWornImage" => true
+        ]
+      ],
+      "hasBackgroundImage" => true
+    ];
+  }
+}

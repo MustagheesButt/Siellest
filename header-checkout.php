@@ -7,8 +7,8 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Checkout | Siellest® Official Store</title>
-  <meta name="description" content="Cartier" />
-  <meta name="keywords" content="Cartier" />
+  <meta name="description" content="Siellest" />
+  <meta name="keywords" content="Siellest" />
   <link rel="icon" type="image/png" href="/on/demandware.static/Sites-CartierUS-Site/-/default/dw34eee5d0/images/favicons/favicon-196x196.png" sizes="196x196" />
   <link rel="icon" type="image/png" href="/on/demandware.static/Sites-CartierUS-Site/-/default/dwb2b16170/images/favicons/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/png" href="/on/demandware.static/Sites-CartierUS-Site/-/default/dwfad26f14/images/favicons/favicon-32x32.png" sizes="32x32" />
@@ -36,7 +36,7 @@
           <div class="col-3 flex-direction-row flex-justify-end flex-align-center">
           </div>
           <div class="col-6 flex-direction-row flex-align-center flex-justify-center">
-            <a href="/en-us/home" class="header__logo set--w-100 flex flex-direction-col flex-align-center" title="Cartier Home" data-tracking='{"trackEvent": "header", "trackObject": {"headerLink": "cartier"}}'>
+            <a href="/" class="header__logo set--w-100 flex flex-direction-col flex-align-center" title="<?= get_bloginfo('name') ?> Home">
               <svg aria-hidden="true" focusable="false" class="header__logo-img">
                 <use xlink:href="#logo" />
               </svg>
