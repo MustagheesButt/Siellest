@@ -18,14 +18,13 @@ class Checkout
     // other params I dont know what to do of: usingVerifiedAddress, lat, lng
 
     $customer = WC()->customer;
+    WC()->session->set('shipping_salutation', $salutation);
     $customer->set_shipping_first_name($first_name);
     $customer->set_shipping_last_name($last_name);
     $customer->set_shipping_location($country_code, $state_code, $postal_code, $city);
     $customer->set_shipping_address_1($address1);
     $customer->set_shipping_address_2($address2);
     WC()->cart->calculate_totals();
-
-    WC()->session->set('shipping_salutation', $salutation);
 
     return [
       "action" => "CheckoutShippingServices-UpdateShippingMethodsList",
@@ -145,6 +144,9 @@ class Checkout
     WC()->session->set('billing_salutation', $salutation);
     WC()->session->set('shipping_uuid', $shipping_uuid);
     WC()->session->set('chosen_shipping_methods', [$shipping_method_id]);
+    // For some reason, billing country and state doesnt gets submitted at next stage
+    WC()->session->set('billing_country', $country_code);
+    WC()->session->set('billing_state', $state_code);
 
     return [
       "action" => "CheckoutShippingServices-SubmitShipping",
@@ -211,6 +213,13 @@ class Checkout
     $card_number = $request->get_param('dwfrm_billing_creditCardFields_cardNumber');
     $card_type = $request->get_param('dwfrm_billing_creditCardFields_cardType');
 
+    if (empty($country_code)) {
+      $country_code = WC()->session->get('billing_country');
+    }
+    if (empty($state_code)) {
+      $state_code = WC()->session->get('billing_state');
+    }
+
     $customer = WC()->customer;
     $customer->set_billing_first_name($first_name);
     $customer->set_billing_last_name($last_name);
@@ -267,7 +276,21 @@ class Checkout
     $order->set_billing_phone($customer->get_billing_phone());
     $order->set_billing_email($customer->get_billing_email());
 
+    $selected_shipping_method_id = WC()->session->get('chosen_shipping_methods')[0];
+    $shipping = new WC_Order_Item_Shipping();
+    $shipping->set_method_title( "Express Delivery" ); // TODO: use correct title
+    $shipping->set_method_id($selected_shipping_method_id);
+    $shipping->set_total( WC()->cart->get_shipping_total() );
+    $shipping->calculate_taxes([
+      'country' => $customer->get_shipping_country(),
+      'state' => $customer->get_shipping_state(),
+      'postcode' => $customer->get_shipping_postcode(),
+      'city' => $customer->get_shipping_city()
+    ]);
+    $order->add_item($shipping);
+
     $order->calculate_totals();
+    // $order->save();
     // $order->payment_complete();
 
     return [
@@ -356,6 +379,7 @@ class Checkout
   static function checkoutservices_placeorder()
   {
     $order = wc_get_order(WC()->session->get('order_id'));
+    $order_total = $order->get_total() * 100;
 
     $client = new \Adyen\Client();
 
@@ -374,7 +398,7 @@ class Checkout
         "encryptedSecurityCode": "test_737"
       },
       "amount": {
-        "value": ' . $order->get_total() . ',
+        "value": ' . $order_total . ',
         "currency": "' . $order->get_currency() . '"
       },
       "reference": "' . $order->get_order_number() . '",
@@ -388,6 +412,7 @@ class Checkout
 
       if ($result['resultCode'] == "Authorised") {
         $order->payment_complete();
+        WC()->cart->empty_cart();
         return [
           "action" => "CheckoutServices-PlaceOrder",
           "queryString" => "",

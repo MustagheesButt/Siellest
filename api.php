@@ -1,12 +1,9 @@
 <?php
-  // ini_set('display_errors', 1); 
-  // error_reporting(E_ALL);
-
 require_once 'classes/Product.php';
 require_once 'classes/Cart.php';
 require_once 'classes/Checkout.php';
 
-add_filter( 'woocommerce_is_rest_api_request', 'simulate_as_not_rest' );
+add_filter('woocommerce_is_rest_api_request', 'simulate_as_not_rest');
 /**
  * We have to tell WC that this should not be handled as a REST request.
  * Otherwise we can't use the product loop template contents properly.
@@ -15,17 +12,18 @@ add_filter( 'woocommerce_is_rest_api_request', 'simulate_as_not_rest' );
  * @param bool $is_rest_api_request
  * @return bool
  */
-function simulate_as_not_rest( $is_rest_api_request ) {
-	if ( empty( $_SERVER['REQUEST_URI'] ) ) {
-			return $is_rest_api_request;
-	}
+function simulate_as_not_rest($is_rest_api_request)
+{
+  if (empty($_SERVER['REQUEST_URI'])) {
+    return $is_rest_api_request;
+  }
 
-	// Bail early if this is not our request.
-	if ( false === strpos( $_SERVER['REQUEST_URI'], 'siellest' ) ) {
-		return $is_rest_api_request;
-	}
+  // Bail early if this is not our request.
+  if (false === strpos($_SERVER['REQUEST_URI'], 'siellest')) {
+    return $is_rest_api_request;
+  }
 
-	return false;
+  return false;
 }
 
 // TODO if user not logged in, store in cookie
@@ -92,8 +90,7 @@ function wishlist_removeproduct(WP_REST_Request $request)
   if (is_user_logged_in()) {
     delete_user_meta($user->ID, 'wishlist', $pid);
     $wishlist = get_user_meta($user->ID, 'wishlist');
-  }
-  else {
+  } else {
     if (isset($_COOKIE['wishlist'])) {
       $wishlist = explode(',', $_COOKIE['wishlist']);
       unset($wishlist[array_search($pid, $wishlist)]);
@@ -169,32 +166,14 @@ function search_updategrid()
   $start = $_GET['start'];
   $category = $_GET['cgid'];
 
-  $args = array(
-    'status' => ['publish'],
-    'offset' => $start,
-    'limit' => 24,
-    'paginate' => true,
-    'category' => [$category],
-    'orderby' => 'meta_value_num',
-    'meta_key' => '_price',
-    'order' => 'asc',
-    'tax_query' => array(
-      // array(
-      //   'taxonomy'      => 'product_cat',
-      //   'field' => 'term_id', //This is optional, as it defaults to 'term_id'
-      //   'terms'         => 26,
-      //   'operator'      => 'IN' // Possible values are 'IN', 'NOT IN', 'AND'.
-      // ),
-      // array(
-      //   'taxonomy'      => 'product_visibility',
-      //   'field'         => 'slug',
-      //   'terms'         => 'exclude-from-catalog', // Possibly 'exclude-from-search' too
-      //   'operator'      => 'NOT IN'
-      // )
-    )
-  );
+  if (isset($_GET['collection'])) {
+    $collections = [$_GET['collection']];
+  } else if (isset($_GET['prefn1']) && $_GET['prefn1'] == 'collection') {
+    $collections = explode(',', $_GET['prefv1']);
+  }
+
   // $total = get_term_by('slug', $category, 'product_cat')->count;
-  $query = new WC_Product_Query($args);
+  $query = Product::custom_query($category, $_GET['srule'], $start, collections: $collections);
   $data = $query->get_products();
   $products = $data->products;
   $total = $data->total;
@@ -204,7 +183,7 @@ function search_updategrid()
   foreach ($products as $product) {
     echo Product::render_product($product);
   }
-  Product::render_product_loop_end($category, $start + 24, $total);
+  Product::render_product_loop_end($category, $start + PRODUCTS_PER_PAGE, $total);
 
   exit();
 }
@@ -308,8 +287,8 @@ function adyen_getpaymentmethods()
 
 function adyen_paymentfromcomponent()
 {
-// data: {"riskData":{"clientData":"eyJ2ZXJzaW9uIjoiMS4wLjAiLCJkZXZpY2VGaW5nZXJwcmludCI6IkRwcXdVNHpFZE4wMDUwMDAwMDAwMDAwMDAwQVZ2eDlRRkYwTTAwMzkzNzI4NzA1V3BZV2lLekJHU2JsZHl1dWlTVEJpeDdSWDNhejgwMDJyS2tFSzFIYThQMDAwMDBZVnhFcjAwMDAwZktraG5yYVJoWGlaQ3FuSTRsc2s6NDAiLCJwZXJzaXN0ZW50Q29va2llIjpbXSwiY29tcG9uZW50cyI6eyJ1c2VyQWdlbnQiOiI3YWFhOGVmMThmYWEyNmIzNzc5ZGNiNDZkMzg0NmFiOSIsIndlYmRyaXZlciI6MCwibGFuZ3VhZ2UiOiJlbi1HQiIsImNvbG9yRGVwdGgiOjMwLCJkZXZpY2VNZW1vcnkiOjgsInBpeGVsUmF0aW8iOjIsImhhcmR3YXJlQ29uY3VycmVuY3kiOjgsInNjcmVlbldpZHRoIjo5MDAsInNjcmVlbkhlaWdodCI6MTQ0MCwiYXZhaWxhYmxlU2NyZWVuV2lkdGgiOjkwMCwiYXZhaWxhYmxlU2NyZWVuSGVpZ2h0IjoxNDQwLCJ0aW1lem9uZU9mZnNldCI6LTMwMCwidGltZXpvbmUiOiJBc2lhL0thcmFjaGkiLCJpbmRleGVkRGIiOjEsImFkZEJlaGF2aW9yIjowLCJvcGVuRGF0YWJhc2UiOjEsInBsYXRmb3JtIjoiTWFjSW50ZWwiLCJwbHVnaW5zIjoiMjljZjcxZTNkODFkNzRkNDNhNWIwZWI3OTQwNWJhODciLCJjYW52YXMiOiIxOTBiOTc4NWIyYTIyNWYxNWExYjNmMWQ5NDJiZDdlMSIsIndlYmdsIjoiOGMzYjU1MGNiZmRlMDYwNjAxNmJiYTBkZDFkZWRjYjgiLCJ3ZWJnbFZlbmRvckFuZFJlbmRlcmVyIjoiQXBwbGV+QXBwbGUgTTEiLCJhZEJsb2NrIjowLCJoYXNMaWVkTGFuZ3VhZ2VzIjowLCJoYXNMaWVkUmVzb2x1dGlvbiI6MCwiaGFzTGllZE9zIjowLCJoYXNMaWVkQnJvd3NlciI6MCwiZm9udHMiOiIyOTJlYTJjY2VjY2QwMmIwMWMwYzRjMWQ0MTMyMTc1ZSIsImF1ZGlvIjoiNTVmNjcxMjQ0MzRiMmRlNzEzMjIyNzlhZWYxNmUzNmIiLCJlbnVtZXJhdGVEZXZpY2VzIjoiOGVhMWY3YTQ1M2MwMjkxMTU4NmY5Zjg3ZWExZTY4ZmMifX0="},"paymentMethod":{"type":"paypal","subtype":"sdk"},"email":"falcone609@yopmail.com"}
-// paymentMethod: PayPal
+  // data: {"riskData":{"clientData":"eyJ2ZXJzaW9uIjoiMS4wLjAiLCJkZXZpY2VGaW5nZXJwcmludCI6IkRwcXdVNHpFZE4wMDUwMDAwMDAwMDAwMDAwQVZ2eDlRRkYwTTAwMzkzNzI4NzA1V3BZV2lLekJHU2JsZHl1dWlTVEJpeDdSWDNhejgwMDJyS2tFSzFIYThQMDAwMDBZVnhFcjAwMDAwZktraG5yYVJoWGlaQ3FuSTRsc2s6NDAiLCJwZXJzaXN0ZW50Q29va2llIjpbXSwiY29tcG9uZW50cyI6eyJ1c2VyQWdlbnQiOiI3YWFhOGVmMThmYWEyNmIzNzc5ZGNiNDZkMzg0NmFiOSIsIndlYmRyaXZlciI6MCwibGFuZ3VhZ2UiOiJlbi1HQiIsImNvbG9yRGVwdGgiOjMwLCJkZXZpY2VNZW1vcnkiOjgsInBpeGVsUmF0aW8iOjIsImhhcmR3YXJlQ29uY3VycmVuY3kiOjgsInNjcmVlbldpZHRoIjo5MDAsInNjcmVlbkhlaWdodCI6MTQ0MCwiYXZhaWxhYmxlU2NyZWVuV2lkdGgiOjkwMCwiYXZhaWxhYmxlU2NyZWVuSGVpZ2h0IjoxNDQwLCJ0aW1lem9uZU9mZnNldCI6LTMwMCwidGltZXpvbmUiOiJBc2lhL0thcmFjaGkiLCJpbmRleGVkRGIiOjEsImFkZEJlaGF2aW9yIjowLCJvcGVuRGF0YWJhc2UiOjEsInBsYXRmb3JtIjoiTWFjSW50ZWwiLCJwbHVnaW5zIjoiMjljZjcxZTNkODFkNzRkNDNhNWIwZWI3OTQwNWJhODciLCJjYW52YXMiOiIxOTBiOTc4NWIyYTIyNWYxNWExYjNmMWQ5NDJiZDdlMSIsIndlYmdsIjoiOGMzYjU1MGNiZmRlMDYwNjAxNmJiYTBkZDFkZWRjYjgiLCJ3ZWJnbFZlbmRvckFuZFJlbmRlcmVyIjoiQXBwbGV+QXBwbGUgTTEiLCJhZEJsb2NrIjowLCJoYXNMaWVkTGFuZ3VhZ2VzIjowLCJoYXNMaWVkUmVzb2x1dGlvbiI6MCwiaGFzTGllZE9zIjowLCJoYXNMaWVkQnJvd3NlciI6MCwiZm9udHMiOiIyOTJlYTJjY2VjY2QwMmIwMWMwYzRjMWQ0MTMyMTc1ZSIsImF1ZGlvIjoiNTVmNjcxMjQ0MzRiMmRlNzEzMjIyNzlhZWYxNmUzNmIiLCJlbnVtZXJhdGVEZXZpY2VzIjoiOGVhMWY3YTQ1M2MwMjkxMTU4NmY5Zjg3ZWExZTY4ZmMifX0="},"paymentMethod":{"type":"paypal","subtype":"sdk"},"email":"falcone609@yopmail.com"}
+  // paymentMethod: PayPal
   return [
     "action" => "Adyen-PaymentFromComponent",
     "queryString" => "",
@@ -335,9 +314,9 @@ function adyen_paymentfromcomponent()
     "orderToken" => "ZaE9eYJJJ1eeH9mec49DPuvJSN9decvwuJjvAKeubaE"
   ];
 
-// data: {"cancelTransaction":true}
-// paymentMethod: PayPal
-// returns 500
+  // data: {"cancelTransaction":true}
+  // paymentMethod: PayPal
+  // returns 500
   return [
     "action" => "Adyen-PaymentFromComponent",
     "queryString" => "",
@@ -350,24 +329,24 @@ function adyen_paymentfromcomponent()
 
 function address_verification(WP_REST_Request $request)
 {
-// originalShipmentUUID: 7df82deaeef593fc2eb68c107d
-// shipmentUUID: 7df82deaeef593fc2eb68c107d
-// shipmentSelector: new
-// dwfrm_shipping_shippingAddress_addressFields_usingVerifiedAddress: true
-// dwfrm_shipping_shippingAddress_addressFields_salutations_salutation: mr
-// dwfrm_shipping_shippingAddress_addressFields_firstName: Don
-// dwfrm_shipping_shippingAddress_addressFields_lastName: Falcone
-// dwfrm_shipping_shippingAddress_addressFields_address1: 230 5th Ave
-// dwfrm_shipping_shippingAddress_addressFields_address2: 
-// dwfrm_shipping_shippingAddress_addressFields_country_countryCode: US
-// dwfrm_shipping_shippingAddress_addressFields_city_cityCode: Manhattan
-// dwfrm_shipping_shippingAddress_addressFields_states_stateCode: NY
-// dwfrm_shipping_shippingAddress_addressFields_postalCode_postalCode: 10001
-// dwfrm_shipping_shippingAddress_addressFields_phone: +1 215-334-5135
-// shipmentUUID: 7df82deaeef593fc2eb68c107d
-// dwfrm_shipping_shippingAddress_shippingMethodID: SATD
-// csrf_token: LJFL19Eh8CIV9_ZvkmR0KWmmuPZPi701prbnCYAxr99uWdYJZr8ghCtZxEJnMovGPUzwSmIygxdLu5TyB3OGXrpFoLqurVWArj3Va1Jg-gBipPIdBO6aQHrmR__-59T97KjczbZInvUzdwJ5nXCLxfQR3SXClBbFH5Ga4YJS2434rQ8xMJU=
-// email: 
+  // originalShipmentUUID: 7df82deaeef593fc2eb68c107d
+  // shipmentUUID: 7df82deaeef593fc2eb68c107d
+  // shipmentSelector: new
+  // dwfrm_shipping_shippingAddress_addressFields_usingVerifiedAddress: true
+  // dwfrm_shipping_shippingAddress_addressFields_salutations_salutation: mr
+  // dwfrm_shipping_shippingAddress_addressFields_firstName: Don
+  // dwfrm_shipping_shippingAddress_addressFields_lastName: Falcone
+  // dwfrm_shipping_shippingAddress_addressFields_address1: 230 5th Ave
+  // dwfrm_shipping_shippingAddress_addressFields_address2: 
+  // dwfrm_shipping_shippingAddress_addressFields_country_countryCode: US
+  // dwfrm_shipping_shippingAddress_addressFields_city_cityCode: Manhattan
+  // dwfrm_shipping_shippingAddress_addressFields_states_stateCode: NY
+  // dwfrm_shipping_shippingAddress_addressFields_postalCode_postalCode: 10001
+  // dwfrm_shipping_shippingAddress_addressFields_phone: +1 215-334-5135
+  // shipmentUUID: 7df82deaeef593fc2eb68c107d
+  // dwfrm_shipping_shippingAddress_shippingMethodID: SATD
+  // csrf_token: LJFL19Eh8CIV9_ZvkmR0KWmmuPZPi701prbnCYAxr99uWdYJZr8ghCtZxEJnMovGPUzwSmIygxdLu5TyB3OGXrpFoLqurVWArj3Va1Jg-gBipPIdBO6aQHrmR__-59T97KjczbZInvUzdwJ5nXCLxfQR3SXClBbFH5Ga4YJS2434rQ8xMJU=
+  // email: 
 
   $original_address = [
     "firstName"   => $request->get_param('dwfrm_shipping_shippingAddress_addressFields_firstName'),
@@ -382,7 +361,7 @@ function address_verification(WP_REST_Request $request)
   ];
 
   $verified = true;
-  foreach($original_address as $key => $value) {
+  foreach ($original_address as $key => $value) {
     if (array_search($key, ['address2']) != false && empty($value)) {
       $verified = false;
       break;
@@ -581,6 +560,10 @@ add_action('rest_api_init', function () {
   register_rest_route('siellest', 'product-zoom', array(
     'methods' => 'GET, POST',
     'callback' => 'Product::product_zoom'
+  ));
+  register_rest_route('siellest', 'product-variation', array(
+    'methods' => 'GET',
+    'callback' => 'Product::product_variation'
   ));
 
   register_rest_route('siellest', 'account-login', array(

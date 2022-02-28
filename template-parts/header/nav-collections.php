@@ -327,7 +327,7 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/jewelry/all-collections/?collection=clash-de-siellest" id="flyout-Jewelry_AllCollection_ClashdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Clash de Siellest"}}' aria-label="View Jewelry: Clash de Siellest">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=clash-de-siellest" id="flyout-Jewelry_AllCollection_ClashdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Clash de Siellest"}}' aria-label="View Jewelry: Clash de Siellest">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_CLASH-DE-CARTIER.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Clash de Cartier" alt="Clash de Cartier" style="; ; " />
@@ -338,7 +338,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=love" id="flyout-Jewelry_AllCollection_LOVE" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "LOVE"}}' aria-label="View Jewelry: LOVE">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=love" id="flyout-Jewelry_AllCollection_LOVE" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "LOVE"}}' aria-label="View Jewelry: LOVE">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_LOVE.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="LOVE" alt="LOVE" style="; ; " />
@@ -349,7 +349,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=trinity" id="flyout-Jewelry_AllCollection_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=trinity" id="flyout-Jewelry_AllCollection_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_TRINITY.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Trinity" alt="Trinity" style="; ; " />
@@ -360,7 +360,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=juste-un-clou" id="flyout-Jewelry_AllCollection__JusteunClou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Juste un Clou"}}' aria-label="View Jewelry: Juste un Clou">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=juste-un-clou" id="flyout-Jewelry_AllCollection__JusteunClou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Juste un Clou"}}' aria-label="View Jewelry: Juste un Clou">
                       <picture>
 
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_JUSTE-UN-CLOU.jpg" class="picture--source-element">
@@ -372,7 +372,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=panthere-de-siellest" id="flyout-Jewelry_AllCollection_PantheredeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=panthere-de-siellest" id="flyout-Jewelry_AllCollection_PantheredeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_PANTHERE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re de Cartier" alt="Panth&egrave;re de Cartier" style="; ; " />
@@ -383,7 +383,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=diamond-collection" id="flyout-Jewelry_Diamond_Collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Diamond collection"}}' aria-label="View Jewelry: Diamond collection">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=diamond-collection" id="flyout-Jewelry_Diamond_Collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Diamond collection"}}' aria-label="View Jewelry: Diamond collection">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_DIAMOND-COLLECTION.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Diamond collection" alt="Diamond collection" style="; ; " />
@@ -395,7 +395,7 @@
                   </div>
 
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/ecrou-de-siellest" id="flyout-Jewelry_AllCollection_EcroudeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
+                    <a href="product-category/jewelry/jewelry-allcollections/ecrou-de-siellest" id="flyout-Jewelry_AllCollection_EcroudeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_ECROU-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ecrou de Cartier" alt="Ecrou de Cartier" style="; ; " />
@@ -406,7 +406,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=cactus-de-siellest" id="flyout-Jewelry_AllCollection_CactusdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Cactus de Cartier"}}' aria-label="View Jewelry: Cactus de Cartier">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=cactus-de-siellest" id="flyout-Jewelry_AllCollection_CactusdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Cactus de Cartier"}}' aria-label="View Jewelry: Cactus de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_CACTUS-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cactus de Cartier" alt="Cactus de Cartier" style="; ; " />
@@ -417,7 +417,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=amulette-de-siellest" id="flyout-Jewelry_AllCollection_AmulettedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Amulette de Cartier"}}' aria-label="View Jewelry: Amulette de Cartier">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=amulette-de-siellest" id="flyout-Jewelry_AllCollection_AmulettedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Amulette de Cartier"}}' aria-label="View Jewelry: Amulette de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/MEGAMENU_AMULETTE_02272021.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Amulette de Cartier" alt="Amulette de Cartier" style="; ; " />
@@ -428,7 +428,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=jewelry-for-men" id="flyout-Jewelry_allcollection_ForMen" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Jewelry for men"}}' aria-label="View Jewelry: Jewelry for men">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=jewelry-for-men" id="flyout-Jewelry_allcollection_ForMen" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Jewelry for men"}}' aria-label="View Jewelry: Jewelry for men">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_BRACELETS_JEWELRY-FOR-MEN.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Jewelry for men" alt="Jewelry for men" style="; ; " />
@@ -439,7 +439,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=caresse-dorchidees-de-siellest" id="flyout-Jewelry_AllCollection_CaressedOrchideesdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=caresse-dorchidees-de-siellest" id="flyout-Jewelry_AllCollection_CaressedOrchideesdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_CARESSES-DORCHIDEES.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Caresse d'Orchid&eacute;es de Cartier" alt="Caresse d'Orchid&eacute;es de Cartier" style="; ; " />
@@ -450,7 +450,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=c-de-siellest" id="flyout-Jewerly_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=c-de-siellest" id="flyout-Jewerly_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_C-DE-CARTIER.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="C de Cartier" alt="C de Cartier" style="; ; " />
@@ -461,7 +461,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=agrafe" id="flyout-Jewelry_Agrafe" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Agrafe"}}' aria-label="View Jewelry: Agrafe">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=agrafe" id="flyout-Jewelry_Agrafe" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Agrafe"}}' aria-label="View Jewelry: Agrafe">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_COLLECTIONS_MAILLON-PANTHERE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Agrafe" alt="Agrafe" style="; ; " />
@@ -472,7 +472,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=cartier-fauna-%26-flora" id="flyout-Jewelry_Cartier_Fauna" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Cartier Fauna &amp; Flora"}}' aria-label="View Jewelry: Cartier Fauna &amp; Flora">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=cartier-fauna-%26-flora" id="flyout-Jewelry_Cartier_Fauna" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Cartier Fauna &amp; Flora"}}' aria-label="View Jewelry: Cartier Fauna &amp; Flora">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS_CARTIER_FAUNA-FLORA.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Fauna &amp; Flora" alt="Cartier Fauna &amp; Flora" style="; ; " />
@@ -483,7 +483,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=links-and-chains" id="flyout-Jewelry_Links_and_Chains" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Links and Chains"}}' aria-label="View Jewelry: Links and Chains">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=links-and-chains" id="flyout-Jewelry_Links_and_Chains" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Links and Chains"}}' aria-label="View Jewelry: Links and Chains">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_LINKS-AND-CHAINS.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Links and Chains" alt="Links and Chains" style="; ; " />
@@ -494,7 +494,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/all-collections/?collection=hearts-and-symbols" id="flyout-Jewelry_Hearts_and_Symbols" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Hearts and Symbols"}}' aria-label="View Jewelry: Hearts and Symbols">
+                    <a href="product-category/jewelry/jewelry-allcollections/?collection=hearts-and-symbols" id="flyout-Jewelry_Hearts_and_Symbols" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "All Collections", "thirdLevel": "Hearts and Symbols"}}' aria-label="View Jewelry: Hearts and Symbols">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_HEARTS-AND-SYMBOLS-1.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Hearts and Symbols" alt="Hearts and Symbols" style="; ; " />
@@ -583,7 +583,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/bracelets/panthere-de-siellest" id="flyout-Jewelry_Bracelet_PanthereDeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Bracelets", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
+                    <a href="product-category/jewelry/bracelets/?collection=panthere-de-siellest" id="flyout-Jewelry_Bracelet_PanthereDeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Bracelets", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_BRACELETS_PANTHERE-DE-CARTIER.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re de Cartier" alt="Panth&egrave;re de Cartier" style="; ; " />
@@ -605,7 +605,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/bracelets/ecrou-de-siellest" id="flyout-Jewelry_Bracelet_Ecrou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Bracelets", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
+                    <a href="product-category/jewelry/bracelets/?collection=ecrou-de-siellest" id="flyout-Jewelry_Bracelet_Ecrou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Bracelets", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_BRACELETS_ECROU-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ecrou de Cartier" alt="Ecrou de Cartier" style="; ; " />
@@ -694,7 +694,7 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/clash-de-cartier/" id="flyout-Jewelry_Rings_Clash_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Clash de Cartier"}}' aria-label="View Jewelry: Clash de Cartier">
+                    <a href="product-category/jewelry/rings/?collection=clash-de-siellest" id="flyout-Jewelry_Rings_Clash_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Clash de Cartier"}}' aria-label="View Jewelry: Clash de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_CLASH-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Clash de Cartier" alt="Clash de Cartier" style="; ; " />
@@ -705,7 +705,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/love/" id="flyout-Jewelry_Rings_LOVE" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "LOVE"}}' aria-label="View Jewelry: LOVE">
+                    <a href="product-category/jewelry/rings/?collection=love" id="flyout-Jewelry_Rings_LOVE" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "LOVE"}}' aria-label="View Jewelry: LOVE">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_LOVE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="LOVE" alt="LOVE" style="; ; " />
@@ -716,7 +716,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/trinity/" id="flyout-Jewelry_Rings_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
+                    <a href="product-category/jewelry/rings/?collection=trinity" id="flyout-Jewelry_Rings_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_TRINITY.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Trinity" alt="Trinity" style="; ; " />
@@ -727,7 +727,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/juste-un-clou/" id="flyout-Jewelry_Rings_Juste_un_Clou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Juste un Clou"}}' aria-label="View Jewelry: Juste un Clou">
+                    <a href="product-category/jewelry/rings/?collection=juste-un-clou" id="flyout-Jewelry_Rings_Juste_un_Clou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Juste un Clou"}}' aria-label="View Jewelry: Juste un Clou">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_JUSTE-UN-CLOU.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Juste un Clou" alt="Juste un Clou" style="; ; " />
@@ -738,7 +738,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/panthere-de-cartier/" id="flyout-Jewelry_Rings_Panth&egrave;re_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
+                    <a href="product-category/jewelry/rings/?collection=panthere-de-siellest" id="flyout-Jewelry_Rings_Panth&egrave;re_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_PANTHERE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re de Cartier" alt="Panth&egrave;re de Cartier" style="; ; " />
@@ -749,7 +749,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/diamond-collection/" id="flyout-Jewelry_Rings_Diamond_Collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Diamond Collection"}}' aria-label="View Jewelry: Diamond Collection">
+                    <a href="product-category/jewelry/rings/?collection=diamond-collection" id="flyout-Jewelry_Rings_Diamond_Collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Diamond Collection"}}' aria-label="View Jewelry: Diamond Collection">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_DIAMOND-COLLECTION.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Diamond Collection" alt="Diamond Collection" style="; ; " />
@@ -760,7 +760,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/ecrou-de-cartier/" id="flyout-Jewelry_Rings_Ecrou_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
+                    <a href="product-category/jewelry/rings/?collection=ecrou-de-siellest" id="flyout-Jewelry_Rings_Ecrou_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_ECROU-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ecrou de Cartier" alt="Ecrou de Cartier" style="; ; " />
@@ -771,7 +771,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/cactus-de-cartier/" id="flyout-Jewelry_Rings_Cactus_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Cactus de Cartier"}}' aria-label="View Jewelry: Cactus de Cartier">
+                    <a href="product-category/jewelry/rings/?collection=cactus-de-siellest" id="flyout-Jewelry_Rings_Cactus_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Cactus de Cartier"}}' aria-label="View Jewelry: Cactus de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_CACTUS-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cactus de Cartier" alt="Cactus de Cartier" style="; ; " />
@@ -782,29 +782,29 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/caresse-dorchidees-de-cartier/" id="flyout-Jewelry_Rings_Caresse_d'Orchid&eacute;es_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
+                    <a href="product-category/jewelry/rings/?collection=caresse-dorchidees-de-siellest" id="flyout-Jewelry_Rings_Caresse_d'Orchid&eacute;es_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_CARESSES-DORCHIDEES.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Caresse d'Orchid&eacute;es de Cartier" alt="Caresse d'Orchid&eacute;es de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Caresse d'Orchid&eacute;es de Cartier
+                        Caresse d'Orchid&eacute;es de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/cartier-fauna-%26-flora/" id="flyout-Jewelry_Rings_Cartier_Fauna_Flora" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Cartier Fauna &amp; Flora"}}' aria-label="View Jewelry: Cartier Fauna &amp; Flora">
+                    <a href="product-category/jewelry/rings/?collection=siellest-fauna-%26-flora" id="flyout-Jewelry_Rings_Cartier_Fauna_Flora" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Cartier Fauna &amp; Flora"}}' aria-label="View Jewelry: Cartier Fauna &amp; Flora">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_FAUNA%20ET%20FLORA.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Fauna &amp; Flora" alt="Cartier Fauna &amp; Flora" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cartier Fauna &amp; Flora
+                        Siellest Fauna &amp; Flora
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/rings/maillon-panthere/" id="flyout-Jewelry_Rings_Maillon_Panth&egrave;re" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Maillon Panth&egrave;re"}}' aria-label="View Jewelry: Maillon Panth&egrave;re">
+                    <a href="product-category/jewelry/rings/?collection=maillon-panthere" id="flyout-Jewelry_Rings_Maillon_Panth&egrave;re" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Rings", "thirdLevel": "Maillon Panth&egrave;re"}}' aria-label="View Jewelry: Maillon Panth&egrave;re">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_MAILLON-PANTHERE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Maillon Panth&egrave;re" alt="Maillon Panth&egrave;re" style="; ; " />
@@ -849,18 +849,18 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/clash-de-cartier/" id="flyout-Jewelry_Necklaces_Clash_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Clash de Cartier"}}' aria-label="View Jewelry: Clash de Cartier">
+                    <a href="product-category/jewelry/necklaces/?collection=clash-de-siellest" id="flyout-Jewelry_Necklaces_Clash_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Clash de Cartier"}}' aria-label="View Jewelry: Clash de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_CLASH-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Clash de Cartier" alt="Clash de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Clash de Cartier
+                        Clash de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/love/" id="flyout-Jewelry_Necklaces_LOVE" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "LOVE"}}' aria-label="View Jewelry: LOVE">
+                    <a href="product-category/jewelry/necklaces/?collection=love" id="flyout-Jewelry_Necklaces_LOVE" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "LOVE"}}' aria-label="View Jewelry: LOVE">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_LOVE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="LOVE" alt="LOVE" style="; ; " />
@@ -871,7 +871,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/trinity/" id="flyout-Jewelry_Necklaces_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
+                    <a href="product-category/jewelry/necklaces/?collection=trinity" id="flyout-Jewelry_Necklaces_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_TRINITY.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Trinity" alt="Trinity" style="; ; " />
@@ -882,7 +882,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/juste-un-clou/" id="flyout-Jewelry_Necklaces_Juste_un_Clou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Juste un Clou"}}' aria-label="View Jewelry: Juste un Clou">
+                    <a href="product-category/jewelry/necklaces/?collection=juste-un-clou" id="flyout-Jewelry_Necklaces_Juste_un_Clou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Juste un Clou"}}' aria-label="View Jewelry: Juste un Clou">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_JUSTE-UN-CLOU.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Juste un Clou" alt="Juste un Clou" style="; ; " />
@@ -893,7 +893,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/panthere-de-cartier/" id="flyout-Jewelry_Necklaces_Panth&egrave;re_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
+                    <a href="product-category/jewelry/necklaces/?collection=panthere-de-siellest" id="flyout-Jewelry_Necklaces_Panth&egrave;re_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_PANTHERE-DE-CARTIER.jpg" class="picture--source-element">
 
@@ -905,7 +905,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/diamond-collection/" id="flyout-Jewelry_Necklaces_Diamond_Collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Diamond Collection"}}' aria-label="View Jewelry: Diamond Collection">
+                    <a href="product-category/jewelry/necklaces/?collection=diamond-collection" id="flyout-Jewelry_Necklaces_Diamond_Collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Diamond Collection"}}' aria-label="View Jewelry: Diamond Collection">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_DIAMOND-COLLECTION.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Diamond Collection" alt="Diamond Collection" style="; ; " />
@@ -916,7 +916,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/amulette-de-cartier/" id="flyout-Jewelry_Necklaces_Amulette" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Amulette de Cartier"}}' aria-label="View Jewelry: Amulette de Cartier">
+                    <a href="product-category/jewelry/necklaces/?collection=amulette-de-siellest" id="flyout-Jewelry_Necklaces_Amulette" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Amulette de Cartier"}}' aria-label="View Jewelry: Amulette de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/MEGAMENU_NECKLACE_AMULETTE_02272021.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Amulette de Cartier" alt="Amulette de Cartier" style="; ; " />
@@ -927,18 +927,18 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/caresse-dorchidees-de-cartier/" id="flyout-Jewelry_Necklaces_Caresses_d_Orchid&eacute;es" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
+                    <a href="product-category/jewelry/necklaces/?collection=caresse-dorchidees-de-siellest" id="flyout-Jewelry_Necklaces_Caresses_d_Orchid&eacute;es" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_CARESSES-DORCHIDEES.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Caresse d'Orchid&eacute;es de Cartier" alt="Caresse d'Orchid&eacute;es de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Caresse d'Orchid&eacute;es de Cartier
+                        Caresse d'Orchid&eacute;es de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/c-de-cartier/" id="flyout-Jewelry_Necklaces_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
+                    <a href="product-category/jewelry/necklaces/?collection=c-de-siellest" id="flyout-Jewelry_Necklaces_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_C-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="C de Cartier" alt="C de Cartier" style="; ; " />
@@ -949,7 +949,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/agrafe/" id="flyout-Jewelry_Necklaces_Agrafe" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Agrafe"}}' aria-label="View Jewelry: Agrafe">
+                    <a href="product-category/jewelry/necklaces/?collection=agrafe" id="flyout-Jewelry_Necklaces_Agrafe" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Agrafe"}}' aria-label="View Jewelry: Agrafe">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_MAILLON-PANTHERE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Agrafe" alt="Agrafe" style="; ; " />
@@ -960,13 +960,13 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/cartier-fauna-%26-flora/" id="flyout-Jewelry_Necklaces_Cartier_Fauna_Flora" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Cartier Fauna &amp; Flora"}}' aria-label="View Jewelry: Cartier Fauna &amp; Flora">
+                    <a href="product-category/jewelry/necklaces/?collection=siellest-fauna-%26-flora" id="flyout-Jewelry_Necklaces_Cartier_Fauna_Flora" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Cartier Fauna &amp; Flora"}}' aria-label="View Jewelry: Cartier Fauna &amp; Flora">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_CARTIER-FAUNA-FLORA.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Fauna &amp; Flora" alt="Cartier Fauna &amp; Flora" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cartier Fauna &amp; Flora
+                        Siellest Fauna &amp; Flora
                       </span>
                     </a>
                   </div>
@@ -982,7 +982,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/hearts-and-symbols/" id="flyout-Jewelry_Necklaces_Hearts_and_Symbols" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Hearts and Symbols"}}' aria-label="View Jewelry: Hearts and Symbols">
+                    <a href="product-category/jewelry/necklaces/?collection=hearts-and-symbols" id="flyout-Jewelry_Necklaces_Hearts_and_Symbols" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Hearts and Symbols"}}' aria-label="View Jewelry: Hearts and Symbols">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_NECKLACES_HEARTS-AND-SYMBOLS-1.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Hearts and Symbols" alt="Hearts and Symbols" style="; ; " />
@@ -993,13 +993,13 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/necklaces/ecrou-de-cartier/" id="flyout-Jewelry_Necklaces_Ecrou_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
+                    <a href="product-category/jewelry/necklaces/?collection=ecrou-de-siellest" id="flyout-Jewelry_Necklaces_Ecrou_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Necklaces", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/Ecrou_Necklace_Vignette.png" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ecrou de Cartier" alt="Ecrou de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Ecrou de Cartier
+                        Ecrou de Siellest
                       </span>
                     </a>
                   </div>
@@ -1038,18 +1038,18 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/clash-de-cartier/" id="flyout-Jewelry_Earrings_Clash_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Clash de Cartier"}}' aria-label="View Jewelry: Clash de Cartier">
+                    <a href="product-category/jewelry/earrings/?collection=clash-de-siellest" id="flyout-Jewelry_Earrings_Clash_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Clash de Cartier"}}' aria-label="View Jewelry: Clash de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS-CLASH-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Clash de Cartier" alt="Clash de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Clash de Cartier
+                        Clash de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/love/" id="flyout-Jewelry_Earrings_Love" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Love"}}' aria-label="View Jewelry: Love">
+                    <a href="product-category/jewelry/earrings/?collection=love" id="flyout-Jewelry_Earrings_Love" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Love"}}' aria-label="View Jewelry: Love">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS-LOVE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Love" alt="Love" style="; ; " />
@@ -1060,7 +1060,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/trinity/" id="flyout-Jewelry_Earrings_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
+                    <a href="product-category/jewelry/earrings/?collection=trinity" id="flyout-Jewelry_Earrings_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Trinity"}}' aria-label="View Jewelry: Trinity">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS-TRINITY.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Trinity" alt="Trinity" style="; ; " />
@@ -1071,7 +1071,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/juste-un-clou/" id="flyout-Jewelry_Earrings_Juste_un_clou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Juste un clou"}}' aria-label="View Jewelry: Juste un clou">
+                    <a href="product-category/jewelry/earrings/?collection=juste-un-clou" id="flyout-Jewelry_Earrings_Juste_un_clou" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Juste un clou"}}' aria-label="View Jewelry: Juste un clou">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS-JUSTE-UN-CLOU.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Juste un clou" alt="Juste un clou" style="; ; " />
@@ -1082,18 +1082,18 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/panthere-de-cartier/" id="flyout-Jewelry_Earrings_Panthere_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
+                    <a href="product-category/jewelry/earrings/?collection=panthere-de-siellest" id="flyout-Jewelry_Earrings_Panthere_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Jewelry: Panth&egrave;re de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS-PANTHERE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re de Cartier" alt="Panth&egrave;re de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Panth&egrave;re de Cartier
+                        Panth&egrave;re de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/diamond-collection/" id="flyout-Jewelry_Earrings_Diamond_collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Diamond collection"}}' aria-label="View Jewelry: Diamond collection">
+                    <a href="product-category/jewelry/earrings/?collection=diamond-collection" id="flyout-Jewelry_Earrings_Diamond_collection" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Diamond collection"}}' aria-label="View Jewelry: Diamond collection">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS-DIAMOND-COLLECTION.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Diamond collection" alt="Diamond collection" style="; ; " />
@@ -1104,52 +1104,51 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/ecrou-de-cartier/" id="flyout-Jewelry_Earrings_Ecrou_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
+                    <a href="product-category/jewelry/earrings/?collection=ecrou-de-siellest" id="flyout-Jewelry_Earrings_Ecrou_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Ecrou de Cartier"}}' aria-label="View Jewelry: Ecrou de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS-ECROU-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ecrou de Cartier" alt="Ecrou de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Ecrou de Cartier
+                        Ecrou de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/cactus-de-cartier/" id="flyout-Jewelry_Earrings_Cactus_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Cactus de Cartier"}}' aria-label="View Jewelry: Cactus de Cartier">
+                    <a href="product-category/jewelry/earrings/?collection=cactus-de-siellest" id="flyout-Jewelry_Earrings_Cactus_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Cactus de Cartier"}}' aria-label="View Jewelry: Cactus de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS-CACTUS-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cactus de Cartier" alt="Cactus de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cactus de Cartier
+                        Cactus de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/caresse-dorchidees-de-cartier/" id="flyout-Jewelry_Earrings_Caresse_d_Orchidees_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
+                    <a href="product-category/jewelry/earrings/?collection=caresse-dorchidees-de-siellest" id="flyout-Jewelry_Earrings_Caresse_d_Orchidees_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Caresse dOrchid&eacute;es de Cartier"}}' aria-label="View Jewelry: Caresse d'Orchid&eacute;es de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS_CARESSES-DORCHIDEES.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Caresse d'Orchid&eacute;es de Cartier" alt="Caresse d'Orchid&eacute;es de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Caresse d'Orchid&eacute;es de Cartier
+                        Caresse d'Orchid&eacute;es de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/c-de-cartier/" id="flyout-Jewelry_Earrings_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
+                    <a href="product-category/jewelry/earrings/?collection=c-de-siellest" id="flyout-Jewelry_Earrings_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS_C-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="C de Cartier" alt="C de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        C de Cartier
+                        C de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/agrafe/" id="flyout-Jewelry_Earrings_Agrafe" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Agrafe"}}' aria-label="View Jewelry: Agrafe">
-
+                    <a href="product-category/jewelry/earrings/?collection=agrafe" id="flyout-Jewelry_Earrings_Agrafe" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Agrafe"}}' aria-label="View Jewelry: Agrafe">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS_MAILLON-PANTHERE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Agrafe" alt="Agrafe" style="; ; " />
@@ -1160,13 +1159,13 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/earrings/cartier-fauna-et-flora/" id="flyout-Jewelry_Earrings_Cartier_Fauna_et_Flora" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Cartier Fauna et Flora"}}' aria-label="View Jewelry: Cartier Fauna et Flora">
+                    <a href="product-category/jewelry/earrings/?collection=siellest-fauna-et-flora/" id="flyout-Jewelry_Earrings_Cartier_Fauna_et_Flora" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Earrings", "thirdLevel": "Cartier Fauna et Flora"}}' aria-label="View Jewelry: Cartier Fauna et Flora">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_EARRINGS_CARTIER_FAUNA-FLORA.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Fauna et Flora" alt="Cartier Fauna et Flora" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cartier Fauna et Flora
+                        Siellest Fauna et Flora
                       </span>
                     </a>
                   </div>
@@ -1205,7 +1204,7 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/engagement-rings/solitaire-1895/" id="flyout-Jewelry_Engagement_rings_Solitaire_1895" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Solitaire 1895"}}' aria-label="View Jewelry: Solitaire 1895">
+                    <a href="product-category/jewelry/engagement-rings/?collection=solitaire-1895" id="flyout-Jewelry_Engagement_rings_Solitaire_1895" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Solitaire 1895"}}' aria-label="View Jewelry: Solitaire 1895">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_ENGAGEMENT-RINGS-SOLITAIRE-1895.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Solitaire 1895" alt="Solitaire 1895" style="; ; " />
@@ -1216,18 +1215,18 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/engagement-rings/cartier-destinee/" id="flyout-Jewelry_Engagement_rings_Cartier_Destinee" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Cartier Destin&eacute;e"}}' aria-label="View Jewelry: Cartier Destin&eacute;e">
+                    <a href="product-category/jewelry/engagement-rings/?collection=siellest-destinee" id="flyout-Jewelry_Engagement_rings_Cartier_Destinee" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Cartier Destin&eacute;e"}}' aria-label="View Jewelry: Cartier Destin&eacute;e">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_ENGAGEMENT-RINGS-CARTIER-DESTINEE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Destin&eacute;e" alt="Cartier Destin&eacute;e" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cartier Destin&eacute;e
+                        Siellest Destin&eacute;e
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/engagement-rings/love/" id="flyout-Jewelry_Engagement_rings_Love" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Love"}}' aria-label="View Jewelry: Love">
+                    <a href="product-category/jewelry/engagement-rings/?collection=love" id="flyout-Jewelry_Engagement_rings_Love" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Love"}}' aria-label="View Jewelry: Love">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_ENGAGEMENT-RINGS-LOVE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Love" alt="Love" style="; ; " />
@@ -1238,18 +1237,18 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/engagement-rings/etincelle-de-cartier/" id="flyout-Jewelry_Engagement_rings_Etincelle_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Etincelle de Cartier"}}' aria-label="View Jewelry: Etincelle de Cartier">
+                    <a href="product-category/jewelry/engagement-rings/?collection=etincelle-de-siellest" id="flyout-Jewelry_Engagement_rings_Etincelle_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Etincelle de Cartier"}}' aria-label="View Jewelry: Etincelle de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_ENGAGEMENT-RINGS-ETINCELLE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Etincelle de Cartier" alt="Etincelle de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Etincelle de Cartier
+                        Etincelle de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/engagement-rings/ballerine/" id="flyout-Jewelry_Engagement_rings_Ballerine" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Ballerine"}}' aria-label="View Jewelry: Ballerine">
+                    <a href="product-category/jewelry/engagement-rings/?collection=ballerine" id="flyout-Jewelry_Engagement_rings_Ballerine" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Engagement rings", "thirdLevel": "Ballerine"}}' aria-label="View Jewelry: Ballerine">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_ENGAGEMENT-RINGS-BALLERINE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ballerine" alt="Ballerine" style="; ; " />
@@ -1294,7 +1293,7 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/all-collections-for-her/" id="flyout-Jewelry_Wedding_bands_For_Her" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "All Collections for Her"}}' aria-label="View Jewelry: All Collections for Her">
+                    <a href="product-category/jewelry/wedding-bands/?collection=all-collections-for-her" id="flyout-Jewelry_Wedding_bands_For_Her" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "All Collections for Her"}}' aria-label="View Jewelry: All Collections for Her">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/1011_MEGAMENU_ALL-COLLECTION_WEDDINGBANDS-WOMEN.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="All Collections for Her" alt="All Collections for Her" style="; ; " />
@@ -1305,7 +1304,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/all-collections-for-him/" id="flyout-Jewelry_Wedding_bands_For_Him" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "All Collections for Him"}}' aria-label="View Jewelry: All Collections for Him">
+                    <a href="product-category/jewelry/wedding-bands/?collection=all-collections-for-him" id="flyout-Jewelry_Wedding_bands_For_Him" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "All Collections for Him"}}' aria-label="View Jewelry: All Collections for Him">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/1011_MEGAMENU_ALL-COLLECTION_WEDDINGBANDS-MEN.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="All Collections for Him" alt="All Collections for Him" style="; ; " />
@@ -1316,7 +1315,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/1895/" id="flyout-Jewelry_Wedding_bands_1895" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "1895"}}' aria-label="View Jewelry: 1895">
+                    <a href="product-category/jewelry/wedding-bands/?collection=1895" id="flyout-Jewelry_Wedding_bands_1895" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "1895"}}' aria-label="View Jewelry: 1895">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_WEDDING-BANDS-1895.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="1895" alt="1895" style="; ; " />
@@ -1327,51 +1326,51 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/c-de-cartier/" id="flyout-Jewelry_Wedding_bands_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
+                    <a href="product-category/jewelry/wedding-bands/?collection=c-de-siellest" id="flyout-Jewelry_Wedding_bands_C_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "C de Cartier"}}' aria-label="View Jewelry: C de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_WEDDING-BANDS-C-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="C de Cartier" alt="C de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        C de Cartier
+                        C de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/etincelle-de-cartier/" id="flyout-Jewelry_Wedding_bands_Etincelle_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Etincelle de Cartier"}}' aria-label="View Jewelry: Etincelle de Cartier">
+                    <a href="product-category/jewelry/wedding-bands/?collection=etincelle-de-siellest" id="flyout-Jewelry_Wedding_bands_Etincelle_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Etincelle de Cartier"}}' aria-label="View Jewelry: Etincelle de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_WEDDING-BANDS-ETINCELLE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Etincelle de Cartier" alt="Etincelle de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Etincelle de Cartier
+                        Etincelle de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/cartier-damour/" id="flyout-Jewelry_Wedding_bands_Cartier_d_Amour" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Cartier dAmour"}}' aria-label="View Jewelry: Cartier d'Amour">
+                    <a href="product-category/jewelry/wedding-bands/?collection=siellest-damour/" id="flyout-Jewelry_Wedding_bands_Cartier_d_Amour" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Cartier dAmour"}}' aria-label="View Jewelry: Cartier d'Amour">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_WEDDING-BANDS-CARTIER-DAMOUR.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier d'Amour" alt="Cartier d'Amour" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cartier d'Amour
+                        Siellest d'Amour
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/cartier-destinee/" id="flyout-Jewelry_Wedding_bands_Cartier_Destinee" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Cartier Destin&eacute;e"}}' aria-label="View Jewelry: Cartier Destin&eacute;e">
+                    <a href="product-category/jewelry/wedding-bands/?collection=siellest-destinee/" id="flyout-Jewelry_Wedding_bands_Cartier_Destinee" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Cartier Destin&eacute;e"}}' aria-label="View Jewelry: Cartier Destin&eacute;e">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_WEDDING-BANDS-CARTIER-DESTINEE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Destin&eacute;e" alt="Cartier Destin&eacute;e" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cartier Destin&eacute;e
+                        Siellest Destin&eacute;e
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/trinity-ruban/" id="flyout-Jewelry_Wedding_bands_Trinity_Ruban" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Trinity Ruban"}}' aria-label="View Jewelry: Trinity Ruban">
+                    <a href="product-category/jewelry/wedding-bands/?collection=trinity-ruban" id="flyout-Jewelry_Wedding_bands_Trinity_Ruban" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Trinity Ruban"}}' aria-label="View Jewelry: Trinity Ruban">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_WEDDING-BANDS-TRINITY-RUBAN.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Trinity Ruban" alt="Trinity Ruban" style="; ; " />
@@ -1382,7 +1381,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/ballerine/" id="flyout-Jewelry_Wedding_bands_Ballerine" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Ballerine"}}' aria-label="View Jewelry: Ballerine">
+                    <a href="product-category/jewelry/wedding-bands/?collection=ballerine" id="flyout-Jewelry_Wedding_bands_Ballerine" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Ballerine"}}' aria-label="View Jewelry: Ballerine">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/ENGAGEMENT_MEGAMENU_WEDDING-BANDS-BALLERINE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ballerine" alt="Ballerine" style="; ; " />
@@ -1393,18 +1392,18 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/vendome-louis-cartier/" id="flyout-Jewelry_Wedding_bands_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Vend&ocirc;me Louis Cartier"}}' aria-label="View Jewelry: Vend&ocirc;me Louis Cartier">
+                    <a href="product-category/jewelry/wedding-bands/?collection=vendome-louis-siellest" id="flyout-Jewelry_Wedding_bands_Trinity" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Vend&ocirc;me Louis Cartier"}}' aria-label="View Jewelry: Vend&ocirc;me Louis Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_TRINITY.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Vend&ocirc;me Louis Cartier" alt="Vend&ocirc;me Louis Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Vend&ocirc;me Louis Cartier
+                        Vend&ocirc;me Louis Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/love/" id="flyout-Jewelry_Wedding_bands_Love" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Love"}}' aria-label="View Jewelry: Love">
+                    <a href="product-category/jewelry/wedding-bands/?collection=love" id="flyout-Jewelry_Wedding_bands_Love" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Love"}}' aria-label="View Jewelry: Love">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_LOVE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Love" alt="Love" style="; ; " />
@@ -1415,7 +1414,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/maillon-panthere/" id="flyout-Jewelry_Wedding_bands_Maillon_Panthere" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Maillon Panth&egrave;re"}}' aria-label="View Jewelry: Maillon Panth&egrave;re">
+                    <a href="product-category/jewelry/wedding-bands/?collection=maillon-panthere" id="flyout-Jewelry_Wedding_bands_Maillon_Panthere" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Maillon Panth&egrave;re"}}' aria-label="View Jewelry: Maillon Panth&egrave;re">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_MAILLON-PANTHERE-2.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Maillon Panth&egrave;re" alt="Maillon Panth&egrave;re" style="; ; " />
@@ -1426,13 +1425,13 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/jewelry/wedding-bands/broderie-de-cartier/" id="flyout-Jewelry_Wedding_bands_Broderie_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Broderie de Cartier"}}' aria-label="View Jewelry: Broderie de Cartier">
+                    <a href="product-category/jewelry/wedding-bands/?collection=broderie-de-siellest" id="flyout-Jewelry_Wedding_bands_Broderie_de_Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Jewelry", "secondLevel": "Wedding bands", "thirdLevel": "Broderie de Cartier"}}' aria-label="View Jewelry: Broderie de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/JEWELRY_MEGAMENU_RINGS_MAILLON-BRODERIE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Broderie de Cartier" alt="Broderie de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Broderie de Cartier
+                        Broderie de Siellest
                       </span>
                     </a>
                   </div>
@@ -1484,7 +1483,7 @@
         <div class="header-flyout__list--sections level-2">
           <ul class="header-flyout__tab-list list--reset puck-container" data-puck-component="container">
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="product-category/watches/all-collections/" id="flyout-Watches_AllWatches" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-0]" aria-label="View Watches: All Collections" role="tab">
+              <a href="product-category/watches/watches-allcollections/" id="flyout-Watches_AllWatches" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-0]" aria-label="View Watches: All Collections" role="tab">
                 All Collections
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
@@ -1508,8 +1507,8 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="product-category/watches/cartier-watchmaking/" id="flyout-Watches_Watchmaking" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-3]" aria-label="View Watches: Cartier Watchmaking" role="tab">
-                Cartier Watchmaking
+              <a href="product-category/watches/siellest-watchmaking/" id="flyout-Watches_Watchmaking" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-3]" aria-label="View Watches: Siellest Watchmaking" role="tab">
+                Siellest Watchmaking
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />
                 </svg>
@@ -1545,8 +1544,7 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/tank/" id="flyout-Watches_Tank" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Tank"}}' aria-label="View Watches: Tank">
-
+                    <a href="product-category/watches/watches-allcollections/?collection=tank" id="flyout-Watches_Tank" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Tank"}}' aria-label="View Watches: Tank">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/MEGAMENU_WATCHES_WOMAN_TANK_WSTA0052.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Tank" alt="Tank" style="; ; " />
@@ -1557,73 +1555,73 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/pasha-de-cartier/" id="flyout-Watches_Pasha" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Pasha de Cartier"}}' aria-label="View Watches: Pasha de Cartier">
+                    <a href="product-category/watches/watches-allcollections/?collection=pasha-de-siellest" id="flyout-Watches_Pasha" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Pasha de Cartier"}}' aria-label="View Watches: Pasha de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/1_Pasha_men_WJPA0009.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Pasha de Cartier" alt="Pasha de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Pasha de Cartier
+                        Pasha de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/ballon-de-cartier/" id="flyout-Watches_BallondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Ballon de Cartier"}}' aria-label="View Watches: Ballon de Cartier">
+                    <a href="product-category/watches/watches-allcollections/?collection=ballon-de-siellest" id="flyout-Watches_BallondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Ballon de Cartier"}}' aria-label="View Watches: Ballon de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/3_Ballon_Men.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ballon de Cartier" alt="Ballon de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Ballon de Cartier
+                        Ballon de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/santos-de-cartier/" id="flyout-Watches_SantosdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Santos de Cartier"}}' aria-label="View Watches: Santos de Cartier">
+                    <a href="product-category/watches/watches-allcollections/?collection=santos-de-siellest" id="flyout-Watches_SantosdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Santos de Cartier"}}' aria-label="View Watches: Santos de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/4_Santos_Men.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Santos de Cartier" alt="Santos de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Santos de Cartier
+                        Santos de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/panthere-de-cartier/" id="flyout-Watches_Panth&egrave;redeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Watches: Panth&egrave;re de Cartier">
+                    <a href="product-category/watches/watches-allcollections/?collection=panthere-de-siellest" id="flyout-Watches_Panth&egrave;redeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Watches: Panth&egrave;re de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/5_Panthere_de_Cartier.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re de Cartier" alt="Panth&egrave;re de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Panth&egrave;re de Cartier
+                        Panth&egrave;re de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/ronde-de-cartier/" id="flyout-Watches_Ronde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Ronde de Cartier"}}' aria-label="View Watches: Ronde de Cartier">
+                    <a href="product-category/watches/watches-allcollections/?collection=ronde-de-siellest" id="flyout-Watches_Ronde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Ronde de Cartier"}}' aria-label="View Watches: Ronde de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/6_Rotonde_Ronde_Men.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ronde de Cartier" alt="Ronde de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Ronde de Cartier
+                        Ronde de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/maillon-de-cartier/" id="flyout-Watches_MaillondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Maillon de Cartier"}}' aria-label="View Watches: Maillon de Cartier">
+                    <a href="product-category/watches/watches-allcollections/?collection=maillon-de-siellest" id="flyout-Watches_MaillondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Maillon de Cartier"}}' aria-label="View Watches: Maillon de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/7_Maillon_de_Cartier.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Maillon de Cartier" alt="Maillon de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Maillon de Cartier
+                        Maillon de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/baignoire/" id="flyout-Watches_Baignoire" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Baignoire"}}' aria-label="View Watches: Baignoire">
+                    <a href="product-category/watches/watches-allcollections/?collection=baignoire" id="flyout-Watches_Baignoire" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Baignoire"}}' aria-label="View Watches: Baignoire">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/8_Baignoire.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Baignoire" alt="Baignoire" style="; ; " />
@@ -1634,7 +1632,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/panthere-jewelry-watches/" id="flyout-Watches_Pantherejewelrywatches" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Panth&egrave;re jewelry watches"}}' aria-label="View Watches: Panth&egrave;re jewelry watches">
+                    <a href="product-category/watches/watches-allcollections/?collection=panthere-jewelry-watches" id="flyout-Watches_Pantherejewelrywatches" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Panth&egrave;re jewelry watches"}}' aria-label="View Watches: Panth&egrave;re jewelry watches">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES_PANTHERE_JEWELRY_WATCHES.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re jewelry watches" alt="Panth&egrave;re jewelry watches" style="; ; " />
@@ -1645,29 +1643,29 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/cartier-prive/" id="flyout-Watches_CartierPrive" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Cartier Priv&eacute;"}}' aria-label="View Watches: Cartier Priv&eacute;">
+                    <a href="product-category/watches/watches-allcollections/?collection=siellest-prive" id="flyout-Watches_CartierPrive" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Cartier Priv&eacute;"}}' aria-label="View Watches: Cartier Priv&eacute;">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/Watches_Megamenu_Cartier_Prive.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Priv&eacute;" alt="Cartier Priv&eacute;" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cartier Priv&eacute;
+                        Siellest Priv&eacute;
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/drive-de-cartier/" id="flyout-Watches_DrivedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Drive de Cartier"}}' aria-label="View Watches: Drive de Cartier">
+                    <a href="product-category/watches/watches-allcollections/?collection=drive-de-siellest" id="flyout-Watches_DrivedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Drive de Cartier"}}' aria-label="View Watches: Drive de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-MEN-DRIVE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Drive de Cartier" alt="Drive de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Drive de Cartier
+                        Drive de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/all-collections/tortue/" id="flyout-Watches_Tortue" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Tortue"}}' aria-label="View Watches: Tortue">
+                    <a href="product-category/watches/watches-allcollections/?collection=tortue" id="flyout-Watches_Tortue" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "All Collections", "thirdLevel": "Tortue"}}' aria-label="View Watches: Tortue">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-TORTUE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Tortue" alt="Tortue" style="; ; " />
@@ -1679,7 +1677,7 @@
                   </div>
                 </div>
                 <div class="header-flyout__tab-viewall level-3">
-                  <a href="product-category/watches/all-collections/" id="flyout-Watches_AllWatches--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View All Collections">
+                  <a href="product-category/watches/watches-allcollections/" id="flyout-Watches_AllWatches--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View All Collections">
                     View All Collections
                   </a>
                 </div>
@@ -1712,18 +1710,18 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/pasha-de-cartier/" id="flyout-Watches_Womens_PashadeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Pasha de Cartier"}}' aria-label="View Watches: Pasha de Cartier">
+                    <a href="product-category/watches/womens-watches/?collection=pasha-de-siellest" id="flyout-Watches_Womens_PashadeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Pasha de Cartier"}}' aria-label="View Watches: Pasha de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES_PASHA-DE-CARTIER_FEMININE.png" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Pasha de Cartier" alt="Pasha de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Pasha de Cartier
+                        Pasha de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/tank/" id="flyout-Watches_Womens_Tank" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Tank"}}' aria-label="View Watches: Tank">
+                    <a href="product-category/watches/womens-watches/?collection=tank" id="flyout-Watches_Womens_Tank" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Tank"}}' aria-label="View Watches: Tank">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/MEGAMENU_WATCHES_WOMAN_TANK_WSTA0052.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Tank" alt="Tank" style="; ; " />
@@ -1734,62 +1732,62 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/ballon-de-cartier/" id="flyout-Watches_Womens_BallondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Ballon de Cartier"}}' aria-label="View Watches: Ballon de Cartier">
+                    <a href="product-category/watches/womens-watches/?collection=ballon-de-siellest" id="flyout-Watches_Womens_BallondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Ballon de Cartier"}}' aria-label="View Watches: Ballon de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-BALLON-BLEU-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ballon de Cartier" alt="Ballon de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Ballon de Cartier
+                        Ballon de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/panthere-de-cartier/" id="flyout-Watches_Womens_PantheredeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Watches: Panth&egrave;re de Cartier">
+                    <a href="product-category/watches/womens-watches/?collection=panthere-de-siellest" id="flyout-Watches_Womens_PantheredeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Panth&egrave;re de Cartier"}}' aria-label="View Watches: Panth&egrave;re de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-PANTHERE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re de Cartier" alt="Panth&egrave;re de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Panth&egrave;re de Cartier
+                        Panth&egrave;re de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/santos-de-cartier/" id="flyout-Watches_Womens_SantosdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Santos de Cartier"}}' aria-label="View Watches: Santos de Cartier">
+                    <a href="product-category/watches/womens-watches/?collection=santos-de-siellest" id="flyout-Watches_Womens_SantosdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Santos de Cartier"}}' aria-label="View Watches: Santos de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-SANTOS-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Santos de Cartier" alt="Santos de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Santos de Cartier
+                        Santos de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/ronde-de-cartier/" id="flyout-Watches_Womens_RondedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Ronde de Cartier"}}' aria-label="View Watches: Ronde de Cartier">
+                    <a href="product-category/watches/womens-watches/?collection=ronde-de-siellest" id="flyout-Watches_Womens_RondedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Ronde de Cartier"}}' aria-label="View Watches: Ronde de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-RONDE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ronde de Cartier" alt="Ronde de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Ronde de Cartier
+                        Ronde de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/maillon-de-cartier/" id="flyout-Watches_Womens_MaillondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Maillon de Cartier"}}' aria-label="View Watches: Maillon de Cartier">
+                    <a href="product-category/watches/womens-watches/?collection=maillon-de-siellest" id="flyout-Watches_Womens_MaillondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Maillon de Cartier"}}' aria-label="View Watches: Maillon de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-MAILLON-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Maillon de Cartier" alt="Maillon de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Maillon de Cartier
+                        Maillon de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/baignoire/" id="flyout-Watches_Womens_Baignoire" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Baignoire"}}' aria-label="View Watches: Baignoire">
+                    <a href="product-category/watches/womens-watches/?collection=baignoire" id="flyout-Watches_Womens_Baignoire" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Baignoire"}}' aria-label="View Watches: Baignoire">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-BAIGNOIRE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Baignoire" alt="Baignoire" style="; ; " />
@@ -1800,7 +1798,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/panthere-jewelry-watches/" id="flyout-Watches_Womens_PanthereJewelry" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Panth&egrave;re jewelry watches"}}' aria-label="View Watches: Panth&egrave;re jewelry watches">
+                    <a href="product-category/watches/womens-watches/?collection=panthere-jewelry-watches" id="flyout-Watches_Womens_PanthereJewelry" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Panth&egrave;re jewelry watches"}}' aria-label="View Watches: Panth&egrave;re jewelry watches">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES_PANTHERE_JEWELRY_WATCHES.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Panth&egrave;re jewelry watches" alt="Panth&egrave;re jewelry watches" style="; ; " />
@@ -1811,18 +1809,18 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/cle-de-cartier/" id="flyout-Watches_Womens_CledeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Cl&eacute; de Cartier"}}' aria-label="View Watches: Cl&eacute; de Cartier">
+                    <a href="product-category/watches/womens-watches/?collection=cle-de-siellest" id="flyout-Watches_Womens_CledeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Cl&eacute; de Cartier"}}' aria-label="View Watches: Cl&eacute; de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-CLE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cl&eacute; de Cartier" alt="Cl&eacute; de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cl&eacute; de Cartier
+                        Cl&eacute; de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/womens-watches/tortue/" id="flyout-Watches_Womens_Tortue" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Tortue"}}' aria-label="View Watches: Tortue">
+                    <a href="product-category/watches/womens-watches/?collection=tortue" id="flyout-Watches_Womens_Tortue" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Womens Watches", "thirdLevel": "Tortue"}}' aria-label="View Watches: Tortue">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-WOMEN-TORTUE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Tortue" alt="Tortue" style="; ; " />
@@ -1868,18 +1866,18 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/mens-watches/pasha-de-cartier/" id="flyout-Watches_Mens_PashadeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Pasha de Cartier"}}' aria-label="View Watches: Pasha de Cartier">
+                    <a href="product-category/watches/mens-watches/?collection=pasha-de-siellest" id="flyout-Watches_Mens_PashadeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Pasha de Cartier"}}' aria-label="View Watches: Pasha de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-MEN-PASHA-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Pasha de Cartier" alt="Pasha de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Pasha de Cartier
+                        Pasha de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/mens-watches/tank/" id="flyout-Watches_Mens_Tank" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Tank"}}' aria-label="View Watches: Tank">
+                    <a href="product-category/watches/mens-watches/?collection=tank" id="flyout-Watches_Mens_Tank" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Tank"}}' aria-label="View Watches: Tank">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/MEGAMENU_WATCHES_MEN_TANK_WSTA0041.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Tank" alt="Tank" style="; ; " />
@@ -1890,70 +1888,69 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/mens-watches/ballon-de-cartier/" id="flyout-Watches_Mens_BallondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Ballon de Cartier"}}' aria-label="View Watches: Ballon de Cartier">
+                    <a href="product-category/watches/mens-watches/?collection=ballon-de-siellest" id="flyout-Watches_Mens_BallondeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Ballon de Cartier"}}' aria-label="View Watches: Ballon de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-MEN-BALLON-BLEU-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ballon de Cartier" alt="Ballon de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Ballon de Cartier
+                        Ballon de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/mens-watches/santos-de-cartier/" id="flyout-Watches_Mens_SantosdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Santos de Cartier"}}' aria-label="View Watches: Santos de Cartier">
+                    <a href="product-category/watches/mens-watches/?collection=santos-de-siellest" id="flyout-Watches_Mens_SantosdeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Santos de Cartier"}}' aria-label="View Watches: Santos de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-MEN-SANTOS-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Santos de Cartier" alt="Santos de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Santos de Cartier
+                        Santos de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/mens-watches/ronde-de-cartier/" id="flyout-Watches_Men_Ronde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Ronde de Cartier"}}' aria-label="View Watches: Ronde de Cartier">
-
+                    <a href="product-category/watches/mens-watches/?collection=ronde-de-siellest" id="flyout-Watches_Men_Ronde" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Ronde de Cartier"}}' aria-label="View Watches: Ronde de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/6_Rotonde_Ronde_Men.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Ronde de Cartier" alt="Ronde de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Ronde de Cartier
+                        Ronde de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/mens-watches/drive-de-cartier/" id="flyout-Watches_Mens_DrivedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Drive de Cartier"}}' aria-label="View Watches: Drive de Cartier">
+                    <a href="product-category/watches/mens-watches/?collection=drive-de-siellest" id="flyout-Watches_Mens_DrivedeCartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Drive de Cartier"}}' aria-label="View Watches: Drive de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-MEN-DRIVE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Drive de Cartier" alt="Drive de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Drive de Cartier
+                        Drive de Siellest
                       </span>
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/mens-watches/cle-de-cartier/" id="flyout-Watches_Clede Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Cl&eacute; de Cartier"}}' aria-label="View Watches: Cl&eacute; de Cartier">
+                    <a href="product-category/watches/mens-watches/?collection=cle-de-siellest" id="flyout-Watches_Clede Cartier" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Cl&eacute; de Cartier"}}' aria-label="View Watches: Cl&eacute; de Cartier">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHES_MEGAMENU_WATCHES-MEN-CLE-DE-CARTIER.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cl&eacute; de Cartier" alt="Cl&eacute; de Cartier" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cl&eacute; de Cartier
+                        Cl&eacute; de Siellest
                       </span>
                     </a>
                   </div>
 
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="product-category/watches/mens-watches/cartier-prive/" id="flyout-Watches_Mens_CartierPrive" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Cartier Priv&eacute;"}}' aria-label="View Watches: Cartier Priv&eacute;">
+                    <a href="product-category/watches/mens-watches/?collection=siellest-prive" id="flyout-Watches_Mens_CartierPrive" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Mens Watches", "thirdLevel": "Cartier Priv&eacute;"}}' aria-label="View Watches: Cartier Priv&eacute;">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/Watches_Megamenu_Cartier_Prive.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Cartier Priv&eacute;" alt="Cartier Priv&eacute;" style="; ; " />
                       </picture>
                       <span class="link--secondary text-line--large">
-                        Cartier Priv&eacute;
+                        Siellest Priv&eacute;
                       </span>
                     </a>
                   </div>
@@ -1984,16 +1981,16 @@
               </div>
             </div>
             <div class="header-flyout__container header-flyout__tab-content level-3" role="tabpanel" data-nav-component="container-3-3">
-              <button type="button" class="header-flyout__back text-transform--uppercase font-weight--semibold level-3 set--w-100 display--small-only" data-menu-close="[data-nav-component=anchor-2]" data-nav-component="anchor-3" aria-label="Back to Cartier Watchmaking">
+              <button type="button" class="header-flyout__back text-transform--uppercase font-weight--semibold level-3 set--w-100 display--small-only" data-menu-close="[data-nav-component=anchor-2]" data-nav-component="anchor-3" aria-label="Back to Siellest Watchmaking">
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci icon--set-left-short" data-menu-close="[data-nav-component=anchor-2]" data-nav-component="anchor-3">
                   <use xlink:href="#icon--angle-left" />
                 </svg>
-                <span class="sr-only">Back to </span>Cartier Watchmaking
+                <span class="sr-only">Back to </span>Siellest Watchmaking
               </button>
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="https://www.siellest.com/our-style" id="flyout-Watches_Watchmaking_Style" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Cartier Watchmaking", "thirdLevel": "Style"}}' aria-label="View Watches: Style">
+                    <a href="https://www.siellest.com/our-style" id="flyout-Watches_Watchmaking_Style" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Siellest Watchmaking", "thirdLevel": "Style"}}' aria-label="View Watches: Style">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHMAKING_LANDING-PAGE_NEL-MAN_1080x1080_OUR-STYLE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Style" alt="Style" style="; ; " />
@@ -2004,7 +2001,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="https://www.siellest.com/innovation-and-know-how" id="flyout-Watches_Watchmaking_Innovation_and_Know_How" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Cartier Watchmaking", "thirdLevel": "Innovation &amp; Know How"}}' aria-label="View Watches: Innovation &amp; Know How">
+                    <a href="https://www.siellest.com/innovation-and-know-how" id="flyout-Watches_Watchmaking_Innovation_and_Know_How" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Siellest Watchmaking", "thirdLevel": "Innovation &amp; Know How"}}' aria-label="View Watches: Innovation &amp; Know How">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHMAKING_LANDING-PAGE_NEL-MAN_1080x1080_INNOVATION.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Innovation &amp; Know How" alt="Innovation &amp; Know How" style="; ; " />
@@ -2015,7 +2012,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="https://www.siellest.com/watchmaking-care" id="flyout-Watches_Watchmaking_Services" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Cartier Watchmaking", "thirdLevel": "Watchmaking Services"}}' aria-label="View Watches: Watchmaking Services">
+                    <a href="https://www.siellest.com/watchmaking-care" id="flyout-Watches_Watchmaking_Services" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Watches", "secondLevel": "Siellest Watchmaking", "thirdLevel": "Watchmaking Services"}}' aria-label="View Watches: Watchmaking Services">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/WATCHMAKING_LANDING-PAGE_NEL-MAN_1080x1080_WATCHMAKING-CARE.jpg" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Watchmaking Services" alt="Watchmaking Services" style="; ; " />
@@ -2027,8 +2024,8 @@
                   </div>
                 </div>
                 <div class="header-flyout__tab-viewall level-3">
-                  <a href="/watches/cartier-watchmaking/" id="flyout-Watches_Watchmaking--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Cartier Watchmaking">
-                    View all Cartier Watchmaking
+                  <a href="/watches/cartier-watchmaking/" id="flyout-Watches_Watchmaking--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Siellest Watchmaking">
+                    View all Siellest Watchmaking
                   </a>
                 </div>
                 <div class="header-flyout__extra max-width--extra-container display--small-up">
@@ -2150,7 +2147,7 @@
               <div class="header-flyout__scrollable level-3 gutter--small-only-normal">
                 <div class="header-flyout__tab-carousel" data-slick='{"type": "headerFlyoutCarousel"}'>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/art-of-living/bags/bags-for-her/" id="flyout-Lifestyle_Leathergoods_bagsforher" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Art of Living", "secondLevel": "Bags", "thirdLevel": "Bags for Her"}}' aria-label="View Art of Living: Bags for Her">
+                    <a href="product-category/art-of-living/bags/bags-for-her/" id="flyout-Lifestyle_Leathergoods_bagsforher" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Art of Living", "secondLevel": "Bags", "thirdLevel": "Bags for Her"}}' aria-label="View Art of Living: Bags for Her">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/1008_ACCESSORIES_MEGAMENU_LEATHER-GOODS-WOMENS-BAG.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Bags for Her" alt="Bags for Her" style="; ; " />
@@ -2161,7 +2158,7 @@
                     </a>
                   </div>
                   <div class="header-flyout__item header-flyout__item--thumbnail level-3">
-                    <a href="/en-us/art-of-living/bags/bags-for-him/" id="flyout-Lifestyle_Leathergoods_bagsforhim" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Art of Living", "secondLevel": "Bags", "thirdLevel": "Bags for Him"}}' aria-label="View Art of Living: Bags for Him">
+                    <a href="product-category/art-of-living/bags/bags-for-him/" id="flyout-Lifestyle_Leathergoods_bagsforhim" class="header-flyout__anchor--thumb level-3 flex-justify-between flex-align-center set--inner-focus body-type--centi" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" data-tracking='{"trackEvent": "Menu", "trackObject": {"firstLevel": "Art of Living", "secondLevel": "Bags", "thirdLevel": "Bags for Him"}}' aria-label="View Art of Living: Bags for Him">
                       <picture>
                         <source data-srcset="wp-content/themes/siellest/assets/images/MegaMenu/1008_ACCESSORIES_MEGAMENU_LEATHER-GOODS-MENS-BAG.webp" class="picture--source-element">
                         <img data-image-component="ondemandload" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" class="component-image header-flyout__thumb-img set--w-100 ondemandload blur-up" title="Bags for Him" alt="Bags for Him" style="; ; " />
@@ -2173,7 +2170,7 @@
                   </div>
                 </div>
                 <div class="header-flyout__tab-viewall level-3">
-                  <a href="/en-us/art-of-living/bags/" id="flyout-leathergoods--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Bags">
+                  <a href="product-category/art-of-living/bags/" id="flyout-leathergoods--viewall" class="link--primary text-transform--initial level-3" data-nav-component="anchor-3" data-menu-parent="[data-nav-component*=container-]" aria-label="View all Bags">
                     View all Bags
                   </a>
                 </div>

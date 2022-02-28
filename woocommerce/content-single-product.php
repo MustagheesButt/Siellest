@@ -1,7 +1,8 @@
 <?php
   $p = wc_get_product();
-  $product = wc_get_product()->get_data(); ?>
-<?php //print_r($product); ?>
+  $product = wc_get_product()->get_data();
+  $category = get_term($p->get_category_ids()[2])->name; // TODO not sure if it'll always be in order
+?>
 
 <div class="pdp" itemscope itemtype="http://schema.org/Product" data-page-motion>
   <div class="pdp-main max-width--large" data-product-container="pdp" data-pid="<?= $product['id'] ?>" data-product-querystring="pid=<?= $product['id'] ?>">
@@ -18,13 +19,12 @@
                 <span class="breadcrumbs__separator">/</span>
               </li>
               <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                <a class="breadcrumbs__anchor link--secondary" href="jewelry/" title="Jewelry">Jewelry</a>
+                <a class="breadcrumbs__anchor link--secondary" href="product-category/jewelry/" title="Jewelry">Jewelry</a>
                 <span class="breadcrumbs__separator">/</span>
               </li>
               <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                <a class="breadcrumbs__anchor link--secondary" href="/en-us/jewelry/bracelets/" title="Bracelets">Bracelets</a>
+                <a class="breadcrumbs__anchor link--secondary" href="product-category/jewelry/bracelets/" title="<?= $category ?>"><?= $category ?></a>
               </li>
-              <?php $p->get_categories() ?>
             </ol>
           </div>
 
@@ -90,6 +90,12 @@
               </div>
             </div>
           </div>
+
+          <?php
+          if ($p->is_type('variable')) {
+            $available_variations = $p->get_available_variations();
+            // var_dump($available_variations[0]);
+          ?>
           <div class="pdp-main__section pdp-main__section--attributes set--w-100">
 
             <div class="product-attribute__list flex flex-flow-wrap">
@@ -97,34 +103,23 @@
 
 
                 <div class="product-attribute__head flex flex-justify-between sr-only">
-                  <label class="product-attribute__label product-attribute__label--size form-control-label" for="productAttribute-B6067217-size">
+                  <label class="product-attribute__label product-attribute__label--size form-control-label" for="productAttribute-<?= $p->id ?>-size">
                     <span class="product-attribute__label-pre">Select Size</span>
                   </label>
                 </div>
                 <div class="product-attribute__contents ">
 
                   <select id="productAttribute-B6067217-size" class="product-attribute__size button form-control form-control--select form-control--boxed text-align-last--center" data-attr="size" data-attr-type="dropdown">
-                    <option value="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6067217_size=&amp;pid=B6067217&amp;quantity=1">
+                    <option value="<?= get_site_url() ?>/wp-json/siellest/Product-Variation?dwvar_<?= $p->id ?>_size=&pid=<?= $p->id ?>&quantity=1">
                       Select Size
                     </option>
-                    <option value="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6067217_size=15&amp;pid=B6067217&amp;quantity=1" data-attr-value="15">
-                      15 cm - Contact us
+                    <?php
+                    foreach ($available_variations as $variation) {
+                    ?>
+                    <option value="<?= get_site_url() ?>/wp-json/siellest/Product-Variation?dwvar_<?= $p->id ?>_size=15&pid=<?= $p->id ?>&quantity=1" data-attr-value="<?= $variation['attributes']['attribute_pa_size'] ?>">
+                      <?= $variation['attributes']['attribute_pa_size'] ?>
                     </option>
-                    <option value="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6067217_size=16&amp;pid=B6067217&amp;quantity=1" data-attr-value="16">
-                      16 cm - Contact us
-                    </option>
-                    <option value="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6067217_size=17&amp;pid=B6067217&amp;quantity=1" data-attr-value="17">
-                      17 cm - Contact us
-                    </option>
-                    <option value="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6067217_size=18&amp;pid=B6067217&amp;quantity=1" data-attr-value="18">
-                      18 cm - Contact us
-                    </option>
-                    <option value="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6067217_size=19&amp;pid=B6067217&amp;quantity=1" data-attr-value="19">
-                      19 cm - Contact us
-                    </option>
-                    <option value="https://www.siellest.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6067217_size=20&amp;pid=B6067217&amp;quantity=1" data-attr-value="20">
-                      20 cm
-                    </option>
+                    <?php } ?>
                   </select>
                 </div>
               </div>
@@ -133,17 +128,18 @@
 
             </div>
           </div>
+          <?php } ?>
           <div class="pdp-main__section pdp-main__section--actions flex set--w-100" data-product-component="actions">
 
             <div class="product-add__container cart-and-ipay flex-grow-1 flex flex-align-center">
 
-              <button type="button" class="product__request-price button button--primary set--w-100 hidden" data-pid="B6067217" data-url="/on/demandware.store/Sites-CartierUS-Site/en_US/RequestPrice-Start?pid=B6067217" data-product-url="productRequestPrice" data-modal-trigger='{"dynamicURL": true, "type": "html", "options": {"modalID": "productRequestPrice", "modalClass": "modal--generic modal--request-price", "keepAlive": false}}' data-product-component="request-price">
+              <button type="button" class="product__request-price button button--primary set--w-100 hidden" data-pid="<?= $p->id ?>" data-url="wp-json/siellest/RequestPrice-Start?pid=<?= $p->id ?>" data-product-url="productRequestPrice" data-modal-trigger='{"dynamicURL": true, "type": "html", "options": {"modalID": "productRequestPrice", "modalClass": "modal--generic modal--request-price", "keepAlive": false}}' data-product-component="request-price">
                 Request Price
               </button>
               <p class="font-family--serif hidden" data-product-component="availability-status">
                 Unavailable online
               </p>
-              <button class="product-add__button add-to-cart button button--primary button--fluid set--w-100  " disabled data-pid="B6067217" data-product-component="add-button" data-url="/on/demandware.store/Sites-CartierUS-Site/en_US/Cart-AddProduct">
+              <button class="product-add__button add-to-cart button button--primary button--fluid set--w-100  " <?= $p->is_type('variable') ? 'disabled' : '' ?> data-pid="<?= $product['id'] ?>" data-product-component="add-button" data-url="wp-json/siellest/Cart-AddProduct">
                 Add to Shopping Bag
               </button>
             </div>
@@ -255,7 +251,7 @@
               </div>
             </div>
             <div class="pdp-main__footer-item pdp-main__ref body-type--deci">
-              Ref. <span data-product-component="pid">B6067217</span>
+              Ref. <span data-product-component="pid"><?= $p->sku ?></span>
             </div>
           </div>
         </div>
@@ -460,17 +456,13 @@
           <h1 class="module-container__title heading-type component-copy__title--regular">You May Also Like</h1>
         </div>
         <div class="product-list__carousel slider--flex slider--arrows-outer slider--dots-right slider--arrows-tile-center slider--h-align-center slider--row slider--pre-layout-1 slider--md-pre-layout-md-3 slider--lg-pre-layout-4" data-slick='{"type": "productListCarousel", "slidesToShow": 4.0, "slidesToScroll": 4.0, "responsive": [{"breakpoint": 767, "settings": {"slidesToShow": 1.0, "slidesToScroll": 1.0}}, {"breakpoint": 1024, "settings": {"slidesToShow": 3.0, "slidesToScroll": 3.0}}]}'>
+          <?php
+            // TODO
+            $recommendations = [
+              wc_get_product(1), wc_get_product(2), wc_get_product(3)
+            ];
+          ?>
           <div class=" col-12 col-md-4 col-lg-3">
-            <script type="text/javascript">
-              //<!--
-              /* <![CDATA[ (viewProduct-active_data.js) */
-              // dw.ac._capture({
-              //   id: "CRB6016700",
-              //   type: "recommendation"
-              // });
-              /* ]]> */
-              // -->
-            </script>
             <div class="product flex flex-grow-1 flex-direction-col">
               <div class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center" itemscope itemtype="http://schema.org/Product" data-product-container="tile" data-product-tile data-pid="CRB6016700" data-tracking-id="CRB6016700" data-tracking-position data-tracking='{"trackEvent": "eeListClick", "asyncParams": {"pid": "data-tracking-id", "pos": "data-tracking-position", "listValue": "--context"}}' data-motion='{"properties": "opacity from-v-direction"}'>
 

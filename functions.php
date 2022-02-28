@@ -1,5 +1,6 @@
 <?php
-
+// ini_set('display_errors', 1); 
+// error_reporting(E_ALL);
 require 'vendor/autoload.php';
 require 'constants.php';
 
@@ -53,8 +54,9 @@ function siellest_request_query($query_vars)
   global $wpdb;
   global $pagenow;
 
-  if ('product' === $typenow && isset($_GET['s']) && 'edit.php' === $pagenow) {
-    $search_term            = esc_sql(sanitize_text_field($_GET['s']));
+  $search_term = $_GET['s'];
+  if ('product' === $typenow && isset($search_term) && !empty($search_term) && 'edit.php' === $pagenow) {
+    $search_term            = esc_sql(sanitize_text_field($search_term));
     $meta_key               = 'ext_url';
     $post_types             = array('product', 'product_variation');
     $search_results         = $wpdb->get_results(
@@ -70,7 +72,22 @@ function siellest_request_query($query_vars)
   return $query_vars;
 }
 
+function siellest_modify_query_params($query_vars)
+{
+  if (isset($_GET['prefn1']) && isset($_GET['prefv1'])) {
+    // if ($_GET['prefn1'] == 'collection')
+    //   $_GET['collection'] = $_GET['prefv1'];
+    if ($_GET['prefn1'] == 'category') {
+      set_query_var('product_cat', $_GET['prefv1']);
+      $query_vars['product_cat'] = $_GET['prefv1'];
+    }
+  }
+
+  return $query_vars;
+}
+
 add_filter('request', 'siellest_request_query', 20);
+add_filter('request', 'siellest_modify_query_params', 20);
 
 function siellest_register_styles()
 {

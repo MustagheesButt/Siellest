@@ -1,30 +1,15 @@
 <?php
-// ini_set('display_errors', 1);
-// error_reporting(E_ALL);
+// Note: Some vars get set in siellest_modify_query_params
 $category = (!empty(get_query_var('product_cat'))) ? get_query_var('product_cat') : $_GET['cgid'];
+$sort_rule = $_GET['srule'];
 
-$tax_query = [];
 if (isset($_GET['collection'])) {
-  array_push($tax_query, array(
-    'taxonomy'      => 'pa_collection',
-    'field'         => 'slug',
-    'terms'         => $_GET['collection'],
-    'operator'      => 'IN'
-  ));
+  $collections = [$_GET['collection']];
+} else if (isset($_GET['prefn1']) && $_GET['prefn1'] == 'collection') {
+  $collections = explode(',', $_GET['prefv1']);
 }
 
-$args = array(
-  'status' => ['publish'],
-  'paged' => 1,
-  'limit' => 24,
-  'paginate' => true,
-  'category' => [$category],
-  'orderby' => 'meta_value_num',
-  'meta_key' => '_price',
-  'order' => 'asc',
-  'tax_query' => $tax_query
-);
-$query = new WC_Product_Query($args);
+$query = Product::custom_query($category, $sort_rule, collections: $collections);
 $data = $query->get_products();
 $products = $data->products;
 
@@ -52,16 +37,16 @@ $plp_banners = [
         <?php
         if ($plp_banners[$category]) {
         ?>
-        <div class="col-12 col-md-6 col-lg-6 ">
-          <div class="descriptive-card__aspect-ratio descriptive-card__aspect-ratio--wide">
-            <div class="descriptive-card__media component-overlay component-overlay--center">
-              <picture>
-                <source data-srcset="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$category] ?>" class="picture--source-element">
-                <img data-image-component="lazyload" src="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$category] ?>?sw=40&q=100" class="component-image descriptive-card__img object-fit--cover lazyload blur-up" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; " />
-              </picture>
+          <div class="col-12 col-md-6 col-lg-6 ">
+            <div class="descriptive-card__aspect-ratio descriptive-card__aspect-ratio--wide">
+              <div class="descriptive-card__media component-overlay component-overlay--center">
+                <picture>
+                  <source data-srcset="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$category] ?>" class="picture--source-element">
+                  <img data-image-component="lazyload" src="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$category] ?>?sw=40&q=100" class="component-image descriptive-card__img object-fit--cover lazyload blur-up" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; " />
+                </picture>
+              </div>
             </div>
           </div>
-        </div>
         <?php } ?>
         <div class="col-12 col-md-6 col-lg-6 ">
           <div class="descriptive-card__content-wrap flex flex-grow-1 text-align--left component-v-align--center component-h-align--center">
@@ -144,28 +129,29 @@ $plp_banners = [
             </div>
             <div class="col-12 col-md-9">
               <div class="">
+                <?php if ($collections) { ?>
+                <ol class="applied-refinements__list list--reset flex flex-flow-wrap" data-refinement-type="reset remove" tabindex="-1">
+                  <li class="applied-refinements__item refinement-bar__reset">
+                    <button class="pill body-type--centi" data-url="wp-json/siellest/Search-ShowAjax?cgid=jewelry_bracelets" aria-label="Reset, all refinements" data-refinement-action="reset">
+                      Clear All
+                    </button>
+                  </li>
+                  <li class="applied-refinements__item">
+                    <a class="pill pill--icon-right  body-type--centi" href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=jewelry_bracelets&amp;prefn1=collection&amp;prefv1=%c3%89crou%20de%20Cartier%7cCACTUS%20DE%20CARTIER%7cCartier%20D%27Amour%7cETINCELLE%20DE%20CARTIER%7cJuste%20Un%20Clou&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true&amp;srule=price-high-to-low" title="Remove Refinement – boolean: AMULETTE DE CARTIER" data-refinement-action="remove">
+                      <span class="aria-hidden">AMULETTE DE CARTIER</span>
+                      <svg aria-hidden="true" focusable="false" class="icon body-type--micro pill__icon pill__icon--right pill__icon--actionable">
+                        <use xlink:href="#icon--close"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ol>
+                <?php } ?>
                 <div class="row product-grid feed-view" itemtype="http://schema.org/SomeProducts" itemid="#product" data-search-component="product-grid">
                   <?php
-                  // if ( wc_get_loop_prop( 'total' ) ) {
-                  //   while ( have_posts() ) {
-                  //     the_post();
-
-                  //     /**
-                  //      * Hook: woocommerce_shop_loop.
-                  //      */
-                  //     // do_action( 'woocommerce_shop_loop' );
-
-                  //     // wc_get_template_part( 'content', 'product' );
-                  //     global $product;
-                  //     echo render_product($product);
-                  //   }
-                  // }
-                  // woocommerce_product_loop_end();
-
                   foreach ($products as $product) {
                     echo Product::render_product($product);
                   }
-                  Product::render_product_loop_end($category, 24, wc_get_loop_prop('total'));
+                  Product::render_product_loop_end($category, PRODUCTS_PER_PAGE, wc_get_loop_prop('total'));
                   ?>
                 </div>
               </div>

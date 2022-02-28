@@ -46,6 +46,14 @@ $pages = [
     'meta' => [
       'action' => 'Checkout-Begin'
     ]
+  ],
+
+  'account' => [
+    'title' => 'My Account',
+    'template' => 'Account Pages',
+    'meta' => [
+      'Title' => 'Connection - My ' . get_bloginfo('name')
+    ]
   ]
 ];
 
