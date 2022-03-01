@@ -6,7 +6,7 @@ $sort_rule = $_GET['srule'];
 if (isset($_GET['collection'])) {
   $collections = [$_GET['collection']];
 } else if (isset($_GET['prefn1']) && $_GET['prefn1'] == 'collection') {
-  $collections = explode(',', $_GET['prefv1']);
+  $collections = explode('|', $_GET['prefv1']);
 }
 
 $query = Product::custom_query($category, $sort_rule, collections: $collections);
@@ -132,18 +132,23 @@ $plp_banners = [
                 <?php if ($collections) { ?>
                 <ol class="applied-refinements__list list--reset flex flex-flow-wrap" data-refinement-type="reset remove" tabindex="-1">
                   <li class="applied-refinements__item refinement-bar__reset">
-                    <button class="pill body-type--centi" data-url="wp-json/siellest/Search-ShowAjax?cgid=jewelry_bracelets" aria-label="Reset, all refinements" data-refinement-action="reset">
+                    <button class="pill body-type--centi" data-url="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>" aria-label="Reset, all refinements" data-refinement-action="reset">
                       Clear All
                     </button>
                   </li>
+                  <?php
+                  foreach ($collections as $collection) {
+                    $cleared = array_diff($collections, [$collection]);
+                  ?>
                   <li class="applied-refinements__item">
-                    <a class="pill pill--icon-right  body-type--centi" href="/on/demandware.store/Sites-CartierUS-Site/en_US/Search-ShowAjax?cgid=jewelry_bracelets&amp;prefn1=collection&amp;prefv1=%c3%89crou%20de%20Cartier%7cCACTUS%20DE%20CARTIER%7cCartier%20D%27Amour%7cETINCELLE%20DE%20CARTIER%7cJuste%20Un%20Clou&amp;prefn2=sapIsVisibleWeb&amp;prefv2=true&amp;srule=price-high-to-low" title="Remove Refinement – boolean: AMULETTE DE CARTIER" data-refinement-action="remove">
-                      <span class="aria-hidden">AMULETTE DE CARTIER</span>
+                    <a class="pill pill--icon-right  body-type--centi" href="wp-json/Search-ShowAjax?cgid=<?= $category ?>&prefn1=collection&prefv1=<?= implode('|', $cleared) ?>&prefn2=sapIsVisibleWeb&;prefv2=true&srule=price-high-to-low" title="Remove Refinement – boolean: <?= $collection ?>" data-refinement-action="remove">
+                      <span class="aria-hidden"><?= $collection ?></span>
                       <svg aria-hidden="true" focusable="false" class="icon body-type--micro pill__icon pill__icon--right pill__icon--actionable">
                         <use xlink:href="#icon--close"></use>
                       </svg>
                     </a>
                   </li>
+                  <?php } ?>
                 </ol>
                 <?php } ?>
                 <div class="row product-grid feed-view" itemtype="http://schema.org/SomeProducts" itemid="#product" data-search-component="product-grid">
