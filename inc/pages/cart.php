@@ -21,8 +21,7 @@ $count = sizeof($cart['items']);
             <?php
             foreach(WC()->cart->get_cart_contents() as $cart_item) {
               $product = wc_get_product($cart_item['data']->get_id());
-              $formatted_price = number_format((float)$product->price, 2);
-              $currency_symbol = get_woocommerce_currency_symbol();
+              $formatted_price = Product::formatted_price($product->price);
               $img_link = wp_get_attachment_url($product->image_id);
             ?>
             <div class="cart__line-item product-line-item product-line-item--cart gutter--normal " data-product-container="card" data-pid="<?= $product->id ?>" data-cart-line-item="afb67579c4df2d1a383c29583e">
@@ -42,7 +41,7 @@ $count = sizeof($cart['items']);
                       </div>
                       <div class="product-line-item__header-price display--medium-up white-space--nowrap">
                         <div class="product-line-item__total-price item-total-afb67579c4df2d1a383c29583e price font-family--sans" data-line-item-component="price-total">
-                          <div class="price__sales pricing line-item-total-price-amount"><?= $currency_symbol ?><?= $formatted_price ?></div>
+                          <div class="price__sales pricing line-item-total-price-amount"><?= $formatted_price ?></div>
                         </div>
                       </div>
                       <div class="product-line-item__remove ">
@@ -79,7 +78,7 @@ $count = sizeof($cart['items']);
                       </div>
                       <div class="product-line-item__attribute font-weight--semibold display--medium-down body-type--deci">
                         <div class="product-line-item__total-price item-total-afb67579c4df2d1a383c29583e price font-family--sans" data-line-item-component="price-total">
-                          <div class="price__sales pricing line-item-total-price-amount"><?= $currency_symbol ?><?= $formatted_price ?></div>
+                          <div class="price__sales pricing line-item-total-price-amount"><?= $formatted_price ?></div>
                         </div>
                       </div>
                       <div class="product-line-item__attribute">

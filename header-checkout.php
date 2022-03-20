@@ -23,12 +23,21 @@
   include 'template-parts/header/svg-icons.php';
   include 'template-parts/header/fonts.php';
   ?>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?= GTAG_ID ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', '<?= GTAG_ID ?>');
+  </script>
 </head>
 
 <body>
-
-  <!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-577SDR" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript> -->
-
   <div class="page" data-action="Checkout-Begin" data-querystring="stage=shipping">
     <header class="header-container gutter--normal" data-header-component="header-container">
       <nav class="header header--no-menu max-width--xmedium header--logo-no-copy" role="navigation" data-header-component="header">

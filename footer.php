@@ -100,7 +100,7 @@
             <h2 class="footer-links__heading footer__heading body-type font-weight--semibold text-transform--uppercase">Follow Us</h2>
             <ul class="footer-links__list list--reset footer-links__list--unstacked">
               <li class="footer-links__item">
-                <a href="https://www.instagram.com/siellest/" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="Follow us on Twitter" style="" rel="noopener noreferrer" data-link="instagram" data-tracking='{"trackEvent": "footer", "trackObject": {&quot;footerLink&quot;: &quot;aria-label&quot;}}'>
+                <a href="https://www.instagram.com/siellestofficial/" target=_blank class="component-actions__cta   link link--highlight-hover " aria-label="Follow us on Twitter" style="" rel="noopener noreferrer" data-link="instagram" data-tracking='{"trackEvent": "footer", "trackObject": {&quot;footerLink&quot;: &quot;aria-label&quot;}}'>
                   <svg aria-hidden="true" focusable="false" class="icon body-type--hecto">
                     <use xlink:href="#icon--instagram" />
                   </svg>

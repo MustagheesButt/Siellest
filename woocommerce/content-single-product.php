@@ -1,11 +1,11 @@
 <?php
-  $p = wc_get_product();
-  $product = wc_get_product()->get_data();
-  $category = get_term($p->get_category_ids()[2])->name; // TODO not sure if it'll always be in order
+  $product = wc_get_product();
+  $p = wc_get_product()->get_data();
+  $category = get_term($product->get_category_ids()[2])->name; // TODO not sure if it'll always be in order
 ?>
 
 <div class="pdp" itemscope itemtype="http://schema.org/Product" data-page-motion>
-  <div class="pdp-main max-width--large" data-product-container="pdp" data-pid="<?= $product['id'] ?>" data-product-querystring="pid=<?= $product['id'] ?>">
+  <div class="pdp-main max-width--large" data-product-container="pdp" data-pid="<?= $p['id'] ?>" data-product-querystring="pid=<?= $p['id'] ?>">
 
     <div class="row flex-no-gutters">
 
@@ -31,15 +31,15 @@
           <ul id="pdpCarousel-B6067217" class="product-gallery product-gallery--pdp slider--sm-pre-layout-1 slider--arrows-inner slider--arrows-center slider--dots-inner list--reset slider--flex slider--row" data-slick='{"type": "pdpCarousel"}' data-product-component="image-gallery" aria-label="Product Main Images">
             <li class="product-gallery__col col-12  ">
               <button class="product-gallery__item aspect-ratio--square set--w-100  bg--grey-image" type="button" data-product-component="zoom-trigger">
-                <img src="<?= wp_get_attachment_url($product['image_id']) ?>" class="product-gallery__img component-overlay component-overlay--center object-fit--contain <?= true ? 'full-stretch-image' : '' ?>" data-product-component="image" data-image-index="0" alt="<?= $product['name'] ?>, image 1" itemprop="image" />
+                <img src="<?= wp_get_attachment_url($p['image_id']) ?>" class="product-gallery__img component-overlay component-overlay--center object-fit--contain <?= true ? 'full-stretch-image' : '' ?>" data-product-component="image" data-image-index="0" alt="<?= $p['name'] ?>, image 1" itemprop="image" />
               </button>
             </li>
             <?php
-            foreach ($product['gallery_image_ids'] as $key => $img_id) {
+            foreach ($p['gallery_image_ids'] as $key => $img_id) {
             ?>
             <li class="product-gallery__col col-12  col-md-6">
               <button class="product-gallery__item aspect-ratio--square set--w-100  bg--grey-image" type="button" data-product-component="zoom-trigger">
-                <img src="<?= wp_get_attachment_url($img_id) ?>?sw=750&amp;sh=750&amp;sm=fit&amp;sfrm=png" class="product-gallery__img component-overlay component-overlay--center object-fit--contain <?= true ? 'full-stretch-image' : '' ?>" data-product-component="image" data-image-index="1" alt="<?= $product['name'] ?>, image <?= $key + 1 ?>" itemprop="image" />
+                <img src="<?= wp_get_attachment_url($img_id) ?>?sw=750&amp;sh=750&amp;sm=fit&amp;sfrm=png" class="product-gallery__img component-overlay component-overlay--center object-fit--contain <?= true ? 'full-stretch-image' : '' ?>" data-product-component="image" data-image-index="1" alt="<?= $p['name'] ?>, image <?= $key + 1 ?>" itemprop="image" />
               </button>
             </li>
             <?php
@@ -60,12 +60,12 @@
           <div class="pdp-main__section pdp-main__section--name set--w-100">
 
             <h1 class="pdp__name heading-type fluid-type--deka-hecto text-line--normal" data-product-component="name">  
-              <?= $product['name'] ?>
+              <?= $p['name'] ?>
             </h1>
 
             <div class="pdp__details-short-description-wrapper">
               <div class="pdp-main__short-description cms-generic-copy text-line--medium">
-                <?= $product['short_description'] ?>
+                <?= $p['short_description'] ?>
               </div>
             </div>
 
@@ -74,8 +74,8 @@
                 <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                   <meta itemprop="priceCurrency" content="<?= get_woocommerce_currency() ?>" />
                   <span class="price__sales sales">
-                    <span class="value" itemprop="price" content="<?= number_format((float)$product['price'], 2, thousands_separator:'') ?>">
-                      <?= get_woocommerce_currency_symbol() ?><?= number_format($product['price'], 2) ?>
+                    <span class="value" itemprop="price" content="<?= number_format((float)$p['price'], 2, thousands_separator:'') ?>">
+                      <?= Product::formatted_price($p['price']) ?>
                     </span>
                 </div>
               </div>
@@ -86,22 +86,19 @@
             <div class="pdp__details-description-wrapper">
 
               <div class="pdp-main__description cms-generic-copy text-line--medium" data-product-component="short-description">
-                <?= $product['description'] ?>
+                <?= $p['description'] ?>
               </div>
             </div>
           </div>
 
           <?php
-          if ($p->is_type('variable')) {
-            $available_variations = $p->get_available_variations();
-            // var_dump($available_variations[0]);
+          if ($product->is_type('variable')) {
+            $available_variations = $product->get_available_variations();
           ?>
           <div class="pdp-main__section pdp-main__section--attributes set--w-100">
 
             <div class="product-attribute__list flex flex-flow-wrap">
               <div class="product-attribute product-attribute--size product-attribute--last" data-attr-group="size" data-attr-group-type="dropdown">
-
-
                 <div class="product-attribute__head flex flex-justify-between sr-only">
                   <label class="product-attribute__label product-attribute__label--size form-control-label" for="productAttribute-<?= $p->id ?>-size">
                     <span class="product-attribute__label-pre">Select Size</span>
@@ -139,7 +136,7 @@
               <p class="font-family--serif hidden" data-product-component="availability-status">
                 Unavailable online
               </p>
-              <button class="product-add__button add-to-cart button button--primary button--fluid set--w-100  " <?= $p->is_type('variable') ? 'disabled' : '' ?> data-pid="<?= $product['id'] ?>" data-product-component="add-button" data-url="wp-json/siellest/Cart-AddProduct">
+              <button class="product-add__button add-to-cart button button--primary button--fluid set--w-100  " <?= $product->is_type('variable') ? 'disabled' : '' ?> data-pid="<?= $p['id'] ?>" data-product-component="add-button" data-url="wp-json/siellest/Cart-AddProduct">
                 Add to Shopping Bag
               </button>
             </div>
@@ -457,190 +454,70 @@
         </div>
         <div class="product-list__carousel slider--flex slider--arrows-outer slider--dots-right slider--arrows-tile-center slider--h-align-center slider--row slider--pre-layout-1 slider--md-pre-layout-md-3 slider--lg-pre-layout-4" data-slick='{"type": "productListCarousel", "slidesToShow": 4.0, "slidesToScroll": 4.0, "responsive": [{"breakpoint": 767, "settings": {"slidesToShow": 1.0, "slidesToScroll": 1.0}}, {"breakpoint": 1024, "settings": {"slidesToShow": 3.0, "slidesToScroll": 3.0}}]}'>
           <?php
-            // TODO
-            $recommendations = [
-              wc_get_product(1), wc_get_product(2), wc_get_product(3)
-            ];
+          // TODO
+          $recommendations = wc_get_related_products($product->id, 3);
+          foreach ($recommendations as $recommendation) {
           ?>
-          <div class=" col-12 col-md-4 col-lg-3">
-            <div class="product flex flex-grow-1 flex-direction-col">
-              <div class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center" itemscope itemtype="http://schema.org/Product" data-product-container="tile" data-product-tile data-pid="CRB6016700" data-tracking-id="CRB6016700" data-tracking-position data-tracking='{"trackEvent": "eeListClick", "asyncParams": {"pid": "data-tracking-id", "pos": "data-tracking-position", "listValue": "--context"}}' data-motion='{"properties": "opacity from-v-direction"}'>
+            <div class=" col-12 col-md-4 col-lg-3">
+              <div class="product flex flex-grow-1 flex-direction-col">
+                <div class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center" itemscope itemtype="http://schema.org/Product" data-product-container="tile" data-product-tile data-pid="CRB6016700" data-tracking-id="CRB6016700" data-tracking-position data-tracking='{"trackEvent": "eeListClick", "asyncParams": {"pid": "data-tracking-id", "pos": "data-tracking-position", "listValue": "--context"}}' data-motion='{"properties": "opacity from-v-direction"}'>
 
-                <a class="product-tile__anchor" href="/en-us/jewelry/bracelets/trinity-bracelet-CRB6016700.html" data-product-url="productShow" itemprop="url">
+                  <a class="product-tile__anchor" href="/en-us/jewelry/bracelets/trinity-bracelet-CRB6016700.html" data-product-url="productShow" itemprop="url">
 
-                  <div class="product-tile__media product-tile__media--default aspect-ratio--square ">
-                    <div class="product-tile__media-container component-overlay component-overlay--center">
-                      <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up set--has-secondary-image full-stretch-image " data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dw88406a3f/images/large/637708788550193812-2059312.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="0" itemprop="image" alt="Trinity bracelet" title="Trinity bracelet" />
-                      <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image" data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dwcb11c1ce/images/large/637708788550193812-2059408.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="1" itemprop="image" alt="Trinity bracelet" title="Trinity bracelet" />
+                    <div class="product-tile__media product-tile__media--default aspect-ratio--square ">
+                      <div class="product-tile__media-container component-overlay component-overlay--center">
+                        <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up set--has-secondary-image full-stretch-image " data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dw88406a3f/images/large/637708788550193812-2059312.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="0" itemprop="image" alt="Trinity bracelet" title="Trinity bracelet" />
+                        <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image" data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dwcb11c1ce/images/large/637708788550193812-2059408.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="1" itemprop="image" alt="Trinity bracelet" title="Trinity bracelet" />
+                      </div>
                     </div>
-                  </div>
-                  <div class="product-tile__body">
-                    <p class="product-tile__body-section product-tile__name text-line--large heading-type body-type--deci" itemprop="name">
-                      Trinity bracelet
-                    </p>
-                    <div class="product-tile__body-section product-tile__swatches font-family--serif" data-product-component="swatches">
+                    <div class="product-tile__body">
+                      <p class="product-tile__body-section product-tile__name text-line--large heading-type body-type--deci" itemprop="name">
+                        Trinity bracelet
+                      </p>
+                      <div class="product-tile__body-section product-tile__swatches font-family--serif" data-product-component="swatches">
+                      </div>
+                      <p class="product-tile__body-section product-tile__material font-family--serif">
+                        White gold, yellow gold, rose gold
+                      </p>
+                      <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci">
+                        <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                          <meta itemprop="priceCurrency" content="USD" />
+                          <span class="price__sales sales">
+                            <span class="value" itemprop="price" content="610.00">
+                              $610.00
+                            </span>
+                        </div>
+                      </div>
                     </div>
-                    <p class="product-tile__body-section product-tile__material font-family--serif">
-                      White gold, yellow gold, rose gold
-                    </p>
-                    <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci">
-                      <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="priceCurrency" content="USD" />
-                        <span class="price__sales sales">
-                          <span class="value" itemprop="price" content="610.00">
-                            $610.00
+                  </a>
+                  <button type="button" class="product-tile__wishlist body-type--deka" title="Add to Wish List, Trinity bracelet" data-wishlist-trigger="heart" data-wishlist-label-add="Add to Wish List, Trinity bracelet" data-wishlist-label-remove="Remove from Wish List, Trinity bracelet">
+                    <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-add">
+                      <use xlink:href="#icon--heart" />
+                    </svg>
+                    <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-remove">
+                      <use xlink:href="#icon--heart-filled" />
+                    </svg>
+                  </button>
+                  <div class="product-tile__overlay flex flex-align-end bg--white">
+                    <div class="product-tile__overlay-actions set--w-100">
+                      <div class="product-tile__quickadd" data-quickadd>
+                        <button type="button" class="product-tile__quickadd-trigger button button--primary button--small set--w-100" data-url="/on/demandware.store/Sites-CartierUS-Site/en_US/Product-ShowQuickAdd?pid=CRB6016700" data-product-url="productShowQuickAdd" title="Quick Add for Trinity bracelet" data-quickadd-trigger>
+                          <span class="display--small-up">
+                            Add to Shopping Bag
                           </span>
+                          <span class="display--small-only">
+                            Add to Bag
+                          </span>
+                        </button>
+                        <div class="product-tile__quickadd-panel body-type--deci" data-quickadd-component="panel" tabindex="-1" role="dialog" aria-modal="true"></div>
                       </div>
                     </div>
                   </div>
-                </a>
-                <button type="button" class="product-tile__wishlist body-type--deka" title="Add to Wish List, Trinity bracelet" data-wishlist-trigger="heart" data-wishlist-label-add="Add to Wish List, Trinity bracelet" data-wishlist-label-remove="Remove from Wish List, Trinity bracelet">
-                  <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-add">
-                    <use xlink:href="#icon--heart" />
-                  </svg>
-                  <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-remove">
-                    <use xlink:href="#icon--heart-filled" />
-                  </svg>
-                </button>
-                <div class="product-tile__overlay flex flex-align-end bg--white">
-                  <div class="product-tile__overlay-actions set--w-100">
-                    <div class="product-tile__quickadd" data-quickadd>
-                      <button type="button" class="product-tile__quickadd-trigger button button--primary button--small set--w-100" data-url="/on/demandware.store/Sites-CartierUS-Site/en_US/Product-ShowQuickAdd?pid=CRB6016700" data-product-url="productShowQuickAdd" title="Quick Add for Trinity bracelet" data-quickadd-trigger>
-                        <span class="display--small-up">
-                          Add to Shopping Bag
-                        </span>
-                        <span class="display--small-only">
-                          Add to Bag
-                        </span>
-                      </button>
-                      <div class="product-tile__quickadd-panel body-type--deci" data-quickadd-component="panel" tabindex="-1" role="dialog" aria-modal="true"></div>
-                    </div>
-                  </div>
-                </div>
 
+                </div>
               </div>
             </div>
-          </div>
-          <div class=" col-12 col-md-4 col-lg-3">
-            <script type="text/javascript">
-              //<!--
-              /* <![CDATA[ (viewProduct-active_data.js) */
-              // dw.ac._capture({
-              //   id: "CR65050002",
-              //   type: "recommendation"
-              // });
-              /* ]]> */
-              // -->
-            </script>
-            <div class="product flex flex-grow-1 flex-direction-col">
-              <div class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center" itemscope itemtype="http://schema.org/Product" data-product-container="tile" data-product-tile data-pid="CR65050002" data-tracking-id="CR65050002" data-tracking-position data-tracking='{"trackEvent": "eeListClick", "asyncParams": {"pid": "data-tracking-id", "pos": "data-tracking-position", "listValue": "--context"}}' data-motion='{"properties": "opacity from-v-direction"}'>
-
-                <a class="product-tile__anchor" href="/en-us/pasha-de-cartier-edition-noire-eau-de-toilette-CR65050002.html" data-product-url="productShow" itemprop="url">
-
-                  <div class="product-tile__media product-tile__media--default aspect-ratio--square ">
-                    <div class="product-tile__media-container component-overlay component-overlay--center">
-                      <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up  full-stretch-image " data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dwac29de6b/images/large/637745190967037320-2262504.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="0" itemprop="image" alt="Pasha de Cartier Edition Noire Eau de Toilette" title="Pasha de Cartier Edition Noire Eau de Toilette" />
-                    </div>
-                  </div>
-                  <div class="product-tile__body">
-                    <p class="product-tile__body-section product-tile__name text-line--large heading-type body-type--deci" itemprop="name">
-                      Pasha de Cartier Edition Noire Eau de Toilette
-                    </p>
-                    <div class="product-tile__body-section product-tile__swatches font-family--serif" data-product-component="swatches">
-                    </div>
-                    <p class="product-tile__body-section product-tile__material font-family--serif">
-                      Spray
-                    </p>
-                    <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci">
-                      <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                        <meta itemprop="priceCurrency" content="USD" />
-                        <span class="price__sales sales">
-                          <span class="value" itemprop="price" content="71.00">
-                            $71.00
-                          </span>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-                <button type="button" class="product-tile__wishlist body-type--deka" title="Add to Wish List, Pasha de Cartier Edition Noire Eau de Toilette" data-wishlist-trigger="heart" data-wishlist-label-add="Add to Wish List, Pasha de Cartier Edition Noire Eau de Toilette" data-wishlist-label-remove="Remove from Wish List, Pasha de Cartier Edition Noire Eau de Toilette">
-                  <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-add">
-                    <use xlink:href="#icon--heart" />
-                  </svg>
-                  <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-remove">
-                    <use xlink:href="#icon--heart-filled" />
-                  </svg>
-                </button>
-                <div class="product-tile__overlay flex flex-align-end bg--white">
-                  <div class="product-tile__overlay-actions set--w-100">
-                    <div class="product-tile__quickadd" data-quickadd>
-                      <button type="button" class="product-tile__quickadd-trigger button button--primary button--small set--w-100" data-url="/on/demandware.store/Sites-CartierUS-Site/en_US/Product-ShowQuickAdd?pid=CR65050002" data-product-url="productShowQuickAdd" title="Quick Add for Pasha de Cartier Edition Noire Eau de Toilette" data-quickadd-trigger>
-                        <span class="display--small-up">
-                          Add to Shopping Bag
-                        </span>
-                        <span class="display--small-only">
-                          Add to Bag
-                        </span>
-                      </button>
-                      <div class="product-tile__quickadd-panel body-type--deci" data-quickadd-component="panel" tabindex="-1" role="dialog" aria-modal="true"></div>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
-          <div class=" col-12 col-md-4 col-lg-3">
-            <script type="text/javascript">
-              //<!--
-              /* <![CDATA[ (viewProduct-active_data.js) */
-              // dw.ac._capture({
-              //   id: "CRB8043200",
-              //   type: "recommendation"
-              // });
-              /* ]]> */
-              // -->
-            </script>
-            <div class="product flex flex-grow-1 flex-direction-col">
-              <div class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center" itemscope itemtype="http://schema.org/Product" data-product-container="tile" data-product-tile data-pid="CRB8043200" data-tracking-id="CRB8043200" data-tracking-position data-tracking='{"trackEvent": "eeListClick", "asyncParams": {"pid": "data-tracking-id", "pos": "data-tracking-position", "listValue": "--context"}}' data-motion='{"properties": "opacity from-v-direction"}'>
-
-                <a class="product-tile__anchor" href="/en-us/jewelry/earrings/trinity-earrings-CRB8043200.html" data-product-url="productShow" itemprop="url">
-
-                  <div class="product-tile__media product-tile__media--default aspect-ratio--square ">
-                    <div class="product-tile__media-container component-overlay component-overlay--center">
-                      <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up set--has-secondary-image full-stretch-image " data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dw2a7fc059/images/large/637708833564097399-2088278.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="0" itemprop="image" alt="Trinity earrings" title="Trinity earrings" />
-                      <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image" data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dw5984c7be/images/large/637708833564097399-2088194.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="1" itemprop="image" alt="Trinity earrings" title="Trinity earrings" />
-                    </div>
-                  </div>
-                  <div class="product-tile__body">
-                    <p class="product-tile__body-section product-tile__name text-line--large heading-type body-type--deci" itemprop="name">
-                      Trinity earrings
-                    </p>
-                    <div class="product-tile__body-section product-tile__swatches font-family--serif" data-product-component="swatches">
-                    </div>
-                    <p class="product-tile__body-section product-tile__material font-family--serif">
-                      White gold, yellow gold, rose gold, diamond
-                    </p>
-                  </div>
-                </a>
-                <button type="button" class="product-tile__wishlist body-type--deka" title="Add to Wish List, Trinity earrings" data-wishlist-trigger="heart" data-wishlist-label-add="Add to Wish List, Trinity earrings" data-wishlist-label-remove="Remove from Wish List, Trinity earrings">
-                  <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-add">
-                    <use xlink:href="#icon--heart" />
-                  </svg>
-                  <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-remove">
-                    <use xlink:href="#icon--heart-filled" />
-                  </svg>
-                </button>
-                <div class="product-tile__overlay flex flex-align-end bg--white">
-                  <div class="product-tile__overlay-actions set--w-100">
-                    <a class="product-tile__anchor button button--primary button--small set--w-100" href="/en-us/jewelry/earrings/trinity-earrings-CRB8043200.html" data-product-url="productShow" itemprop="url">
-                      Discover
-                    </a>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-          </div>
+          <?php } ?>
         </div>
       </section>
     </div>

@@ -4,3 +4,5 @@ const ADYEN_KEY = "AQEkhmfuXNWTK0Qc+iSel34tpOuyRojsfYk8rhCLULo834BmPuoEEMFdWw2+5
 const MERCHANT_ACC = "NezucoIncECOM";
 
 const PRODUCTS_PER_PAGE = 24;
+
+const GTAG_ID = "G-L6FB3EF3HF";

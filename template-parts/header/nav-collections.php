@@ -1507,7 +1507,7 @@
               </a>
             </li>
             <li class="header-flyout__tab-item header-flyout__item level-2">
-              <a href="product-category/watches/siellest-watchmaking/" id="flyout-Watches_Watchmaking" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-3]" aria-label="View Watches: Siellest Watchmaking" role="tab">
+              <a href="watches-siellest-watchmaking/" id="flyout-Watches_Watchmaking" class="white-space--nowrap header-flyout__anchor header-flyout__anchor--tab flex-justify-between flex-align-center level-2" data-nav-component="anchor-2" data-nav-tab="anchor-2" data-menu-parent="[data-nav-component=parent-container]" data-menu-target="[data-nav-component=container-3-3]" aria-label="View Watches: Siellest Watchmaking" role="tab">
                 Siellest Watchmaking
                 <svg aria-hidden="true" focusable="false" class="header-flyout__anchor-arrow icon body-type--deci display--small-only">
                   <use xlink:href="#icon--angle-right" />

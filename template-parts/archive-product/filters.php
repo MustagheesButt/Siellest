@@ -302,14 +302,19 @@
       </div>
     </div>
     <?php
-    $prefs = [
-      ['n' => 'sapIsVisibleWeb', 'v' => 'true']
-    ];
     $sort_items = [
       'price-low-to-high' => 'Price Low To High',
       'price-high-to-low' => 'Price High To Low',
       'intl-emerch' => 'Recommended'
     ];
+    $params = http_build_query([
+      'cgid' => $category,
+      'collection' => $_GET['collection'],
+      'prefn1' => $_GET['prefn1'],
+      'prefv1' => $_GET['prefv1'],
+      'prefn2' => $_GET['prefn2'],
+      'prefv2' => $_GET['prefv2']
+    ]);
     $selected_rule = !empty($_GET['srule']) ? $_GET['srule'] : 'intl-emerch';
     ?>
     <div class="refinement-bar__sort-list form-check-group" name="sort-order" data-search-component="search-sort">
@@ -318,7 +323,7 @@
       foreach ($sort_items as $key => $si_name) {
       ?>
         <div class="refinement-bar__sort-item-container">
-          <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>&prefn1=sapIsVisibleWeb&prefv1=true&srule=<?= $key ?>&start=0&sz=24" data-sort-option-id="<?= $key ?>" data-search-component="search-sort-anchor" aria-label="<?= $si_name ?>" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+          <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?<?= $params ?>&srule=<?= $key ?>&start=0&sz=24" data-sort-option-id="<?= $key ?>" data-search-component="search-sort-anchor" aria-label="<?= $si_name ?>" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
             <input type="radio" id="<?= $key ?>" class="form-check-input" name="sort-radio" <?= $selected_rule == $key ? 'checked' : '' ?> />
             <label for="price-low-to-high" class="form-check-label--radio cursor--pointer">
               <span class="body-type--centi link--underline-hover"><?= $si_name ?></span>
@@ -326,30 +331,6 @@
           </a>
         </div>
       <?php } ?>
-      <!-- <div class="refinement-bar__sort-item-container">
-        <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?cgid=jewelry&prefn1=sapIsVisibleWeb&prefv1=true&srule=price-low-to-high&start=0&sz=24" data-sort-option-id="price-low-to-high" data-search-component="search-sort-anchor" aria-label="Price Low To High" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-          <input type="radio" id="price-low-to-high" class="form-check-input" name="sort-radio" />
-          <label for="price-low-to-high" class="form-check-label--radio cursor--pointer">
-            <span class="body-type--centi link--underline-hover">Price Low To High</span>
-          </label>
-        </a>
-      </div>
-      <div class="refinement-bar__sort-item-container">
-        <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?cgid=jewelry&prefn1=sapIsVisibleWeb&prefv1=true&srule=price-high-to-low&start=0&sz=24" data-sort-option-id="price-high-to-low" data-search-component="search-sort-anchor" aria-label="Price High to Low" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-          <input type="radio" id="price-high-to-low" class="form-check-input" name="sort-radio" />
-          <label for="price-high-to-low" class="form-check-label--radio cursor--pointer">
-            <span class="body-type--centi link--underline-hover">Price High to Low</span>
-          </label>
-        </a>
-      </div>
-      <div class="refinement-bar__sort-item-container">
-        <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?cgid=jewelry&prefn1=sapIsVisibleWeb&prefv1=true&srule=intl-emerch&start=0&sz=24" data-sort-option-id="intl-emerch" data-search-component="search-sort-anchor" aria-label="Recommended" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
-          <input type="radio" id="intl-emerch" class="form-check-input" name="sort-radio" checked />
-          <label for="intl-emerch" class="form-check-label--radio cursor--pointer">
-            <span class="body-type--centi link--underline-hover">Recommended</span>
-          </label>
-        </a>
-      </div> -->
     </div>
   </div>
   <div class="refinement-bar__footer flex flex-justify-between display--small-only gutter--normal">

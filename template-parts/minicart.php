@@ -29,7 +29,7 @@ $cart_items_count = WC()->cart->get_cart_contents_count();
   $cart_items = WC()->cart->get_cart_contents();
   foreach ($cart_items as $key => $cart_item) {
     $product = wc_get_product($cart_item['data']->get_id());
-    $formatted_price = number_format((float)$product->price, 2);
+    $formatted_price = Product::formatted_price($product->price);
     $img_link = wp_get_attachment_url($product->image_id);
   ?>
     <div class="utility-overlay__line-item product-line-item product-line-item--minicart" data-product-container="card" data-pid="<?= $product->id ?>" data-cart-line-item="8e96d8c85644c1b5b5c42941e6">
@@ -82,7 +82,7 @@ $cart_items_count = WC()->cart->get_cart_contents_count();
               </div>
               <div class="product-line-item__attribute font-weight--semibold  body-type--deci">
                 <div class="product-line-item__total-price item-total-8e96d8c85644c1b5b5c42941e6 price font-family--sans" data-line-item-component="price-total">
-                  <div class="price__sales pricing line-item-total-price-amount"><?= get_woocommerce_currency_symbol() ?><?= $formatted_price ?></div>
+                  <div class="price__sales pricing line-item-total-price-amount"><?= $formatted_price ?></div>
                 </div>
               </div>
               <div class="product-line-item__attribute">

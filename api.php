@@ -2,6 +2,7 @@
 require_once 'classes/Product.php';
 require_once 'classes/Cart.php';
 require_once 'classes/Checkout.php';
+require_once 'classes/Search.php';
 
 add_filter('woocommerce_is_rest_api_request', 'simulate_as_not_rest');
 /**
@@ -158,45 +159,6 @@ function logout()
       'Location' => get_home_url() // or set any other URL you wish to redirect to
     )
   ));
-}
-
-function search_updategrid()
-{
-  header('Content-Type: text/html');
-  $start = $_GET['start'];
-  $category = $_GET['cgid'];
-
-  if (isset($_GET['collection'])) {
-    $collections = [$_GET['collection']];
-  } else if (isset($_GET['prefn1']) && $_GET['prefn1'] == 'collection') {
-    $collections = explode(',', $_GET['prefv1']);
-  }
-
-  // $total = get_term_by('slug', $category, 'product_cat')->count;
-  $query = Product::custom_query($category, $_GET['srule'], $start, collections: $collections);
-  $data = $query->get_products();
-  $products = $data->products;
-  $total = $data->total;
-
-  // $products = wc_products_array_orderby( $products, 'price', 'ASC' );
-
-  foreach ($products as $product) {
-    echo Product::render_product($product);
-  }
-  Product::render_product_loop_end($category, $start + PRODUCTS_PER_PAGE, $total);
-
-  exit();
-}
-
-function search_showajax()
-{
-  header('Content-Type: text/html');
-
-  echo "<main class='main'>";
-  include 'template-parts/archive-product/main.php';
-  echo "</main>";
-
-  exit();
 }
 
 function gtm_eventviewdatalayer()
@@ -576,12 +538,16 @@ add_action('rest_api_init', function () {
   ));
   register_rest_route('siellest', 'search-updategrid', array(
     'method' => 'GET',
-    'callback' => 'search_updategrid'
+    'callback' => 'Search::search_updategrid'
   ));
   register_rest_route('siellest', 'search-showajax', array(
     'method' => 'GET',
-    'callback' => 'search_showajax'
+    'callback' => 'Search::search_showajax'
   ));
+  register_rest_route('siellest', 'searchservices-getsuggestions', [
+    'method' => 'GET',
+    'callback' => 'Search::searchservices_getsuggestions'
+  ]);
 
   register_rest_route('siellest', 'contactus-getcontent', array(
     'methods' => 'GET',

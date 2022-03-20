@@ -24,7 +24,18 @@ $plp_banners = [
   'necklaces' => 'JEWELRY_BANNERS_1920x800_VIEW-ALL-NECKLACES.webp',
   'earrings' => 'JEWELRY_TOP-BANNER_1920x800_VIEW-ALL-EARRINGS.webp',
   'engagement-rings' => 'ENGAGEMENT_BANNERS_1920x800_ALL-ENGAEMENT-RINGS.webp',
-  'wedding-bands' => 'ENGAGEMENT_BANNERS_1920x800_ALL-WEDDING-BANDS.webp'
+  'wedding-bands' => 'ENGAGEMENT_BANNERS_1920x800_ALL-WEDDING-BANDS.webp',
+
+  'watches-allcollections' => 'WATCHES_BANNERS_1920x800_TANK.webp',
+  'womens-watches' => 'header_watches_for_women.webp',
+  'mens-watches' => 'header_wa_mens_ALL_MENS_2020.webp',
+
+  'bags' => '01_HEADER_ALL BAGS_PANTHERE MARO_NEL_MAN_1920X800_A.webp',
+  'personal-accessories' => 'ACCESSORIES_KEY_RINGS_08322021.webp',
+  'home' => 'HEADER-DECOR-1920x800-08312021.webp',
+  'writing-&-stationery' => 'NOTEBOOKS_1920x800.jpg',
+  'eyewear' => '01_HEADER_PLP_EYEWEAR22_CT0334S-002_NEL&MAN_1920x800_2282022.webp',
+  'fragrances' => 'HEADER TOUS PARFUMS TEST 2_1920x800-2.webp'
 ];
 ?>
 <div class="search-results__main " data-search-component="search-main">

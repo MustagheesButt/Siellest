@@ -4,17 +4,16 @@ class Product
 {
   static function product_variation(WP_REST_Request $request)
   {
-// dwvar_B6047517_size: 20
-// pid: B6047517
-// quantity: 1
+    // quantity: 1
     $pid = $request->get_param('pid');
+    $selected_variation = $request->get_param("dwvar_{$pid}_size"); // eg: 13 for 13 cm
     $product = wc_get_product($pid);
 
     return [
       "action" => "Product-Variation",
-      "queryString" => "dwvar_B6047517_size=20&pid=B6047517&quantity=1",
+      "queryString" => "dwvar_{$pid}_size=$selected_variation&pid=$pid&quantity=1",
       "locale" => "en_US",
-      "product" => Product::get_product_data($product),
+      "product" => Product::get_product_data($product, $selected_variation),
       "resources" => [
         "info_selectforstock" => "Select Styles for Availability",
         "assistiveSelectedText" => "selected"
@@ -112,15 +111,15 @@ class Product
     $p_link   = $product->get_permalink();
     $name     = $product->get_name();
     $currency = get_woocommerce_currency();
-    $currency_symbol = get_woocommerce_currency_symbol();
     $price           = $product->get_price();
-    $formatted_price = number_format((float)$price, 2);
+    $formatted_price = Product::formatted_price($price);
     $img1            = wp_get_attachment_url($product->get_image_id());
     $gallery_images  = $product->get_gallery_image_ids();
     if (sizeof($gallery_images) > 0) {
       $img2 = wp_get_attachment_url($gallery_images[0]);
     }
 
+    // TODO i think they've updated all images to require full-stretch
     $stretch_class = $product->get_meta('has_background') ? 'full-stretch-image' : '';
 
     return "<div class=\"product-grid__item col-6 col-md-3\" data-tracking-context=\"Productlisting\">
@@ -131,9 +130,9 @@ class Product
     
             <div class=\"product-tile__media product-tile__media--default aspect-ratio--square \">
               <div class=\"product-tile__media-container component-overlay component-overlay--center\">
-                <img class=\"product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up set--has-secondary-image $stretch_class\" data-product-component=\"image\" data-src=\"$img1?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png\" data-image-index=\"0\" itemprop=\"image\" alt=\"$name\" title=\"$name\" />
+                <img class=\"product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up set--has-secondary-image $stretch_class\" data-product-component=\"image\" data-src=\"$img1?sw=350&sh=350&sm=fit&sfrm=png\" data-image-index=\"0\" itemprop=\"image\" alt=\"$name\" title=\"$name\" />
     
-                <img class=\"product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up $stretch_class\" data-product-component=\"image\" data-src=\"$img2?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png\" data-image-index=\"1\" itemprop=\"image\" alt=\"$name\" title=\"$name\" />
+                <img class=\"product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up $stretch_class\" data-product-component=\"image\" data-src=\"$img2?sw=350&sh=350&sm=fit&sfrm=png\" data-image-index=\"1\" itemprop=\"image\" alt=\"$name\" title=\"$name\" />
               </div>
             </div>
             <div class=\"product-tile__body\">
@@ -150,7 +149,7 @@ class Product
                   <meta itemprop=\"priceCurrency\" content=\"$currency\" />
                   <span class=\"price__sales sales\">
                     <span class=\"value\" itemprop=\"price\" content=\"$price\">
-                      $currency_symbol$formatted_price
+                      $formatted_price
                     </span>
                 </div>
               </div>
@@ -183,7 +182,6 @@ class Product
   public static function render_product_loop_end($category, $showing, $total)
   {
     $page = $showing / 24;
-    // $nonce = wp_create_nonce('wp_rest');
     $prefn1 = $_GET['prefn1'];
     $prefv1 = $_GET['prefv1'];
 
@@ -229,9 +227,10 @@ class Product
   {
     $permalink       = $product->get_permalink();
     $currency        = get_woocommerce_currency();
-    $currency_symbol = get_woocommerce_currency_symbol();
-    $formatted_price = number_format((float)$product->price, 2);
+    $formatted_price = Product::formatted_price($product->price);
     $truncated_desc  = substr($product->description, 0, 88);
+    if ($product->is_type('variable'))
+      $available_variations = $product->get_available_variations();
 
     $output = "
       <link rel=\"stylesheet\" href=\"wp-content/themes/siellest/assets/css/productMain.css\" />
@@ -268,7 +267,7 @@ class Product
                       <meta itemprop=\"priceCurrency\" content=\"$currency\" />
                       <span class=\"price__sales sales\">
                         <span class=\"value\" itemprop=\"price\" content=\"$product->price\">
-                          $currency_symbol$formatted_price
+                          $formatted_price
                         </span>
                     </div>
                   </div>
@@ -283,14 +282,38 @@ class Product
                       <span class=\"pdp-main__description-full\">Read Less</span>
                     </button>            
                   </div>
-                </div>
-                <!-- Attributes -->                    
+                </div>";
+                if ($product->is_type('variable')) {
+                $output .= "<!-- Attributes -->                    
                 <div class=\"quickview__attribute-list product-attribute__list flex flex-flow-wrap\">
+                  <div class=\"product-attribute product-attribute--size product-attribute--last\" data-attr-group=\"size\" data-attr-group-type=\"dropdown\">
+                    <div class=\"product-attribute__head flex flex-justify-between sr-only\">
+                      <label class=\"product-attribute__label product-attribute__label--size form-control-label\" for=\"productAttribute-$p->id-size\">
+                        <span class=\"product-attribute__label-pre\">Select Size</span>
+                      </label>
+                    </div>
+                    <div class=\"product-attribute__contents \">
+
+                      <select id=\"productAttribute-$product->id-size\" class=\"product-attribute__size button form-control form-control--select form-control--boxed text-align-last--center\" data-attr=\"size\" data-attr-type=\"dropdown\">
+                        <option value=\"" . get_site_url() . "/wp-json/siellest/Product-Variation?dwvar_{$product->id}_size=&pid=$product->id&quantity=1\">
+                          Select Size
+                        </option>";
+                        
+                        foreach ($available_variations as $variation) {
+                        
+                        $output .= "<option value=\"" . get_site_url() . "/wp-json/siellest/Product-Variation?dwvar_{$product->id}_size=" . (int)$variation['attributes']['attribute_pa_size'] . "&pid=$product->id&quantity=1\" data-attr-value=\"" . (int)$variation['attributes']['attribute_pa_size'] . "\">
+                          " . $variation['attributes']['attribute_pa_size'] . "
+                        </option>";
+                        }
+                      $output .= "</select>
+                    </div>
+                  </div>
                   <!-- Quantity Drop Down Menu -->
                   <input type=\"hidden\" value=\"1\" data-product-component=\"qty\" />
                   <!-- Options -->
-                </div>
-                <div class=\"quickview__footer\" data-product-component=\"actions\">
+                </div>";
+                }
+                $output .= "<div class=\"quickview__footer\" data-product-component=\"actions\">
                   <div class=\"quickview__footer-section quickview__footer-section-actions flex\">
                     <!-- Cart and [Optionally] Apple Pay -->                                                            
                     <div class=\"product-add__container cart-and-ipay flex-grow-1 flex flex-align-center\">
@@ -405,59 +428,20 @@ class Product
     return $output;
   }
 
-  public static function get_product_data($product)
+  public static function get_product_data($product, $selected_variation=null)
   {
     $types_map = [
       'simple' => 'standard',
-      'variable' => 'variant'
+      'variable' => 'variant' // could be master for default variant
     ];
-
-  //   {
-  //     "attributes": {
-  //         "attribute_pa_size": "13-cm"
-  //     },
-  //     "availability_html": "",
-  //     "backorders_allowed": false,
-  //     "dimensions": {
-  //         "length": "",
-  //         "width": "",
-  //         "height": ""
-  //     },
-  //     "dimensions_html": "N\/A",
-  //     "display_price": 1200,
-  //     "display_regular_price": 1200,
-  //     "image": {
-  //         "title": "",
-  //         "caption": "",
-  //         "url": "",
-  //         "alt": "",
-  //         "src": "",
-  //         "srcset": false,
-  //         "sizes": false
-  //     },
-  //     "image_id": 0,
-  //     "is_downloadable": false,
-  //     "is_in_stock": true,
-  //     "is_purchasable": true,
-  //     "is_sold_individually": "no",
-  //     "is_virtual": false,
-  //     "max_qty": "",
-  //     "min_qty": 1,
-  //     "price_html": "",
-  //     "sku": "",
-  //     "variation_description": "",
-  //     "variation_id": 2775,
-  //     "variation_is_active": true,
-  //     "variation_is_visible": true,
-  //     "weight": "",
-  //     "weight_html": "N\/A"
-  // },
 
     $variation_attrs = null;
     if ($product->is_type('variable')) {
-      $variation_attrs = Product::mapped_variation_attrs();
+      $variation_attrs = Product::mapped_variation_attrs($product, $selected_variation);
     }
 
+    $currency = get_woocommerce_currency();
+    $formatted_price = Product::formatted_price($product->price);
     return [
       "uuid" => "ea75d4a05c64b80983c90dcce6",
       "id" => "$product->id",
@@ -468,15 +452,15 @@ class Product
       "price" => [
         "sales" => [
           "value" => $product->price,
-          "currency" => get_woocommerce_currency(),
-          "formatted" => get_woocommerce_currency_symbol() . number_format((float)$product->price, 2),
+          "currency" => $currency,
+          "formatted" => $formatted_price,
           "decimalPrice" => $product->price
         ],
         "list" => null,
         "html" => "<div class=\"price flex--inline flex-flow-wrap flex-align-baseline\" data-product-component=\"price\" itemprop=\"offers\" itemscope itemtype=\"http://schema.org/Offer\">
-          <meta itemprop=\"priceCurrency\" content=\"USD\" />
+          <meta itemprop=\"priceCurrency\" content=\"$currency\" />
           <span class=\"price__sales sales\">
-            <span class=\"value\" itemprop=\"price\" content=\"4450.00\">$4,450.00</span>
+            <span class=\"value\" itemprop=\"price\" content=\"$product->price\">$formatted_price</span>
           </span></div>"
       ],
       "sellable" => [
@@ -756,7 +740,7 @@ class Product
 
   public static function get_images($product, $size = 'large')
   {
-    $size = $size == 'large' ? 750 : 250;
+    $size = $size == 'large' ? 750 : 250; // TODO 350 being used in search results
     $imgs_data = [];
 
     $url = wp_get_attachment_url($product->image_id);
@@ -855,65 +839,84 @@ class Product
     ];
   }
 
-  private static function mapped_variation_attrs($product) {
+  private static function mapped_variation_attrs($product, $selected_variation=null) {
     $size_attr = [
       "attributeId" => "size",
       "displayName" => "Size",
       "id" => "size",
       "swatchable" => false,
-      "resetUrl" => get_site_url() . "/wp-json/siellest/Product-Variation?dwvar_B6047517_size=&pid=B6047517&quantity=1",
-      "selectedValue" => "20 cm",
+      "resetUrl" => get_site_url() . "/wp-json/siellest/Product-Variation?dwvar_{$product->id}_size=&pid=$product->id&quantity=1",
+      "selectedValue" => null,
       "values" => []
     ];
-
+//   {
+  //     "attributes": {
+  //         "attribute_pa_size": "13-cm"
+  //     },
+  //     "availability_html": "",
+  //     "backorders_allowed": false,
+  //     "dimensions": {
+  //         "length": "",
+  //         "width": "",
+  //         "height": ""
+  //     },
+  //     "dimensions_html": "N\/A",
+  //     "display_price": 1200,
+  //     "display_regular_price": 1200,
+  //     "image": {
+  //         "title": "",
+  //         "caption": "",
+  //         "url": "",
+  //         "alt": "",
+  //         "src": "",
+  //         "srcset": false,
+  //         "sizes": false
+  //     },
+  //     "image_id": 0,
+  //     "is_downloadable": false,
+  //     "is_in_stock": true,
+  //     "is_purchasable": true,
+  //     "is_sold_individually": "no",
+  //     "is_virtual": false,
+  //     "max_qty": "",
+  //     "min_qty": 1,
+  //     "price_html": "",
+  //     "sku": "",
+  //     "variation_description": "",
+  //     "variation_id": 2775,
+  //     "variation_is_active": true,
+  //     "variation_is_visible": true,
+  //     "weight": "",
+  //     "weight_html": "N\/A"
+  // },
     foreach($product->get_available_variations() as $key => $value)
     {
-      if (isset($value['attributes']['attribute_pa_size'])) {
+      $raw = $value['attributes']['attribute_pa_size'];
+      if (isset($raw)) {
+        $value = (int)$raw;
+        $display_value = str_replace('-', ' ', $raw);
+        $selected = false;
+
+        if ($selected_variation == $value) {
+          $size_attr['selectedValue'] = $value;
+          $selected = true;
+        }
+
         array_push($size_attr['values'], [
-          "id" => "15",
+          "id" => $value,
           "description" => null,
-          "displayValue" => "15 cm",
-          "value" => "15",
-          "selected" => false,
+          "displayValue" => $display_value,
+          "value" => "$value",
+          "selected" => $selected,
           "selectable" => false,
-          "labelDefault" => "Size: 15 cm",
-          "labelSelected" => "Size: 15 cm, selected",
-          "labelUnselectable" => "Size: 15 cm, unselectable",
+          "labelDefault" => "Size: $display_value",
+          "labelSelected" => "Size: $display_value, selected",
+          "labelUnselectable" => "Size: $display_value, unselectable",
           "visibleWeb" => true,
           "visiblePhone" => true,
-          "url" => get_site_url() . "/wp-json/siellest/Product-Variation?dwvar_B6047517_size=15&pid=B6047517&quantity=1"
+          "url" => get_site_url() . "/wp-json/siellest/Product-Variation?dwvar_{$product->id}_size=$value&pid=$product->id&quantity=1"
         ]);
       }
-      // $size_attr["values"] = [
-      //   [
-      //     "id" => "15",
-      //     "description" => null,
-      //     "displayValue" => "15 cm",
-      //     "value" => "15",
-      //     "selected" => false,
-      //     "selectable" => false,
-      //     "labelDefault" => "Size: 15 cm",
-      //     "labelSelected" => "Size: 15 cm, selected",
-      //     "labelUnselectable" => "Size: 15 cm, unselectable",
-      //     "visibleWeb" => true,
-      //     "visiblePhone" => true,
-      //     "url" => get_site_url() . "/wp-json/siellest/Product-Variation?dwvar_B6047517_size=15&pid=B6047517&quantity=1"
-      //   ],
-        // {
-        //   "id": "16",
-        //   "description": null,
-        //   "displayValue": "16 cm",
-        //   "value": "16",
-        //   "selected": false,
-        //   "selectable": true,
-        //   "labelDefault": "Size: 16 cm",
-        //   "labelSelected": "Size: 16 cm, selected",
-        //   "labelUnselectable": "Size: 16 cm, unselectable",
-        //   "visibleWeb": true,
-        //   "visiblePhone": true,
-        //   "url": "https://www.cartier.com/on/demandware.store/Sites-CartierUS-Site/en_US/Product-Variation?dwvar_B6047517_size=16&pid=B6047517&quantity=1"
-        // },
-      // ];
     }
 
     $variations = [$size_attr];
@@ -953,6 +956,17 @@ class Product
     return new WC_Product_Query($args);
   }
 
+  /*
+   * @return Array(ids) 
+   */
+  static function search($s)
+  {
+    // return Product::custom_query('', '', 0, [], $s);
+    $data_store = WC_Data_Store::load( 'product' );
+    $search_results = $data_store->search_products($s);
+    return $search_results;
+  }
+
   static function get_available_collections($category)
   {
     $args = array(
@@ -974,5 +988,13 @@ class Product
     }
 
     return $collections;
+  }
+
+  static function formatted_price($price)
+  {
+    $price = ($price == "") ? 0.0 : $price;
+
+    $currency_symbol = get_woocommerce_currency_symbol();
+    return $currency_symbol . number_format((float)$price, 2);
   }
 }

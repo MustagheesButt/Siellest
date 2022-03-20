@@ -10,8 +10,8 @@ include 'classes/Nav_Walker.php';
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title><?php
-  if (!empty($args['title'])) echo $args['title'];
-  else echo siellest_title(); ?></title>
+          if (!empty($args['title'])) echo $args['title'];
+          else echo siellest_title(); ?></title>
   <meta name="description" content="Discover <?= get_bloginfo('name') ?>'s unique collections of fine jewelry, watches, bridal sets, accessories and fragrances." />
   <meta name="keywords" content="<?= get_bloginfo('name') ?>" />
   <link rel="icon" type="image/png" href="wp-content/themes/siellest/assets/images/favicons/favicon-196x196.png" sizes="196x196" />
@@ -27,15 +27,22 @@ include 'classes/Nav_Walker.php';
   ?>
   <!-- <script src="https://www.google.com/recaptcha/api.js?render=6Lfx490aAAAAAF7JDTnl7ek_DeDaktJy5kMRiDCG" async defer></script> -->
   <!-- <div id="recaptcha-validator"></div> -->
-  <link rel="canonical" href="/en-us/home" />
+  <link rel="canonical" href="/home" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=<?= GTAG_ID ?>"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', '<?= GTAG_ID ?>');
+  </script>
 </head>
 
 <body>
-
-  <!-- <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-577SDR" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript> -->
-
   <div class="page" data-action="<?= $args['action'] ?>" data-querystring="" data-page-motion>
     <a href="#main" class="header__skip-to-main button button--primary button--small body-type--deci" role="button" aria-label="Skip to main content" title="Skip to main content" data-window-scroll='{"target": "#main", "offset": ".header"}'>
       Skip to main content
