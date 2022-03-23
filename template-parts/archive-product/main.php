@@ -1,20 +1,12 @@
 <?php
-// Note: Some vars get set in siellest_modify_query_params
-$category = (!empty(get_query_var('product_cat'))) ? get_query_var('product_cat') : $_GET['cgid'];
-$sort_rule = $_GET['srule'];
 
-if (isset($_GET['collection'])) {
-  $collections = [$_GET['collection']];
-} else if (isset($_GET['prefn1']) && $_GET['prefn1'] == 'collection') {
-  $collections = explode('|', $_GET['prefv1']);
-}
-
-$query = Product::custom_query($category, $sort_rule, collections: $collections);
+$params = Product::get_shop_params();
+$query = Product::custom_query($params['category'], $params['sort_rule'], collections: $params['collections']);
 $data = $query->get_products();
 $products = $data->products;
 
 wc_set_loop_prop('total', $data->total);
-$category_data = get_term_by('slug', $category, 'product_cat');
+$category_data = get_term_by('slug', $params['category'], 'product_cat');
 // $products = wc_products_array_orderby( $products, 'price', 'ASC' );
 
 $plp_banners = [
@@ -34,7 +26,7 @@ $plp_banners = [
   'personal-accessories' => 'ACCESSORIES_KEY_RINGS_08322021.webp',
   'home' => 'HEADER-DECOR-1920x800-08312021.webp',
   'writing-&-stationery' => 'NOTEBOOKS_1920x800.jpg',
-  'eyewear' => '01_HEADER_PLP_EYEWEAR22_CT0334S-002_NEL&MAN_1920x800_2282022.webp',
+  'eyewear' => '01_HEADER_PLP_EYEWEAR22_CT0334S-002_NEL&MAN_1920x800_2282022.jpg',
   'fragrances' => 'HEADER TOUS PARFUMS TEST 2_1920x800-2.webp'
 ];
 ?>
@@ -46,14 +38,14 @@ $plp_banners = [
 
       <div class="row flex-no-gutters">
         <?php
-        if ($plp_banners[$category]) {
+        if ($plp_banners[$params['category']]) {
         ?>
           <div class="col-12 col-md-6 col-lg-6 ">
             <div class="descriptive-card__aspect-ratio descriptive-card__aspect-ratio--wide">
               <div class="descriptive-card__media component-overlay component-overlay--center">
                 <picture>
-                  <source data-srcset="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$category] ?>" class="picture--source-element">
-                  <img data-image-component="lazyload" src="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$category] ?>?sw=40&q=100" class="component-image descriptive-card__img object-fit--cover lazyload blur-up" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; " />
+                  <source data-srcset="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$params['category']] ?>" class="picture--source-element">
+                  <img data-image-component="lazyload" src="wp-content/themes/siellest/assets/images/plp-banners/<?= $plp_banners[$params['category']] ?>?sw=40&q=100" class="component-image descriptive-card__img object-fit--cover lazyload blur-up" title="" alt="" style="--focal-point-x: 50%; --focal-point-y:50%; ; " />
                 </picture>
               </div>
             </div>
@@ -88,7 +80,7 @@ $plp_banners = [
                   <span class="breadcrumbs__separator">/</span>
                 </li>
                 <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                  <a class="breadcrumbs__anchor link--secondary" href="product-category/jewelry/<?= $category ?>/" title="All Collections"><?= $category_data->name ?></a>
+                  <a class="breadcrumbs__anchor link--secondary" href="product-category/jewelry/<?= $parms['category'] ?>/" title="All Collections"><?= $category_data->name ?></a>
                 </li>
               </ol>
             </div>
@@ -143,7 +135,7 @@ $plp_banners = [
                 <?php if ($collections) { ?>
                 <ol class="applied-refinements__list list--reset flex flex-flow-wrap" data-refinement-type="reset remove" tabindex="-1">
                   <li class="applied-refinements__item refinement-bar__reset">
-                    <button class="pill body-type--centi" data-url="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>" aria-label="Reset, all refinements" data-refinement-action="reset">
+                    <button class="pill body-type--centi" data-url="wp-json/siellest/Search-ShowAjax?cgid=<?= $params['category'] ?>" aria-label="Reset, all refinements" data-refinement-action="reset">
                       Clear All
                     </button>
                   </li>
@@ -152,7 +144,7 @@ $plp_banners = [
                     $cleared = array_diff($collections, [$collection]);
                   ?>
                   <li class="applied-refinements__item">
-                    <a class="pill pill--icon-right  body-type--centi" href="wp-json/Search-ShowAjax?cgid=<?= $category ?>&prefn1=collection&prefv1=<?= implode('|', $cleared) ?>&prefn2=sapIsVisibleWeb&;prefv2=true&srule=price-high-to-low" title="Remove Refinement – boolean: <?= $collection ?>" data-refinement-action="remove">
+                    <a class="pill pill--icon-right  body-type--centi" href="wp-json/Search-ShowAjax?cgid=<?= $params['category'] ?>&prefn1=collection&prefv1=<?= implode('|', $cleared) ?>&prefn2=sapIsVisibleWeb&;prefv2=true&srule=price-high-to-low" title="Remove Refinement – boolean: <?= $collection ?>" data-refinement-action="remove">
                       <span class="aria-hidden"><?= $collection ?></span>
                       <svg aria-hidden="true" focusable="false" class="icon body-type--micro pill__icon pill__icon--right pill__icon--actionable">
                         <use xlink:href="#icon--close"></use>
@@ -167,7 +159,7 @@ $plp_banners = [
                   foreach ($products as $product) {
                     echo Product::render_product($product);
                   }
-                  Product::render_product_loop_end($category, PRODUCTS_PER_PAGE, wc_get_loop_prop('total'));
+                  Product::render_product_loop_end($params['category'], PRODUCTS_PER_PAGE, wc_get_loop_prop('total'));
                   ?>
                 </div>
               </div>

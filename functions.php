@@ -110,6 +110,9 @@ function siellest_register_styles()
   if ($post_name === 'cart') {
     wp_enqueue_style('siellest-cart', get_template_directory_uri() . "/assets/css/cartMain.css", array('siellest-global'), $version, 'all');
   }
+  if ($post_name == 'search') {
+    wp_enqueue_style('siellest-searchMain', get_template_directory_uri() . "/assets/css/searchMain.css", array('siellest-global'), $version, 'all');
+  }
 }
 
 add_action('wp_enqueue_scripts', 'siellest_register_styles');

@@ -100,20 +100,20 @@
             <div class="product-attribute__list flex flex-flow-wrap">
               <div class="product-attribute product-attribute--size product-attribute--last" data-attr-group="size" data-attr-group-type="dropdown">
                 <div class="product-attribute__head flex flex-justify-between sr-only">
-                  <label class="product-attribute__label product-attribute__label--size form-control-label" for="productAttribute-<?= $p->id ?>-size">
+                  <label class="product-attribute__label product-attribute__label--size form-control-label" for="productAttribute-<?= $product->id ?>-size">
                     <span class="product-attribute__label-pre">Select Size</span>
                   </label>
                 </div>
                 <div class="product-attribute__contents ">
 
                   <select id="productAttribute-B6067217-size" class="product-attribute__size button form-control form-control--select form-control--boxed text-align-last--center" data-attr="size" data-attr-type="dropdown">
-                    <option value="<?= get_site_url() ?>/wp-json/siellest/Product-Variation?dwvar_<?= $p->id ?>_size=&pid=<?= $p->id ?>&quantity=1">
+                    <option value="<?= get_site_url() ?>/wp-json/siellest/Product-Variation?dwvar_<?= $product->id ?>_size=&pid=<?= $product->id ?>&quantity=1">
                       Select Size
                     </option>
                     <?php
                     foreach ($available_variations as $variation) {
                     ?>
-                    <option value="<?= get_site_url() ?>/wp-json/siellest/Product-Variation?dwvar_<?= $p->id ?>_size=15&pid=<?= $p->id ?>&quantity=1" data-attr-value="<?= $variation['attributes']['attribute_pa_size'] ?>">
+                    <option value="<?= get_site_url() ?>/wp-json/siellest/Product-Variation?dwvar_<?= $product->id ?>_size=15&pid=<?= $product->id ?>&quantity=1" data-attr-value="<?= $variation['attributes']['attribute_pa_size'] ?>">
                       <?= $variation['attributes']['attribute_pa_size'] ?>
                     </option>
                     <?php } ?>
@@ -130,7 +130,7 @@
 
             <div class="product-add__container cart-and-ipay flex-grow-1 flex flex-align-center">
 
-              <button type="button" class="product__request-price button button--primary set--w-100 hidden" data-pid="<?= $p->id ?>" data-url="wp-json/siellest/RequestPrice-Start?pid=<?= $p->id ?>" data-product-url="productRequestPrice" data-modal-trigger='{"dynamicURL": true, "type": "html", "options": {"modalID": "productRequestPrice", "modalClass": "modal--generic modal--request-price", "keepAlive": false}}' data-product-component="request-price">
+              <button type="button" class="product__request-price button button--primary set--w-100 hidden" data-pid="<?= $product->id ?>" data-url="wp-json/siellest/RequestPrice-Start?pid=<?= $product->id ?>" data-product-url="productRequestPrice" data-modal-trigger='{"dynamicURL": true, "type": "html", "options": {"modalID": "productRequestPrice", "modalClass": "modal--generic modal--request-price", "keepAlive": false}}' data-product-component="request-price">
                 Request Price
               </button>
               <p class="font-family--serif hidden" data-product-component="availability-status">
@@ -248,7 +248,7 @@
               </div>
             </div>
             <div class="pdp-main__footer-item pdp-main__ref body-type--deci">
-              Ref. <span data-product-component="pid"><?= $p->sku ?></span>
+              Ref. <span data-product-component="pid"><?= $product->sku ?></span>
             </div>
           </div>
         </div>

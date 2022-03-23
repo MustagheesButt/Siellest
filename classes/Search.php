@@ -11,7 +11,7 @@ class Search
     if (isset($_GET['collection'])) {
       $collections = [$_GET['collection']];
     } else if (isset($_GET['prefn1']) && $_GET['prefn1'] == 'collection') {
-      $collections = explode(',', $_GET['prefv1']);
+      $collections = explode('|', $_GET['prefv1']);
     }
 
     // $total = get_term_by('slug', $category, 'product_cat')->count;
@@ -49,10 +49,7 @@ class Search
       Product::search($request->get_param('q')),
       0, 3
     );
-    $products = array_map(function ($p) {
-      return wc_get_product($p);
-    }, $products);
-    // var_dump($products);
+    // $products = Product::custom_query('', '', search: $request->get_param('q'), limit: 3)->get_products()->products;
     include get_template_directory() . '/template-parts/search-results.php';
     exit();
   }

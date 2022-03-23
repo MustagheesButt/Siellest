@@ -151,6 +151,7 @@ class Product
                     <span class=\"value\" itemprop=\"price\" content=\"$price\">
                       $formatted_price
                     </span>
+                  </span>
                 </div>
               </div>
               <div class=\"body-type--deci\">
@@ -190,6 +191,7 @@ class Product
 
     $params = http_build_query([
       'cgid' => $category,
+      'collection' => $_GET['collection'],
       'prefn1' => $_GET['prefn1'],
       'prefv1' => $_GET['prefv1'],
       'srule' => $_GET['srule'],
@@ -923,7 +925,7 @@ class Product
     return $variations;
   }
 
-  static function custom_query($category, $sort_rule, $offset=0, $collections=[])
+  static function custom_query($category, $sort_rule, $offset=0, $collections=[], $search='', $limit=PRODUCTS_PER_PAGE)
   {
     $sort_map = [
       'intl-emerch' => ['by' => 'menu_order', 'order' => 'asc'],
@@ -940,13 +942,18 @@ class Product
         'operator'      => 'IN'
       ));
     }
-    
+
+    if (!empty($category)) {
+      $category = [$category];
+    }
+
     $args = array(
       'status' => ['publish'],
       'offset' => $offset,
-      'limit' => PRODUCTS_PER_PAGE,
+      's' => $search,
+      'limit' => $limit,
       'paginate' => true,
-      'category' => [$category],
+      'category' => $category,
       'orderby' => $sort_map[$sort_rule]['by'],
       'meta_key' => '_price',
       'order' => $sort_map[$sort_rule]['order'],
@@ -957,14 +964,25 @@ class Product
   }
 
   /*
-   * @return Array(ids) 
+   * @return Array(id/Product) 
    */
-  static function search($s)
+  static function search($s, $only_ids = false)
   {
-    // return Product::custom_query('', '', 0, [], $s);
     $data_store = WC_Data_Store::load( 'product' );
-    $search_results = $data_store->search_products($s);
-    return $search_results;
+    $product_ids = $data_store->search_products($s);
+
+    if ($only_ids) {
+      return $product_ids;
+    }
+
+    $products = array_map(function ($p) {
+        return wc_get_product($p);
+      }, $product_ids);
+    $products = array_filter($products, function($p) {
+      return gettype($p) == 'object';
+    });
+
+    return $products;
   }
 
   static function get_available_collections($category)
@@ -988,6 +1006,22 @@ class Product
     }
 
     return $collections;
+  }
+
+  static function get_shop_params() {
+    // Note: Some vars get set in siellest_modify_query_params
+    $params = [
+      'category' => (!empty(get_query_var('product_cat'))) ? get_query_var('product_cat') : $_GET['cgid'],
+      'sort_rule' => $_GET['srule'],
+    ];
+  
+    if (isset($_GET['collection'])) {
+      $params['collections'] = [$_GET['collection']];
+    } else if (isset($_GET['prefn1']) && $_GET['prefn1'] == 'collection') {
+      $params['collections'] = explode('|', $_GET['prefv1']);
+    }
+  
+    return $params;
   }
 
   static function formatted_price($price)

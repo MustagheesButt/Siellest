@@ -54,6 +54,13 @@ $pages = [
     'meta' => [
       'Title' => 'Connection - My ' . get_bloginfo('name')
     ]
+  ],
+  'search' => [
+    'title' => 'Search',
+    'meta' => [
+      'Title' => get_bloginfo('name') . ' Search',
+      'action' => 'Search-Show'
+    ]
   ]
 ];
 

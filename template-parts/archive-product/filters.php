@@ -307,15 +307,17 @@
       'price-high-to-low' => 'Price High To Low',
       'intl-emerch' => 'Recommended'
     ];
-    $params = http_build_query([
-      'cgid' => $category,
+
+    $params = Product::get_shop_params();
+    $query_params = http_build_query([
+      'cgid' => $params['category'],
       'collection' => $_GET['collection'],
       'prefn1' => $_GET['prefn1'],
       'prefv1' => $_GET['prefv1'],
       'prefn2' => $_GET['prefn2'],
       'prefv2' => $_GET['prefv2']
     ]);
-    $selected_rule = !empty($_GET['srule']) ? $_GET['srule'] : 'intl-emerch';
+    $selected_rule = !empty($params['sort_rule']) ? $params['sort_rule'] : 'intl-emerch';
     ?>
     <div class="refinement-bar__sort-list form-check-group" name="sort-order" data-search-component="search-sort">
       <div class="display--small-up body-type--deci font-weight--semibold">Sort By</div>
@@ -323,7 +325,7 @@
       foreach ($sort_items as $key => $si_name) {
       ?>
         <div class="refinement-bar__sort-item-container">
-          <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?<?= $params ?>&srule=<?= $key ?>&start=0&sz=24" data-sort-option-id="<?= $key ?>" data-search-component="search-sort-anchor" aria-label="<?= $si_name ?>" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
+          <a class="refinement-bar__sort-item" href="wp-json/siellest/Search-ShowAjax?<?= $query_params ?>&srule=<?= $key ?>&start=0&sz=24" data-sort-option-id="<?= $key ?>" data-search-component="search-sort-anchor" aria-label="<?= $si_name ?>" data-window-scroll='{"target": ".search-results", "offset": ".header"}'>
             <input type="radio" id="<?= $key ?>" class="form-check-input" name="sort-radio" <?= $selected_rule == $key ? 'checked' : '' ?> />
             <label for="price-low-to-high" class="form-check-label--radio cursor--pointer">
               <span class="body-type--centi link--underline-hover"><?= $si_name ?></span>
@@ -334,7 +336,7 @@
     </div>
   </div>
   <div class="refinement-bar__footer flex flex-justify-between display--small-only gutter--normal">
-    <button class="refinement-bar__clear-button button set--w-50" data-url="wp-json/siellest/Search-ShowAjax?cgid=<?= $category ?>" aria-label="Reset, all refinements" data-refinement-action="reset">
+    <button class="refinement-bar__clear-button button set--w-50" data-url="wp-json/siellest/Search-ShowAjax?cgid=<?= $params['category'] ?>" aria-label="Reset, all refinements" data-refinement-action="reset">
       Clear All
     </button>
     <button type="button" class="button button--primary set--w-50" data-toggle-close="[data-search-component=refinement-bar-trigger]">Apply</button>
