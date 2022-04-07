@@ -23,7 +23,7 @@ class Search
     // $products = wc_products_array_orderby( $products, 'price', 'ASC' );
 
     foreach ($products as $product) {
-      echo Product::render_product($product);
+      Product::render_product($product);
     }
     Product::render_product_loop_end($category, $start + PRODUCTS_PER_PAGE, $total);
 

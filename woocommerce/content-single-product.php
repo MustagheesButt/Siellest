@@ -1,7 +1,10 @@
 <?php
   $product = wc_get_product();
   $p = wc_get_product()->get_data();
-  $category = get_term($product->get_category_ids()[2])->name; // TODO not sure if it'll always be in order
+  $cat_ids = $product->get_category_ids();
+  // TODO I think last is the parent, and then subcats in normal order. Need to adjust for more than 2 subcats
+  $category1 = get_term($cat_ids[sizeof($cat_ids) - 1]);
+  $category2 = get_term($cat_ids[sizeof($cat_ids) - 2]);
 ?>
 
 <div class="pdp" itemscope itemtype="http://schema.org/Product" data-page-motion>
@@ -15,15 +18,15 @@
           <div class="pdp-main__breadcrumbs">
             <ol class="breadcrumbs body-type--centi list--reset">
               <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                <a class="breadcrumbs__anchor link--secondary" href="https://www.siellest.com/en-us/home" title="Home">Home</a>
+                <a class="breadcrumbs__anchor link--secondary" href="<?= get_site_url() ?>" title="Home">Home</a>
                 <span class="breadcrumbs__separator">/</span>
               </li>
               <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                <a class="breadcrumbs__anchor link--secondary" href="product-category/jewelry/" title="Jewelry">Jewelry</a>
+                <a class="breadcrumbs__anchor link--secondary" href="product-category/<?= $category1->slug ?>/" title="<?= $category1->name ?>"><?= $category1->name ?></a>
                 <span class="breadcrumbs__separator">/</span>
               </li>
               <li class="breadcrumbs__item flex--inline flex-align-baseline">
-                <a class="breadcrumbs__anchor link--secondary" href="product-category/jewelry/bracelets/" title="<?= $category ?>"><?= $category ?></a>
+                <a class="breadcrumbs__anchor link--secondary" href="product-category/<?= $category1->slug ?>/<?= $category2->slug ?>/" title="<?= $category2->name ?>"><?= $category2->name ?></a>
               </li>
             </ol>
           </div>
@@ -454,70 +457,11 @@
         </div>
         <div class="product-list__carousel slider--flex slider--arrows-outer slider--dots-right slider--arrows-tile-center slider--h-align-center slider--row slider--pre-layout-1 slider--md-pre-layout-md-3 slider--lg-pre-layout-4" data-slick='{"type": "productListCarousel", "slidesToShow": 4.0, "slidesToScroll": 4.0, "responsive": [{"breakpoint": 767, "settings": {"slidesToShow": 1.0, "slidesToScroll": 1.0}}, {"breakpoint": 1024, "settings": {"slidesToShow": 3.0, "slidesToScroll": 3.0}}]}'>
           <?php
-          // TODO
           $recommendations = wc_get_related_products($product->id, 3);
           foreach ($recommendations as $recommendation) {
+            Product::render_product(wc_get_product($recommendation), true, false);
+          }
           ?>
-            <div class=" col-12 col-md-4 col-lg-3">
-              <div class="product flex flex-grow-1 flex-direction-col">
-                <div class="product-tile product-tile--default flex flex-direction-col flex-grow-1 text-align--center" itemscope itemtype="http://schema.org/Product" data-product-container="tile" data-product-tile data-pid="CRB6016700" data-tracking-id="CRB6016700" data-tracking-position data-tracking='{"trackEvent": "eeListClick", "asyncParams": {"pid": "data-tracking-id", "pos": "data-tracking-position", "listValue": "--context"}}' data-motion='{"properties": "opacity from-v-direction"}'>
-
-                  <a class="product-tile__anchor" href="/en-us/jewelry/bracelets/trinity-bracelet-CRB6016700.html" data-product-url="productShow" itemprop="url">
-
-                    <div class="product-tile__media product-tile__media--default aspect-ratio--square ">
-                      <div class="product-tile__media-container component-overlay component-overlay--center">
-                        <img class="product-tile__image product-tile__image--primary component-overlay component-overlay--center object-fit--contain lazyload none-up set--has-secondary-image full-stretch-image " data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dw88406a3f/images/large/637708788550193812-2059312.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="0" itemprop="image" alt="Trinity bracelet" title="Trinity bracelet" />
-                        <img class="product-tile__image product-tile__image--secondary component-overlay component-overlay--center object-fit--contain lazyload none-up display--small-up  full-stretch-image" data-product-component="image" data-src="https://www.siellest.com/wp-content/themes/siellest/assets/dwcb11c1ce/images/large/637708788550193812-2059408.png?sw=350&amp;sh=350&amp;sm=fit&amp;sfrm=png" data-image-index="1" itemprop="image" alt="Trinity bracelet" title="Trinity bracelet" />
-                      </div>
-                    </div>
-                    <div class="product-tile__body">
-                      <p class="product-tile__body-section product-tile__name text-line--large heading-type body-type--deci" itemprop="name">
-                        Trinity bracelet
-                      </p>
-                      <div class="product-tile__body-section product-tile__swatches font-family--serif" data-product-component="swatches">
-                      </div>
-                      <p class="product-tile__body-section product-tile__material font-family--serif">
-                        White gold, yellow gold, rose gold
-                      </p>
-                      <div class="product-tile__body-section text-line--large font-weight--semibold body-type--deci">
-                        <div class="price flex--inline flex-flow-wrap flex-align-baseline" data-product-component="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                          <meta itemprop="priceCurrency" content="USD" />
-                          <span class="price__sales sales">
-                            <span class="value" itemprop="price" content="610.00">
-                              $610.00
-                            </span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                  <button type="button" class="product-tile__wishlist body-type--deka" title="Add to Wish List, Trinity bracelet" data-wishlist-trigger="heart" data-wishlist-label-add="Add to Wish List, Trinity bracelet" data-wishlist-label-remove="Remove from Wish List, Trinity bracelet">
-                    <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-add">
-                      <use xlink:href="#icon--heart" />
-                    </svg>
-                    <svg aria-hidden="true" focusable="false" class="icon product-tile__wishlist-remove">
-                      <use xlink:href="#icon--heart-filled" />
-                    </svg>
-                  </button>
-                  <div class="product-tile__overlay flex flex-align-end bg--white">
-                    <div class="product-tile__overlay-actions set--w-100">
-                      <div class="product-tile__quickadd" data-quickadd>
-                        <button type="button" class="product-tile__quickadd-trigger button button--primary button--small set--w-100" data-url="/on/demandware.store/Sites-CartierUS-Site/en_US/Product-ShowQuickAdd?pid=CRB6016700" data-product-url="productShowQuickAdd" title="Quick Add for Trinity bracelet" data-quickadd-trigger>
-                          <span class="display--small-up">
-                            Add to Shopping Bag
-                          </span>
-                          <span class="display--small-only">
-                            Add to Bag
-                          </span>
-                        </button>
-                        <div class="product-tile__quickadd-panel body-type--deci" data-quickadd-component="panel" tabindex="-1" role="dialog" aria-modal="true"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-          <?php } ?>
         </div>
       </section>
     </div>

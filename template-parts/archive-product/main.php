@@ -157,7 +157,7 @@ $plp_banners = [
                 <div class="row product-grid feed-view" itemtype="http://schema.org/SomeProducts" itemid="#product" data-search-component="product-grid">
                   <?php
                   foreach ($products as $product) {
-                    echo Product::render_product($product);
+                    Product::render_product($product);
                   }
                   Product::render_product_loop_end($params['category'], PRODUCTS_PER_PAGE, wc_get_loop_prop('total'));
                   ?>
